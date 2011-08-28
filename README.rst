@@ -5,7 +5,8 @@ This is my dotfiles folder. I basically followed this great tutorial: http://mir
 Notes
 -----
 
- * You must install pyflakes (pip install pyflakes)
+ * Just synlink your ~/.vimrc to the vimrc file of this repo.
+ * The same for bashrc (bash/bashrc)
 
 
 Thanks!
