@@ -99,7 +99,6 @@ endif
 set ts=2
 set sw=2
 set et
-color pablo
 
 
 call pathogen#runtime_append_all_bundles()
@@ -113,3 +112,19 @@ noremap <Leader>t :CommandT<CR>
 " For closetag plugin
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
+
+" Tagbar
+let g:tagbar_usearrows = 1
+noremap <Leader>l :TagbarToggle<CR>
+
+
+" For solarized color scheme
+set background=dark
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+colorscheme solarized
+
+
+
