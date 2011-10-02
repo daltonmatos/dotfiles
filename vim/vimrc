@@ -127,4 +127,9 @@ let g:solarized_visibility="high"
 colorscheme solarized
 
 
+" New tab
+noremap <C-t> :tabnew<CR>
+
+" Show line numbers
+set number
 
