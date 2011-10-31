@@ -26,6 +26,8 @@ alias eq='equery '
 alias py='ipython'
 alias dfh='df -hP | sed -e "s/Sist. Arq./Sist.Arq./" | column -t'
 alias gf='git flow'
+alias wscan='sudo iwlist eth1 scan'
+alias enews='eselect news'
 
 alias gvimrtab='gvim --remote-tab-silent '
 export LANG="pt_BR.utf8"
@@ -33,7 +35,14 @@ export LC_ALL="pt_BR.utf8"
 HISTCONTROL="ignoreboth"
 EDITOR=vim
 
-PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w [\#]\$\[\033[00m\] '
+git_branch(){
+  branch=`cat .git/HEAD 2> /dev/null | awk -F '/' '{print $3}'`
+  if [ ! -z ${branch} ]; then
+    echo ",${branch}"
+  fi
+}
+
+PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w [\#$(git_branch)]\$\[\033[00m\] '
 
 export LANGUAGE=pt_BR
 
