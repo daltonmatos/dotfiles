@@ -133,3 +133,6 @@ noremap <C-t> :tabnew<CR>
 " Show line numbers
 set number
 
+" For colors in terminal
+set t_Co=256
+
