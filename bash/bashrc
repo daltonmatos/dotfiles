@@ -36,10 +36,18 @@ HISTCONTROL="ignoreboth"
 EDITOR=vim
 
 git_branch(){
-  branch=`cat .git/HEAD 2> /dev/null | awk -F '/' '{print $3}'`
-  if [ ! -z ${branch} ]; then
-    echo ",${branch}"
-  fi
+python <<PYTHON
+import sys
+import subprocess
+from subprocess import PIPE
+
+s = subprocess.Popen(["git","branch"], stdout=PIPE, stderr=PIPE)
+o, e = s.communicate()
+for branch in o.split('\n'):
+  if branch and branch[0] == '*':
+    print ",{0}".format(branch[2:])
+PYTHON
+
 }
 
 PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w [\#$(git_branch)]\$\[\033[00m\] '
