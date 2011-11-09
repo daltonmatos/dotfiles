@@ -136,3 +136,6 @@ set number
 " For colors in terminal
 set t_Co=256
 
+" Disable pylint on every save
+let g:pymode_lint = 0
+
