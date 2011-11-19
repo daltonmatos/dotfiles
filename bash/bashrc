@@ -29,6 +29,10 @@ alias gf='git flow'
 alias wscan='sudo iwlist eth1 scan'
 alias enews='eselect news'
 
+# Tmux aliases
+alias tl='tmux ls'
+alias ta='tmux attach -t'
+
 alias gvimrtab='gvim --remote-tab-silent '
 export LANG="pt_BR.utf8"
 export LC_ALL="pt_BR.utf8"
