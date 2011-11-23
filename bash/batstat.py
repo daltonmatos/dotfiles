@@ -26,9 +26,10 @@ info_hash = build_hash(INFO)
 total_capacity = int(info_hash['designcapacity'].split()[0])
 current_capacity = int(state_hash['remainingcapacity'].split()[0])
 
-total = int(float(current_capacity) / float(total_capacity) * 10)
+total = int(float(current_capacity) / float(total_capacity) * 100)
 bars = total * "|"
-print "-{0}{1}+".format(bars, (10 - total) * ' ')
+#print "-{0}{1}+".format(bars, (10 - total) * ' ')
+print "{0}%".format(total)
 
 
 
