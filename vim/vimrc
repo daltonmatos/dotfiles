@@ -142,7 +142,8 @@ let g:pymode_lint = 0
 
 
 " Retira a barra de ferramentas e o Menu
-set guioptions-=Tm
+set guioptions-=T
+set guioptions-=m
 
 
 
