@@ -138,7 +138,7 @@ set number
 set t_Co=256
 
 " Disable pylint on every save
-let g:pymode_lint = 0
+" let g:pymode_lint = 0
 
 
 " Retira a barra de ferramentas e o Menu
@@ -146,6 +146,8 @@ set guioptions-=T
 set guioptions-=m
 
 
+noremap <A-Down> ddp
+noremap <A-Up> dd<Up><Up>p
 
 " Some interesting annotations about vim commands
 
