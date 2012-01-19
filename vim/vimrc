@@ -145,9 +145,37 @@ set t_Co=256
 set guioptions-=T
 set guioptions-=m
 
+" Alt+{Down,Up} moves current line
+noremap <A-Down> :m+1<cr>
+noremap <A-Up> ddkP
 
-noremap <A-Down> ddp
-noremap <A-j> ddkP
+" Move in visual mode (for block od lines)
+" http://vim.wikia.com/wiki/Moving_lines_up_or_down
+vnoremap <A-Up> :m-2<CR>gv=gv
+vnoremap <A-Down> :m'>+<CR>gv=gv
+
+" Copy+Move current line
+noremap <C-A-Down> yyp
+noremap <C-A-Up> yyP
+
+" Mappings for visual mode (Still needs to select the whole lines...)
+vnoremap <C-A-Down> mzy`zp 
+vnoremap <C-A-Up> yP
+
+
+" Thanks to denilsonsa
+function Salvar_setKeys()
+	"Use Ctrl+S to save
+	nnoremap <silent> <C-S>      :update<CR>
+	vnoremap <silent> <C-S> <C-C>:update<CR>
+	inoremap <silent> <C-S> <C-O>:update<CR>
+	"Ctrl+Alt+S to save all does not work
+	nnoremap <silent> <C-S-S>      :wall<CR>
+	vnoremap <silent> <C-S-S> <C-C>:wall<CR>
+	inoremap <silent> <C-S-S> <C-O>:wall<CR>
+endfunc
+
+au GUIEnter * call Salvar_setKeys()
 
 " Some interesting annotations about vim commands
 
