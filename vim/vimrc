@@ -147,7 +147,7 @@ set guioptions-=m
 
 
 noremap <A-Down> ddp
-noremap <A-Up> dd<Up><Up>p
+noremap <A-j> ddkP
 
 " Some interesting annotations about vim commands
 
