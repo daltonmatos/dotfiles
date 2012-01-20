@@ -104,9 +104,20 @@ set et
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+"General settings
+
+" Move backups off of current dir
+set backupdir=~/.vim/.backups,.,/tmp
+
+"Ctrl+F4 closes current buffer
+nnoremap <C-F4> :close<cr>
+
 let mapleader="_"
 noremap <Leader>tb :CommandTBuffer<CR>
 noremap <Leader>t :CommandT<CR>
+" Opens .vimrc ate any time, in a new tab
+nnoremap <Leader>v :tabedit $MYVIMRC<cr>
+
 
 set wildignore+=doc/**/*.*,*.py~
 
@@ -126,6 +137,7 @@ let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 colorscheme solarized
+"colorscheme pablo
 
 
 " New tab
@@ -164,7 +176,7 @@ vnoremap <C-A-Up> yP
 
 
 " Thanks to denilsonsa
-function Salvar_setKeys()
+function! Salvar_setKeys()
 	"Use Ctrl+S to save
 	nnoremap <silent> <C-S>      :update<CR>
 	vnoremap <silent> <C-S> <C-C>:update<CR>
@@ -176,6 +188,17 @@ function Salvar_setKeys()
 endfunc
 
 au GUIEnter * call Salvar_setKeys()
+
+
+if has("autocmd")
+  autocmd bufwritepost vimrc source $MYVIMRC
+endif
+
+
+" For fugitive.vim
+nnoremap <C-G><C-s> :Gstatus <cr>
+nnoremap <C-G><C-c> :Gcommit <cr>
+nnoremap <C-G><C-d> :Gdiff <cr>
 
 " Some interesting annotations about vim commands
 
