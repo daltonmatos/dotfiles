@@ -199,6 +199,7 @@ endif
 nnoremap <C-G><C-s> :Gstatus <cr>
 nnoremap <C-G><C-c> :Gcommit <cr>
 nnoremap <C-G><C-d> :Gdiff <cr>
+nnoremap <C-G><C-p> :Git push <cr>
 
 " Some interesting annotations about vim commands
 
