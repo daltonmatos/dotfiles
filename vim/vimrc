@@ -110,16 +110,21 @@ call pathogen#helptags()
 set backupdir=~/.vim/.backups,.,/tmp
 
 "Ctrl+F4 closes current buffer
+
 nnoremap <C-F4> :close<cr>
 
 let mapleader="_"
 noremap <Leader>tb :CommandTBuffer<CR>
 noremap <Leader>t :CommandT<CR>
+
 " Opens .vimrc ate any time, in a new tab
 nnoremap <Leader>v :tabedit $MYVIMRC<cr>
 
+" Toggle current word case
+inoremap <A-u> <esc>viw~i
+nnoremap <A-u> viw~
 
-set wildignore+=doc/**/*.*,*.py~
+set wildignore+=*.py~
 
 " For closetag plugin
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
@@ -137,8 +142,6 @@ let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 colorscheme solarized
-"colorscheme pablo
-
 
 " New tab
 noremap <C-t> :tabnew<CR>
@@ -181,7 +184,7 @@ function! Salvar_setKeys()
 	nnoremap <silent> <C-S>      :update<CR>
 	vnoremap <silent> <C-S> <C-C>:update<CR>
 	inoremap <silent> <C-S> <C-O>:update<CR>
-	"Ctrl+Alt+S to save all does not work
+
 	nnoremap <silent> <C-S-S>      :wall<CR>
 	vnoremap <silent> <C-S-S> <C-C>:wall<CR>
 	inoremap <silent> <C-S-S> <C-O>:wall<CR>
