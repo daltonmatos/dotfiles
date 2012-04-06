@@ -106,6 +106,9 @@ call pathogen#helptags()
 
 "General settings
 
+" Auto load when file is changed
+set autoread
+
 " Move backups off of current dir
 set backupdir=~/.vim/.backups,.,/tmp
 
@@ -128,7 +131,7 @@ inoremap <c-O> <esc>:confirm browse e<CR>
 inoremap <A-u> <esc>viw~i
 nnoremap <A-u> viw~
 
-set wildignore+=*.py~
+set wildignore+=*.py~,build/*.*
 
 " For closetag plugin
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
@@ -137,6 +140,9 @@ autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bu
 " Tagbar
 let g:tagbar_usearrows = 1
 noremap <Leader>l :TagbarToggle<CR>
+
+" NERDTree
+noremap <Leader>n :NERDTreeToggle<CR>
 
 
 " For solarized color scheme
@@ -208,6 +214,13 @@ nnoremap <C-G><C-s> :Gstatus <cr>
 nnoremap <C-G><C-c> :Gcommit <cr>
 nnoremap <C-G><C-d> :Gdiff <cr>
 nnoremap <C-G><C-p> :Git push <cr>
+
+
+" Disable automatic python code folding
+let g:pymode_folding = 0
+
+autocmd FileType python :NERDTree
+autocmd FileType python :TagbarOpen
 
 " Some interesting annotations about vim commands
 
