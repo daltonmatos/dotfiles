@@ -219,8 +219,8 @@ nnoremap <C-G><C-p> :Git push <cr>
 " Disable automatic python code folding
 let g:pymode_folding = 0
 
-autocmd FileType python :NERDTree
-autocmd FileType python :TagbarOpen
+" For Pytest
+nnoremap <leader>R :Pytest class<cr>
 
 " Some interesting annotations about vim commands
 
