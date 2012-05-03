@@ -171,13 +171,14 @@ set guioptions-=T
 set guioptions-=m
 
 " Alt+{Down,Up} moves current line
-noremap <A-Down> :m+1<cr>
-noremap <A-Up> ddkP
+" http://vimcasts.org/episodes/bubbling-text/
+nmap <A-Down> ]e
+nmap <A-Up> [e
 
 " Move in visual mode (for block od lines)
-" http://vim.wikia.com/wiki/Moving_lines_up_or_down
-vnoremap <A-Up> :m-2<CR>gv=gv
-vnoremap <A-Down> :m'>+<CR>gv=gv
+" http://vimcasts.org/episodes/bubbling-text/
+vmap <A-Up> [egv
+vmap <A-Down> ]egv
 
 " Copy+Move current line
 noremap <C-A-Down> yyp
