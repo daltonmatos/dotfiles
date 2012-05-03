@@ -31,3 +31,6 @@
 [submodule "vim/bundle/pytest.vim"]
 	path = vim/bundle/pytest.vim
 	url = git://github.com/alfredodeza/pytest.vim
+[submodule "vim/bundle/unimpaired"]
+	path = vim/bundle/unimpaired
+	url = git://github.com/tpope/vim-unimpaired
