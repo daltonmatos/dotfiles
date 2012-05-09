@@ -117,8 +117,6 @@ set backupdir=~/.vim/.backups,.,/tmp
 nnoremap <C-F4> :close<cr>
 
 let mapleader="_"
-noremap <Leader>tb :CommandTBuffer<CR>
-noremap <Leader>t :CommandT<CR>
 
 " Opens .vimrc at any time, in a new tab
 nnoremap <Leader>v :tabedit $MYVIMRC<cr>
