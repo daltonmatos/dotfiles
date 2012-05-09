@@ -71,6 +71,9 @@ export TERM="xterm-256color"
 
 #For virtualenvwrapper
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-# You may need to change this
-source /usr/bin/virtualenvwrapper.sh
+
+[[ -f /usr/bin/virtualenvwrapper.sh ]] && source /usr/bin/virtualenvwrapper.sh
+
+# Debian-likes
+[[ -f /usr/local/bin/virtualenvwrapper.sh ]] && source /usr/local/bin/virtualenvwrapper.sh
 
