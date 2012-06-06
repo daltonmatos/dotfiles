@@ -1,0 +1,19 @@
+[core]
+  pager = 
+	excludesfile = /home/dalton/.global-gitignore
+[user]
+	name = Dalton Barreto
+	email = daltonmatos@gmail.com
+[color]
+	status = auto
+  branch = auto
+  diff = auto
+
+[alias]
+  st = status
+  co = checkout
+  br = branch
+  mg = merge
+  ahead = log --oneline origin/develop..HEAD
+  behind = log --oneline HEAD..origin/develop
+  l = log --oneline
