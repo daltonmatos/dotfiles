@@ -153,6 +153,7 @@ colorscheme solarized
 
 " New tab
 noremap <C-t> :tabnew<CR>
+noremap <leader>t :tab sball<CR>
 
 " Show line numbers
 set number
