@@ -42,3 +42,20 @@ compinit
 promptinit; prompt gentoo
 
 zstyle ':completion::complete:*' use-cache 1
+
+
+function git_prompt_behind_develop(){
+  if $(echo "$(git log HEAD..origin/develop 2> /dev/null)" | grep '^commit' &> /dev/null); then
+    echo " [-$(git log --oneline HEAD..origin/develop 2> /dev/null | wc -l)]"
+  fi
+}
+
+function git_prompt_ahead_develop(){
+  if $(echo "$(git log origin/develop..HEAD 2> /dev/null)" | grep '^commit' &> /dev/null); then
+    echo " [+$(git log --oneline origin/develop..HEAD 2> /dev/null | wc -l)]"
+  fi
+}
+
+RPROMPT+='%{$RED%}$(git_prompt_behind_develop)%{$GREEN%}$(git_prompt_ahead_develop)%{$RESET_COLOR%}'
+
+. /usr/bin/virtualenvwrapper.sh
