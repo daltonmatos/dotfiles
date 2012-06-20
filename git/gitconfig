@@ -17,3 +17,4 @@
   ahead = log --oneline origin/develop..HEAD
   behind = log --oneline HEAD..origin/develop
   l = log --oneline
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
