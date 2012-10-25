@@ -87,6 +87,7 @@ alias efiles='eq f'
 alias tl='tmux ls'
 alias ta='tmux attach -t'
 
+alias json='python -mjson.tool'
 
 [[ -a ~/.shell-extras ]] && . ~/.shell-extras
 
