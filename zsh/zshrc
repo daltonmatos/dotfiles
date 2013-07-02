@@ -29,7 +29,7 @@ ZSH_THEME="daltonmatos"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vitualenvwrapper git-flow github)
+plugins=(git vitualenvwrapper git-flow github python pip)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -39,7 +39,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/i686-pc-linux-gnu/gcc-bin
 
 autoload -U compinit promptinit
 compinit
-promptinit; prompt gentoo
+#promptinit; prompt gentoo
 
 zstyle ':completion::complete:*' use-cache 1
 
@@ -88,6 +88,11 @@ alias tl='tmux ls'
 alias ta='tmux attach -t'
 
 alias json='python -mjson.tool'
+
+alias randpwd='dd if=/dev/random bs=1 count=12 2>/dev/null | md5sum -'
+
+alias prettyxml='xmlindent -f -nbe < '
+
 
 [[ -a ~/.shell-extras ]] && . ~/.shell-extras
 
