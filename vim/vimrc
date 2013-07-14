@@ -289,3 +289,4 @@ nnoremap <leader>R :Pytest class<cr>
 " speeddate (ou algo assim)
 " 
 " http://denilsonsa.selfip.org/~denilson/vimrc
+autocmd BufRead,BufNewFile *.ino set filetype=cpp
