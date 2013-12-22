@@ -63,25 +63,31 @@ RPROMPT+='%{$RED%}$(git_prompt_behind_develop)%{$GREEN%}$(git_prompt_ahead_devel
 [[ -f /usr/local/bin/virtualenvwrapper.sh ]] && source /usr/local/bin/virtualenvwrapper.sh
 
 
-alias esync='sudo eix-sync '
-alias eworld='sudo emerge -auDNv world'
-alias esys='sudo emerge -auDNv system'
-alias einst='sudo emerge'
-alias efetch='sudo emerge -f'
-alias eumask='sudo autounmask'
-alias euinst='sudo emerge -C'
-alias revdep='sudo revdep-rebuild'
-alias flag='sudo flaggie'
-alias etcupdate='sudo etc-update'
-alias eq='equery '
+# Gentoo aliases
+#alias esync='sudo eix-sync '
+#alias eworld='sudo emerge -auDNv world'
+#alias esys='sudo emerge -auDNv system'
+#alias einst='sudo emerge'
+#alias efetch='sudo emerge -f'
+#alias eumask='sudo autounmask'
+#alias euinst='sudo emerge -C'
+#alias revdep='sudo revdep-rebuild'
+#alias flag='sudo flaggie'
+#alias etcupdate='sudo etc-update'
+#alias eq='equery '
+#alias enews='eselect news'
+#alias ebelong='eq b'
+#alias edepend='eq d'
+#alias efiles='eq f'
+
+# Arch Linux
+alias ainst='sudo pacman -S'
+alias asearch='sudo pacman -Ss'
+alias auinst='sudo pacman -R'
+
 alias py='ipython'
 alias dfh='df -hP | sed -e "s/Sist. Arq./Sist.Arq./" | column -t'
 alias gf='git flow'
-alias wscan='sudo iwlist eth1 scan'
-alias enews='eselect news'
-alias ebelong='eq b'
-alias edepend='eq d'
-alias efiles='eq f'
 
 # Tmux aliases
 alias tl='tmux ls'
