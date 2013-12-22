@@ -84,6 +84,7 @@ RPROMPT+='%{$RED%}$(git_prompt_behind_develop)%{$GREEN%}$(git_prompt_ahead_devel
 alias ainst='sudo pacman -S'
 alias asearch='pacman -Ss'
 alias auinst='sudo pacman -R'
+alias newvenv='mkvirtualenv -p /usr/bin/python2'
 
 alias py='ipython'
 alias dfh='df -hP | sed -e "s/Sist. Arq./Sist.Arq./" | column -t'
