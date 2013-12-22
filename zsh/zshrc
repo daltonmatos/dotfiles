@@ -82,7 +82,7 @@ RPROMPT+='%{$RED%}$(git_prompt_behind_develop)%{$GREEN%}$(git_prompt_ahead_devel
 
 # Arch Linux
 alias ainst='sudo pacman -S'
-alias asearch='sudo pacman -Ss'
+alias asearch='pacman -Ss'
 alias auinst='sudo pacman -R'
 
 alias py='ipython'
