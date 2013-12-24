@@ -85,6 +85,11 @@ alias ainst='sudo pacman -S'
 alias asearch='pacman -Ss'
 alias auinst='sudo pacman -R'
 alias newvenv='mkvirtualenv -p /usr/bin/python2'
+alias srv='sudo systemctl'
+
+alias _i='ainst'
+alias _u='auinst'
+alias _s='asearch'
 
 alias py='ipython'
 alias dfh='df -hP | sed -e "s/Sist. Arq./Sist.Arq./" | column -t'
