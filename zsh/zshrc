@@ -91,6 +91,7 @@ alias _i='ainst'
 alias _u='auinst'
 alias _s='asearch'
 alias _u='pacman -Syu'
+alias _info='pacman -Qe'
 
 alias py='ipython'
 alias dfh='df -hP | sed -e "s/Sist. Arq./Sist.Arq./" | column -t'
