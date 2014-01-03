@@ -81,7 +81,7 @@ RPROMPT+='%{$RED%}$(git_prompt_behind_develop)%{$GREEN%}$(git_prompt_ahead_devel
 #alias efiles='eq f'
 
 # Arch Linux
-alias ainst='sudo pacman -S'
+alias ainst='sudo pacman -S --needed'
 alias asearch='pacman -Ss'
 alias auinst='sudo pacman -R'
 alias newvenv='mkvirtualenv -p /usr/bin/python2'
