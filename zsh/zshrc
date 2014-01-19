@@ -90,7 +90,7 @@ alias srv='sudo systemctl'
 alias _i='ainst'
 alias _u='auinst'
 alias _s='asearch'
-alias _u='sudo pacman -Syu'
+alias _u='sudo pacman -Rs'
 alias _info='pacman -Qe'
 
 alias py='ipython'
