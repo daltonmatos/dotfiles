@@ -92,6 +92,7 @@ alias _u='auinst'
 alias _s='asearch'
 alias _u='sudo pacman -Rs'
 alias _info='pacman -Qe'
+alias _sync='pacman -Syu'
 
 alias py='ipython'
 alias dfh='df -hP | sed -e "s/Sist. Arq./Sist.Arq./" | column -t'
