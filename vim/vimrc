@@ -125,10 +125,6 @@ nnoremap <Leader>v :tabedit $MYVIMRC<cr>
 nnoremap <c-O> :confirm browse e<CR>
 inoremap <c-O> <esc>:confirm browse e<CR>
 
-" Toggle current word case
-inoremap <A-u> <esc>viw~i
-nnoremap <A-u> viw~
-
 set wildignore+=*.py~,build/*.*
 
 " For closetag plugin
