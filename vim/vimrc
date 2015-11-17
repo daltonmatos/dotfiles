@@ -218,6 +218,9 @@ let g:pymode_folding = 0
 " For Pytest
 nnoremap <leader>R :Pytest class<cr>
 
+let g:ctrlp_cmd = "CtrlPMixed"
+
+
 " Some interesting annotations about vim commands
 
 " Movendo janelas/splits ^W seguido de shift+ H ou J ou K ou L
