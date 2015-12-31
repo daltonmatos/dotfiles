@@ -103,8 +103,19 @@ set et
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
+Plugin 'bling/vim-airline'
 Plugin 'spf13/vim-colors'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/surround.vim'
+Plugin 'vim-scripts/tComment'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'matze/vim-move'
 
 call vundle#end()
 
@@ -122,8 +133,7 @@ nnoremap <C-F4> :close<cr>
 
 let mapleader="_"
 
-" Opens .vimrc at any time, in a new tab
-nnoremap <Leader>v :tabedit $MYVIMRC<cr>
+
 
 " Ctrl+O opens the file browse dialog
 nnoremap <c-O> :confirm browse e<CR>
@@ -142,6 +152,8 @@ noremap <Leader>l :TagbarToggle<CR>
 " NERDTree
 noremap <Leader>n :NERDTreeToggle<CR>
 
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
 
 " For solarized color scheme
 set background=dark
@@ -150,6 +162,13 @@ let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 colorscheme solarized
+
+""" Vim-AirLine
+"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+" let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_powerline_fonts = 1
 
 " New tab
 noremap <C-t> :tabnew<CR>
@@ -168,25 +187,6 @@ set t_Co=256
 " Retira a barra de ferramentas e o Menu
 set guioptions-=T
 set guioptions-=m
-
-" Alt+{Down,Up} moves current line
-" http://vimcasts.org/episodes/bubbling-text/
-nmap <A-Down> ]e
-nmap <A-Up> [e
-
-" Move in visual mode (for block od lines)
-" http://vimcasts.org/episodes/bubbling-text/
-vmap <A-Up> [egv
-vmap <A-Down> ]egv
-
-" Copy+Move current line
-noremap <C-A-Down> yyp
-noremap <C-A-Up> yyP
-
-" Mappings for visual mode (Still needs to select the whole lines...)
-vnoremap <C-A-Down> mzy`zp 
-vnoremap <C-A-Up> yP
-
 
 " Thanks to denilsonsa
 function! Salvar_setKeys()
@@ -222,10 +222,17 @@ let g:pymode_folding = 0
 " For Pytest
 nnoremap <leader>R :Pytest class<cr>
 
+""" CTRLP
+"
 let g:ctrlp_cmd = "CtrlPMixed"
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_regexp = 1
 let g:ctrlp_switch_buffer = 'Et'
+
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
 
 " Some interesting annotations about vim commands
 
@@ -295,3 +302,7 @@ let g:ctrlp_switch_buffer = 'Et'
 " 
 " http://denilsonsa.selfip.org/~denilson/vimrc
 autocmd BufRead,BufNewFile *.ino set filetype=cpp
+
+
+" Opens .vimrc at any time, in a new tab
+nnoremap <Leader>v :tabedit $MYVIMRC<cr>
