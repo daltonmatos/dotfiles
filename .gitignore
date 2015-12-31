@@ -1,3 +1,4 @@
 vim/.backups
 *~
 vim/bundle/
+*.swp
