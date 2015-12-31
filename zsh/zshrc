@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 EDITOR=vim
+export EDITOR
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -34,7 +35,7 @@ plugins=(git vitualenvwrapper git-flow github python pip)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/i686-pc-linux-gnu/gcc-bin/4.5.3:/usr/i686-pc-linux-gnu/x86_64-pc-linux-gnu/gcc-bin/4.5.3:/usr/games/bin:/home/daltonmatos/src/less.js/bin/
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/i686-pc-linux-gnu/gcc-bin/4.5.3:/usr/i686-pc-linux-gnu/x86_64-pc-linux-gnu/gcc-bin/4.5.3:/usr/games/bin:/home/daltonmatos/src/less.js/bin/
 
 
 autoload -U compinit promptinit
@@ -92,7 +93,7 @@ alias _u='auinst'
 alias _s='asearch'
 alias _u='sudo pacman -Rs'
 alias _info='pacman -Qe'
-alias _sync='pacman -Syu'
+alias _sync='sudo pacman -Syu'
 
 alias py='ipython'
 alias dfh='df -hP | sed -e "s/Sist. Arq./Sist.Arq./" | column -t'
@@ -108,6 +109,11 @@ alias randpwd='dd if=/dev/random bs=1 count=12 2>/dev/null | md5sum -'
 
 alias prettyxml='xmlindent -f -nbe < '
 
+alias avrasm2='wine ~/bin/AvrAssembler2/avrasm2.exe $*'
+alias avrasm32='wine ~/bin/AvrAssembler/avrasm32.exe $*'
+
 
 [[ -a ~/.shell-extras ]] && . ~/.shell-extras
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
