@@ -100,9 +100,13 @@ set ts=2
 set sw=2
 set et
 
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
 
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+Plugin 'spf13/vim-colors'
+Plugin 'altercation/vim-colors-solarized'
+
+call vundle#end()
 
 "General settings
 
@@ -219,7 +223,9 @@ let g:pymode_folding = 0
 nnoremap <leader>R :Pytest class<cr>
 
 let g:ctrlp_cmd = "CtrlPMixed"
-
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_regexp = 1
+let g:ctrlp_switch_buffer = 'Et'
 
 " Some interesting annotations about vim commands
 
