@@ -103,9 +103,9 @@ set et
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
+" Plugins
 Plugin 'bling/vim-airline'
 Plugin 'spf13/vim-colors'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
@@ -115,7 +115,19 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'matze/vim-move'
+Plugin 'matze/vim-move'
+Plugin 'ervandew/supertab'
+Plugin 'myusuf3/numbers.vim'
+
+" ColorSchemes
+Plugin 'fcevado/molokai_dark'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-scripts/phd'
+Plugin 'zanloy/vim-colors-sunburst'
+Plugin 'loogica/vim_themes'
+Plugin 'endel/vim-github-colorscheme'
+Plugin 'vim-scripts/bclear'
+Plugin 'baeuml/summerfruit256.vim'
 
 call vundle#end()
 
@@ -145,15 +157,16 @@ set wildignore+=*.py~,build/*.*
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
 
+" Supertab
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
 " Tagbar
 let g:tagbar_usearrows = 1
 noremap <Leader>l :TagbarToggle<CR>
 
 " NERDTree
 noremap <Leader>n :NERDTreeToggle<CR>
-
-" neocomplete
-let g:neocomplete#enable_at_startup = 1
 
 " For solarized color scheme
 set background=dark
