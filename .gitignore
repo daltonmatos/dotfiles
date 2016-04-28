@@ -2,3 +2,4 @@ vim/.backups
 *~
 vim/bundle/
 *.swp
+*zcompdump*
