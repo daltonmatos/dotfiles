@@ -11,7 +11,6 @@ antigen bundle sudo
 antigen bundle git
 antigen bundle heroku
 antigen bundle pip
-antigen bundle lein
 antigen bundle command-not-found #depends on extra/pkgfile
 antigen bundle git-prompt
 antigen bundle git-flow
