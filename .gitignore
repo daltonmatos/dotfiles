@@ -3,3 +3,4 @@ vim/.backups
 vim/bundle/
 *.swp
 *zcompdump*
+zsh/antigen/
