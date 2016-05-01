@@ -319,4 +319,4 @@ autocmd BufRead,BufNewFile *.ino set filetype=cpp
 
 " Opens .vimrc at any time, in a new tab
 nnoremap <Leader>v :tabedit $MYVIMRC<cr>
-set guifont=DejaVu\ Sans\ Mono\ 13
+set guifont=Inconsolata\ for\ Powerline\ 12
