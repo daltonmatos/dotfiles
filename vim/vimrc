@@ -118,6 +118,7 @@ Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'matze/vim-move'
 Plugin 'ervandew/supertab'
 Plugin 'myusuf3/numbers.vim'
+Plugin 'alvan/vim-closetag'
 
 " ColorSchemes
 Plugin 'fcevado/molokai_dark'
