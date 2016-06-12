@@ -129,6 +129,7 @@ Plugin 'loogica/vim_themes'
 Plugin 'endel/vim-github-colorscheme'
 Plugin 'vim-scripts/bclear'
 Plugin 'baeuml/summerfruit256.vim'
+Plugin 'mileszs/ack.vim'
 
 call vundle#end()
 
