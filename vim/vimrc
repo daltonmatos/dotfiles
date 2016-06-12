@@ -139,7 +139,7 @@ call vundle#end()
 set autoread
 
 " Move backups off of current dir
-set backupdir=~/.vim/.backups,.,/tmp
+set backupdir=/tmp,~/.vim/.backups,.
 
 "Ctrl+F4 closes current buffer
 
