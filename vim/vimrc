@@ -119,6 +119,7 @@ Plugin 'matze/vim-move'
 Plugin 'ervandew/supertab'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'alvan/vim-closetag'
+Plugin 'ekalinin/Dockerfile.vim'
 
 " ColorSchemes
 Plugin 'fcevado/molokai_dark'
@@ -317,6 +318,7 @@ let g:ctrlp_prompt_mappings = {
 " 
 " http://denilsonsa.selfip.org/~denilson/vimrc
 autocmd BufRead,BufNewFile *.ino set filetype=cpp
+autocmd BufRead,BufNewFile Dockerfile-* set syntax=dockerfile
 
 
 " Opens .vimrc at any time, in a new tab
