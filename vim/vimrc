@@ -120,6 +120,7 @@ Plugin 'ervandew/supertab'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'alvan/vim-closetag'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'jistr/vim-nerdtree-tabs'
 
 " ColorSchemes
 Plugin 'fcevado/molokai_dark'
@@ -311,8 +312,12 @@ let g:ctrlp_prompt_mappings = {
 " No meu vimrc o Ctrl-S salva, F12 faz toggle de wrap, shift+F12 faz toggle de
 " horizontal scrollbar.
 " 
-" Plugins legais:
+
 " NERDTree
+let g:nerdtree_tabs_open_on_gui_startup = 0
+
+" Plugins legais:
+
 " Gundo
 " speeddate (ou algo assim)
 " 
