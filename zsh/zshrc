@@ -80,5 +80,6 @@ alias avrasm32='wine ~/bin/AvrAssembler/avrasm32.exe $*'
 
 [[ -a ~/.shell-extras ]] && . ~/.shell-extras
 
+[[ -f /usr/share/nvm/init-nvm.sh ]] && source /usr/share/nvm/init-nvm.sh
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
