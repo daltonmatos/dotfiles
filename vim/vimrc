@@ -53,6 +53,10 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
+set ts=2
+set sw=2
+set et
+
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
@@ -96,9 +100,7 @@ if !exists(":DiffOrig")
 endif
 
 
-set ts=2
-set sw=2
-set et
+
 
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
