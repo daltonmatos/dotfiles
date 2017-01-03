@@ -134,6 +134,7 @@ Plugin 'endel/vim-github-colorscheme'
 Plugin 'vim-scripts/bclear'
 Plugin 'baeuml/summerfruit256.vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'zanglg/nova.vim'
 
 call vundle#end()
 
@@ -180,6 +181,7 @@ let g:solarized_termtrans=1
 let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
+set termguicolors
 colorscheme solarized
 
 """ Vim-AirLine
