@@ -182,7 +182,7 @@ let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 set termguicolors
-colorscheme nova
+colorscheme solarized
 
 """ Vim-AirLine
 "
