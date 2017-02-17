@@ -3,7 +3,8 @@
 	excludesfile = /home/dalton/.global-gitignore
 [user]
 	name = Dalton Barreto
-	email = daltonmatos@gmail.com
+  email = daltonmatos@gmail.com
+	signingKey = 3B147A3234E02C43!
 [color]
 	status = auto
   branch = auto
@@ -23,3 +24,4 @@
 	default = simple
 [commit]
 	verbose = true
+  gpgsign = true
