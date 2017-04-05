@@ -333,4 +333,7 @@ autocmd BufRead,BufNewFile Dockerfile-* set syntax=dockerfile
 
 " Opens .vimrc at any time, in a new tab
 nnoremap <Leader>v :tabedit $MYVIMRC<cr>
-set guifont=Inconsolata\ for\ Powerline\ 12
+"set guifont=Inconsolata\ for\ Powerline\ 12
+
+" http://input.fontbureau.com/
+set guifont=Input\ Regular\ 12
