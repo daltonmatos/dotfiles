@@ -124,6 +124,7 @@ Plugin 'alvan/vim-closetag'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'EinfachToll/DidYouMean'
+Plugin 'fatih/vim-go' " Run :GoInstallBinaries 
 
 " ColorSchemes
 Plugin 'fcevado/molokai_dark'
