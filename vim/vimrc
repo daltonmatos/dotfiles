@@ -162,7 +162,7 @@ set wildignore+=*.py~,build/*.*
 
 " For closetag plugin
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
-autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.xml"
 
 " Supertab
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
