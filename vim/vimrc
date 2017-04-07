@@ -138,6 +138,7 @@ Plugin 'vim-scripts/bclear'
 Plugin 'baeuml/summerfruit256.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'zanglg/nova.vim'
+Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 
@@ -185,7 +186,7 @@ let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 set termguicolors
-colorscheme solarized
+colorscheme base16-solarflare
 
 """ Vim-AirLine
 "
