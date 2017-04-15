@@ -155,8 +155,9 @@ set backupdir=/tmp,~/.vim/.backups,.
 
 nnoremap <C-F4> :close<cr>
 
-let mapleader="_"
+let mapleader="\<Space>"
 
+set wildignore+=*.py~,build/*.*
 
 
 " For signify plugin
@@ -166,7 +167,6 @@ let g:signify_realtime = 1
 nmap <leader>gj <plug>(signify-next-hunk)
 nmap <leader>gk <plug>(signify-prev-hunk)
 
-set wildignore+=*.py~,build/*.*
 
 " For closetag plugin
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
