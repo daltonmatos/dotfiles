@@ -127,6 +127,7 @@ Plugin 'EinfachToll/DidYouMean'
 Plugin 'fatih/vim-go' " Run :GoInstallBinaries 
 Plugin 'tpope/vim-dispatch'
 Plugin 'mhinz/vim-signify'
+Plugin 'nathanaelkane/vim-indent-guides' " <leader>ig to toggle visbility
 
 " ColorSchemes
 Plugin 'fcevado/molokai_dark'
