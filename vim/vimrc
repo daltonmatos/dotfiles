@@ -160,6 +160,8 @@ let mapleader="\<Space>"
 
 set wildignore+=*.py~,build/*.*
 
+" Navigate to previous tag o tagstack
+nmap <C-[> :pop<CR>
 
 " For signify plugin
 let g:signify_vcs_list = ['git']
