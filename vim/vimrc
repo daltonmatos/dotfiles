@@ -301,7 +301,7 @@ let g:ctrlp_prompt_mappings = {
 " Ctrl+V = visual (block)
 " pode ser combinado com I ou A para inserir algo em todas as linhas
 "
-" H, M, L: Mode o cursor para uma posição da tela atual. High, Medium, Low
+" H, M, L: Move o cursor para uma posição da tela atual. High, Medium, Low
 " ctrl+e (Up) e ctrl+y (Down) Scroll de uma linha por vez, sem mover o cursor
 " 
 "
