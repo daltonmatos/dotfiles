@@ -126,6 +126,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'EinfachToll/DidYouMean'
 Plugin 'fatih/vim-go' " Run :GoInstallBinaries 
 Plugin 'tpope/vim-dispatch'
+Plugin 'mhinz/vim-signify'
 
 " ColorSchemes
 Plugin 'fcevado/molokai_dark'
@@ -158,9 +159,12 @@ let mapleader="_"
 
 
 
-" Ctrl+O opens the file browse dialog
-nnoremap <c-O> :confirm browse e<CR>
-inoremap <c-O> <esc>:confirm browse e<CR>
+" For signify plugin
+let g:signify_vcs_list = ['git']
+let g:signify_realtime = 1
+
+nmap <leader>gj <plug>(signify-next-hunk)
+nmap <leader>gk <plug>(signify-prev-hunk)
 
 set wildignore+=*.py~,build/*.*
 
