@@ -181,7 +181,7 @@ let g:tagbar_usearrows = 1
 noremap <Leader>l :TagbarToggle<CR>
 
 " NERDTree
-noremap <Leader>n :NERDTreeToggle<CR>
+noremap <Leader>n :NERDTreeTabsToggle<CR>
 
 " For solarized color scheme
 set background=dark
