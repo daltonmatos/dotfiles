@@ -128,6 +128,7 @@ Plugin 'fatih/vim-go' " Run :GoInstallBinaries
 Plugin 'tpope/vim-dispatch'
 Plugin 'mhinz/vim-signify'
 Plugin 'nathanaelkane/vim-indent-guides' " <leader>ig to toggle visbility
+Plugin 'airblade/vim-rooter'
 
 " ColorSchemes
 Plugin 'fcevado/molokai_dark'
@@ -162,6 +163,11 @@ set wildignore+=*.py~,build/*.*
 
 " Navigate to previous tag o tagstack
 nmap <C-[> :pop<CR>
+
+" For airblade/vim-rooter
+let g:rooter_change_directory_for_non_project_files = 'current'
+let g:rooter_silent_chdir = 1
+let g:rooter_resolve_links = 1
 
 " For signify plugin
 let g:signify_vcs_list = ['git']
