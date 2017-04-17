@@ -243,7 +243,7 @@ au GUIEnter * call Salvar_setKeys()
 
 " Auto source .vimrc after editing .vimrc
 if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
+  autocmd bufwritepost vimrc source $MYVIMRC
 endif
 
 
