@@ -208,6 +208,7 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " Tagbar
 let g:tagbar_usearrows = 1
+let g:tagbar_autoclose = 1
 noremap <Leader>l :TagbarToggle<CR>
 
 " NERDTree
