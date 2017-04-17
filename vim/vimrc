@@ -129,6 +129,7 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'mhinz/vim-signify'
 Plugin 'nathanaelkane/vim-indent-guides' " <leader>ig to toggle visbility
 Plugin 'airblade/vim-rooter'
+Plugin 'artur-shaik/vim-javacomplete2'
 
 " ColorSchemes
 Plugin 'fcevado/molokai_dark'
@@ -163,6 +164,9 @@ set wildignore+=*.py~,build/*.*
 
 " Navigate to previous tag o tagstack
 nmap <C-[> :pop<CR>
+
+" For artur-shaik/javacomplete2
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " For airblade/vim-rooter
 let g:rooter_change_directory_for_non_project_files = 'current'
