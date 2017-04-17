@@ -129,7 +129,7 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'mhinz/vim-signify'
 Plugin 'nathanaelkane/vim-indent-guides' " <leader>ig to toggle visbility
 Plugin 'airblade/vim-rooter'
-Plugin 'artur-shaik/vim-javacomplete2'
+Plugin 'artur-shaik/vim-javacomplete2' " Run mvn complie inside .vim/bundle/vim-javacomplete2/libs/javavi
 
 " ColorSchemes
 Plugin 'fcevado/molokai_dark'
