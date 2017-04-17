@@ -160,6 +160,13 @@ nnoremap <C-F4> :close<cr>
 
 let mapleader="\<Space>"
 
+" Copy/Paste from/to clipboard
+vmap <Leader>y "+y
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+
 set wildignore+=*.py~,build/*.*
 
 " Navigate to previous tag o tagstack
