@@ -180,13 +180,13 @@ vmap <Leader>P "+P
 set wildignore+=*.py~,build/*.*
 
 " Navigate to previous tag o tagstack
-nmap <C-[> :pop<CR>
+nmap <leader>[ :pop<CR>
 
 " For artur-shaik/javacomplete2
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " For airblade/vim-rooter
-let g:rooter_change_directory_for_non_project_files = 'current'
+let g:rooter_change_directory_for_non_project_files = 'home'
 let g:rooter_silent_chdir = 1
 let g:rooter_resolve_links = 1
 
@@ -212,7 +212,7 @@ let g:tagbar_autoclose = 1
 noremap <Leader>l :TagbarToggle<CR>
 
 " NERDTree
-noremap <Leader>n :NERDTreeTabsToggle<CR>
+noremap <Leader>n :NERDTreeToggle<CR>
 
 " For solarized color scheme
 set background=dark
@@ -287,15 +287,18 @@ nnoremap <leader>R :Pytest class<cr>
 
 """ CTRLP
 "
-let g:ctrlp_cmd = "CtrlPMixed"
+let g:ctrlp_cmd = "CtrlP"
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_regexp = 1
 let g:ctrlp_switch_buffer = 'Et'
+let g:ctrlp_match_window = 'max:20'
 
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
+
+nnoremap <C-d> :CtrlPDir 
 
 " Some interesting annotations about vim commands
 
@@ -375,6 +378,8 @@ autocmd BufRead,BufNewFile Dockerfile-* set syntax=dockerfile
 " Opens .vimrc at any time, in a new tab
 nnoremap <Leader>v :tabedit $MYVIMRC<cr>
 nnoremap <Leader>s :tabedit ~/.ssh/config<cr>
+nnoremap <Leader>z :tabedit $ZDOTDIR/.zshrc<cr>
+
 "set guifont=Inconsolata\ for\ Powerline\ 12
 
 " http://input.fontbureau.com/
