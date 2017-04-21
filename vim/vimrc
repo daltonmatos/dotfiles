@@ -356,22 +356,13 @@ nnoremap <C-d> :CtrlPDir
 " NERDTree
 let g:nerdtree_tabs_open_on_gui_startup = 0
 
-" Plugins legais:
-
-" Gundo
-" speeddate (ou algo assim)
-" 
-" http://denilsonsa.selfip.org/~denilson/vimrc
 autocmd BufRead,BufNewFile *.ino set filetype=cpp
 autocmd BufRead,BufNewFile Dockerfile-* set syntax=dockerfile
 
 
-" Opens .vimrc at any time, in a new tab
 nnoremap <Leader>v :tabedit $MYVIMRC<cr>
 nnoremap <Leader>s :tabedit ~/.ssh/config<cr>
 nnoremap <Leader>z :tabedit $ZDOTDIR/.zshrc<cr>
-
-"set guifont=Inconsolata\ for\ Powerline\ 12
 
 " http://input.fontbureau.com/
 set guifont=Input\ Regular\ 12
