@@ -100,8 +100,6 @@ if !exists(":DiffOrig")
 endif
 
 
-
-
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
@@ -264,13 +262,6 @@ function! Salvar_setKeys()
 endfunc
 
 au GUIEnter * call Salvar_setKeys()
-
-
-" Auto source .vimrc after editing .vimrc
-if has("autocmd")
-  autocmd bufwritepost vimrc source $MYVIMRC
-endif
-
 
 " For fugitive.vim
 nnoremap <C-G><C-s> :Gstatus <cr>
