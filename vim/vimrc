@@ -305,7 +305,7 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
 
-nnoremap <C-d> :CtrlPDir 
+nnoremap <C-d> :CtrlPDir ~/
 
 " Some interesting annotations about vim commands
 
