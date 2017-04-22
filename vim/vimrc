@@ -104,6 +104,14 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 " Plugins
+" Dependencies for sirver/ultisnips
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'honza/vim-snippets'
+
+Plugin 'sirver/ultisnips'
+
+Plugin 'ervandew/supertab'
 Plugin 'bling/vim-airline'
 Plugin 'spf13/vim-colors'
 Plugin 'kien/ctrlp.vim'
@@ -112,11 +120,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/surround.vim'
 Plugin 'vim-scripts/tComment'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Shougo/neocomplete.vim'
+"Plugin 'Shougo/neocomplete.vim'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'matze/vim-move'
-Plugin 'ervandew/supertab'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'alvan/vim-closetag'
 Plugin 'ekalinin/Dockerfile.vim'
@@ -179,6 +186,11 @@ set wildignore+=*.py~,build/*.*
 
 " Navigate to previous tag o tagstack
 nmap <leader>[ :pop<CR>
+
+
+" For sirver/ultisnips
+let g:UltiSnipsExpandTrigger="<C-J>"
+
 
 " For artur-shaik/javacomplete2
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
