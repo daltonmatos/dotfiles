@@ -120,7 +120,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/surround.vim'
 Plugin 'vim-scripts/tComment'
 Plugin 'scrooloose/nerdtree'
-"Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/neocomplete.vim'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'matze/vim-move'
@@ -187,10 +187,14 @@ set wildignore+=*.py~,build/*.*
 " Navigate to previous tag o tagstack
 nmap <leader>[ :pop<CR>
 
+" For neocomplete
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 1
 
 " For sirver/ultisnips
 let g:UltiSnipsExpandTrigger="<C-J>"
-
 
 " For artur-shaik/javacomplete2
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
