@@ -136,6 +136,8 @@ Plugin 'nathanaelkane/vim-indent-guides' " <leader>ig to toggle visbility
 Plugin 'airblade/vim-rooter'
 Plugin 'artur-shaik/vim-javacomplete2' " Run mvn complie inside .vim/bundle/vim-javacomplete2/libs/javavi
 
+Plugin 'vim-scripts/indentpython.vim' 
+
 " ColorSchemes
 Plugin 'fcevado/molokai_dark'
 Plugin 'altercation/vim-colors-solarized'
