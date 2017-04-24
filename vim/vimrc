@@ -100,6 +100,24 @@ if !exists(":DiffOrig")
 endif
 
 
+" Basic Docs about installed plugins
+"
+" vim-scripts/Merginal
+" Inside branch list window
+" * cc Checkout selected branch
+" * A Create a new branch based on currently checked out branch
+" * M merge branch under cursor with current checked out branch
+" * rn Prompt to renamea branch under cursor
+"
+" tpope/vim-fugitive
+" Inside fugitive window
+" cc Commit current files
+" ca Commit ammend (can edit commit message)
+" cA Commit ammend with current commit message
+" dp Display unified diff of file
+"
+"
+
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
