@@ -198,7 +198,7 @@ inoremap <C-F> <ESC>:Ack <cword><CR>
 " Selects Ack for search (:Ack)
 " Types default register's content back (<C-R>")
 " hits enter <CR>
-vnoremap <leader>a y:Ack <C-R>"<CR> 
+vnoremap <leader>a y:Ack <C-R>"<CR>
 
 " Copy/Paste from/to clipboard
 vmap <Leader>y "+y
@@ -335,13 +335,13 @@ nnoremap <C-d> :CtrlPDir ~/
 " Some interesting annotations about vim commands
 
 " Movendo janelas/splits ^W seguido de shift+ H ou J ou K ou L
-" 
+"
 " i = insere antes do cursor
 " a = insere após o cursor
 " I = insere no início da linha (respeitando indentação)
 " gI = insere no início da linha
 " A = insere no final da linha
-" 
+"
 " cc = change line
 " dd = delete line
 " cw = change word
@@ -349,50 +349,50 @@ nnoremap <C-d> :CtrlPDir ~/
 " C = change until the end of the line
 " D = delete until the end of the line
 " Y = DOESN'T copy until EOL. :( (mas eu remapeei no meu vimrc)
-" 
+"
 " ; = refaz o último f, F, t, T
 " , = refaz o último f, F, t, T na direção contrária
-" 
+"
 " di" = isso nao precisa do surround
 " ci" = isso nao precisa do surround
-" 
+"
 " gugu = lowercase line
 " guu  = lowercase line
 " gUU  = uppercase line
 " gUgU = uppercase line
 " gu ou gU seguido de movimento = similar ao d, y, c, ...
 " ~ = toggle case of a character
-" 
+"
 " Ctrl+A = incrementa
 " Ctrl+X = decrementa
-" 
+"
 " visual...
 " Ctrl+V = visual (block)
 " pode ser combinado com I ou A para inserir algo em todas as linhas
 "
 " H, M, L: Move o cursor para uma posição da tela atual. High, Medium, Low
 " ctrl+e (Up) e ctrl+y (Down) Scroll de uma linha por vez, sem mover o cursor
-" 
+"
 "
 " Macros:
 " qa = inicia a gravação no registrador a (poderia ser qualquer letra)
 " q = termina a gravação
 " @a = executa a macro gravada em a
 " @@ = re-executa a última macro
-" 
+"
 " Copy-and-paste from different registers:
 " "a = Usa o registrador a (veja :help registers para lista de registradores)
 " "+ = buffer de ctrl+c e ctrl+v
 " "* = buffer de X11 primary selection
 " "/ = buffer de busca
-" 
+"
 " No modo de inserção (ou na linha de :comando):
 " ^R seguido de um registrador = insere o conteúdo daquele registrador
-" 
-" 
+"
+"
 " No meu vimrc o Ctrl-S salva, F12 faz toggle de wrap, shift+F12 faz toggle de
 " horizontal scrollbar.
-" 
+"
 
 " NERDTree
 let g:nerdtree_tabs_open_on_gui_startup = 0
