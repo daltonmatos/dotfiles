@@ -129,14 +129,19 @@ Plugin 'alvan/vim-closetag'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'EinfachToll/DidYouMean'
-Plugin 'fatih/vim-go' " Run :GoInstallBinaries 
+Plugin 'fatih/vim-go' " Run :GoInstallBinaries
 Plugin 'tpope/vim-dispatch'
 Plugin 'mhinz/vim-signify'
 Plugin 'nathanaelkane/vim-indent-guides' " <leader>ig to toggle visbility
 Plugin 'airblade/vim-rooter'
 Plugin 'artur-shaik/vim-javacomplete2' " Run mvn complie inside .vim/bundle/vim-javacomplete2/libs/javavi
+Plugin 'vim-scripts/Merginal'
+Plugin 'elzr/vim-json' " checking for json files, highlighting errors
+Plugin 'vim-scripts/Syntastic'
+Plugin 'alfredodeza/pytest.vim'
 
-Plugin 'vim-scripts/indentpython.vim' 
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'ntpeters/vim-better-whitespace'
 
 " ColorSchemes
 Plugin 'fcevado/molokai_dark'
