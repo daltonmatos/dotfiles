@@ -28,6 +28,10 @@ set autoindent
 set autoread
 
 set swapfile
+set background=dark
+if has('termguicolors')
+  set termguicolors
+endif
 
 " http://input.fontbureau.com/
 set guifont=Input\ Regular\ 12
