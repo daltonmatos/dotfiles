@@ -138,6 +138,9 @@ inoremap <C-F> <ESC>:Ack <cword><CR>
 " hits enter <CR>
 vnoremap <leader>a y:Ack <C-R>"<CR>
 
+nnoremap <leader>la :Ack <cword> %<CR>
+vnoremap <leader>la y:Ack <C-R>" %<CR>
+
 " Copy/Paste from/to clipboard
 vmap <Leader>y "+y
 nmap <Leader>p "+p
