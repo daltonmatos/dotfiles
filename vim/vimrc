@@ -1,9 +1,16 @@
 set nocompatible
+let mapleader="\<Space>"
+
+set guioptions-=T
+set guioptions-=m
+
 set backspace=indent,eol,start
+set wildignore+=*.py~,build/*.*
 
 set backup		" keep a backup file
 set history=128		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
+set number
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 syntax on
@@ -14,6 +21,10 @@ set et
 
 filetype plugin indent on
 set autoindent
+set autoread
+
+set backupdir=/tmp,~/.vim/.backups,.
+set swapfile
 
 " Basic Docs about installed plugins
 "
@@ -82,19 +93,11 @@ Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 
-"General settings
-
-" Auto load when file is changed
-set autoread
-
-" Move backups off of current dir
-set backupdir=/tmp,~/.vim/.backups,.
+colorscheme base16-solarflare
 
 "Ctrl+F4 closes current buffer
-
 nnoremap <C-F4> :close<cr>
 
-let mapleader="\<Space>"
 
 " Mapping for search using :Ack
 nnoremap <leader>a :Ack <cword><CR>
@@ -113,7 +116,6 @@ nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
 
-set wildignore+=*.py~,build/*.*
 
 " Navigate to previous tag o tagstack
 nmap <leader>[ :pop<CR>
@@ -179,15 +181,8 @@ noremap <Leader>l :TagbarToggle<CR>
 
 " NERDTree
 noremap <Leader>n :NERDTreeToggle<CR>
+let g:nerdtree_tabs_open_on_gui_startup = 0
 
-" For solarized color scheme
-set background=dark
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-set termguicolors
-colorscheme base16-solarflare
 
 """ Vim-AirLine
 "
@@ -203,19 +198,6 @@ let g:airline#extensions#tabline#show_close_button = 0
 noremap <C-t> :tabnew<CR>
 noremap <leader>t :tab sball<CR>
 
-" Show line numbers
-set number
-
-" For colors in terminal
-set t_Co=256
-
-" Disable pylint on every save
-" let g:pymode_lint = 0
-
-
-" Retira a barra de ferramentas e o Menu
-set guioptions-=T
-set guioptions-=m
 
 " Thanks to denilsonsa
 function! Salvar_setKeys()
@@ -239,12 +221,6 @@ nnoremap <leader>gp :Git push <cr>
 
 " For Merginal
 nnoremap <leader>gb :MerginalToggle<cr>
-
-" Disable automatic python code folding
-let g:pymode_folding = 0
-
-" For Pytest
-nnoremap <leader>R :Pytest class<cr>
 
 """ CTRLP
 "
@@ -325,8 +301,6 @@ nnoremap <C-d> :CtrlPDir ~/
 " horizontal scrollbar.
 "
 
-" NERDTree
-let g:nerdtree_tabs_open_on_gui_startup = 0
 
 autocmd BufRead,BufNewFile *.ino set filetype=cpp
 autocmd BufRead,BufNewFile Dockerfile-* set syntax=dockerfile
