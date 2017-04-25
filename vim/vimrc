@@ -96,7 +96,7 @@ endif " has("autocmd")
 " Only define it when not defined already.
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+    \ | wincmd p | diffthis
 endif
 
 
@@ -313,14 +313,14 @@ set guioptions-=m
 
 " Thanks to denilsonsa
 function! Salvar_setKeys()
-	"Use Ctrl+S to save
-	nnoremap <silent> <C-S>      :update<CR>
-	vnoremap <silent> <C-S> <C-C>:update<CR>
-	inoremap <silent> <C-S> <C-O>:update<CR>
+  "Use Ctrl+S to save
+  nnoremap <silent> <C-S>      :update<CR>
+  vnoremap <silent> <C-S> <C-C>:update<CR>
+  inoremap <silent> <C-S> <C-O>:update<CR>
 
-	nnoremap <silent> <C-S-S>      :wall<CR>
-	vnoremap <silent> <C-S-S> <C-C>:wall<CR>
-	inoremap <silent> <C-S-S> <C-O>:wall<CR>
+  nnoremap <silent> <C-S-S>      :wall<CR>
+  vnoremap <silent> <C-S-S> <C-C>:wall<CR>
+  inoremap <silent> <C-S-S> <C-O>:wall<CR>
 endfunc
 
 au GUIEnter * call Salvar_setKeys()
