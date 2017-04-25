@@ -54,6 +54,21 @@ au GUIEnter * call Salvar_setKeys()
 " Complete reference about what do you get with this vimrc {{{
 " Basic Docs about installed plugins
 "
+"
+"
+" Finding things
+"
+" <leader>a Searches for the word under cursor wit Ack (All files under
+" current directory)
+" <leader>la Does the same but only on current file
+" Both work for currently selected string
+"
+" CTRL-F on insert mode uses Ack to find word under cursos (all files)
+"
+"
+"
+" How to use some plugins
+"
 " vim-scripts/Merginal
 " Inside branch list window
 " * cc Checkout selected branch
