@@ -326,11 +326,13 @@ endfunc
 au GUIEnter * call Salvar_setKeys()
 
 " For fugitive.vim
-nnoremap <C-G><C-s> :Gstatus <cr>
-nnoremap <C-G><C-c> :Gcommit <cr>
-nnoremap <C-G><C-d> :Gvdiff <cr>
-nnoremap <C-G><C-p> :Git push <cr>
+nnoremap <leader>gs :Gstatus <cr>
+nnoremap <leader>gc :Gcommit <cr>
+nnoremap <leader>gd :Gvdiff <cr>
+nnoremap <leader>gp :Git push <cr>
 
+" For Merginal
+nnoremap <leader>gb :MerginalToggle<cr>
 
 " Disable automatic python code folding
 let g:pymode_folding = 0
