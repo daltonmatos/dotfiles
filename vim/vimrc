@@ -15,6 +15,7 @@ set backup		" keep a backup file
 set history=128		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set number
+set laststatus=2 "every window will show the statusline
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 syntax on
