@@ -78,15 +78,6 @@ Plugin 'vim-scripts/indentpython.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 
 " ColorSchemes
-Plugin 'fcevado/molokai_dark'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'vim-scripts/phd'
-Plugin 'zanloy/vim-colors-sunburst'
-Plugin 'loogica/vim_themes'
-Plugin 'endel/vim-github-colorscheme'
-Plugin 'vim-scripts/bclear'
-Plugin 'baeuml/summerfruit256.vim'
-Plugin 'zanglg/nova.vim'
 Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
