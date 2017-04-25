@@ -99,7 +99,10 @@ Plugin 'honza/vim-snippets'
 Plugin 'sirver/ultisnips'
 
 Plugin 'ervandew/supertab'
+
 Plugin 'bling/vim-airline'
+Plugin 'bling/vim-bufferline'
+
 Plugin 'spf13/vim-colors'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
