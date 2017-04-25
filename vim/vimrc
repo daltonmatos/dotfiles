@@ -1,9 +1,11 @@
+" vim: foldmethod=marker
+" General Settings {{{
 set nocompatible
 let mapleader="\<Space>"
 set rtp+=~/.vim/bundle/Vundle.vim/
 set wildignore+=*.py~,build/*.*
 set backupdir=/tmp,~/.vim/.backups,.
-
+set t_Co=256
 set guioptions-=T
 set guioptions-=m
 
@@ -29,8 +31,9 @@ set swapfile
 
 " http://input.fontbureau.com/
 set guifont=Input\ Regular\ 12
+" }}} General Settings "
 
-" Thanks to denilsonsa
+" Thanks to @denilsonsa (https://github.com/denilsonsa)
 function! Salvar_setKeys()
   "Use Ctrl+S to save
   nnoremap <silent> <C-S>      :update<CR>
@@ -44,6 +47,7 @@ endfunc
 
 au GUIEnter * call Salvar_setKeys()
 
+" Complete reference about what do you get with this vimrc {{{
 " Basic Docs about installed plugins
 "
 " vim-scripts/Merginal
@@ -60,11 +64,13 @@ au GUIEnter * call Salvar_setKeys()
 " cA Commit ammend with current commit message
 " dp Display unified diff of file
 "
-"
+" }}} Complete reference about what do you get with this vimrc "
+
+
+" Plugin installation {{{
 
 call vundle#begin()
 
-" Plugins
 " Dependencies for sirver/ultisnips
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -103,12 +109,14 @@ Plugin 'alfredodeza/pytest.vim'
 Plugin 'mileszs/ack.vim'
 
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'ntpeters/vim-better-whitespace'
 
+Plugin 'ntpeters/vim-better-whitespace'
 " ColorSchemes
 Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
+" }}} Plugin installation
+
 
 colorscheme base16-solarflare
 
