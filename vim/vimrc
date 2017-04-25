@@ -212,6 +212,27 @@ set wildignore+=*.py~,build/*.*
 " Navigate to previous tag o tagstack
 nmap <leader>[ :pop<CR>
 
+
+" For alfredodeza/pytest.vim
+nnoremap <leader>tm :Pytest method<CR>
+nnoremap <leader>tm :Pytest method<CR>
+nnoremap <leader>tc :Pytest class<CR>
+nnoremap <leader>tf :Pytest file<CR>
+nnoremap <leader>tp :Pytest project<CR>
+
+
+" For Syntastic
+" Recomended settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_python_checkers = ['python']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " For neocomplete
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
