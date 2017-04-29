@@ -151,6 +151,10 @@ call vundle#end()
 
 colorscheme base16-solarflare
 
+" For xolox/vim-notes
+let g:notes_directories = ['~/.vimnotes/']
+
+
 "Ctrl+F4 closes current buffer
 nnoremap <C-F4> :close<cr>
 
