@@ -112,7 +112,7 @@ Plugin 'vim-scripts/tComment'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'matze/vim-move'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'alvan/vim-closetag'
