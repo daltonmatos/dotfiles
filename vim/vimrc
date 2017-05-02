@@ -153,7 +153,9 @@ colorscheme base16-solarflare
 
 " For xolox/vim-notes
 let g:notes_directories = ['~/.vimnotes/']
-
+nnoremap <leader>nl :RecentNotes<CR>
+nnoremap <leader>ne :tabedit note:
+nnoremap <leader>nn :Note<CR>
 
 "Ctrl+F4 closes current buffer
 nnoremap <C-F4> :close<cr>
