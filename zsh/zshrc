@@ -5,6 +5,7 @@ antigen use oh-my-zsh
 
 # Load the theme.
 antigen theme candy
+#antigen theme bhilburn/powerlevel9k powerlevel9k
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle sudo
