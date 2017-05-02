@@ -315,8 +315,11 @@ nnoremap <C-d> :CtrlPDir ~/
 " ^R seguido de um registrador = insere o conteúdo daquele registrador
 "
 
-autocmd BufRead,BufNewFile *.ino set filetype=cpp
-autocmd BufRead,BufNewFile Dockerfile-* set syntax=dockerfile
+augroup Filetypes
+  autocmd!
+  autocmd BufRead,BufNewFile *.ino set filetype=cpp
+  autocmd BufRead,BufNewFile Dockerfile-* set syntax=dockerfile
+augroup END
 
 nnoremap <Leader>v :tabedit $MYVIMRC<cr>
 nnoremap <Leader>s :tabedit ~/.ssh/config<cr>
