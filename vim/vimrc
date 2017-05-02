@@ -325,3 +325,12 @@ nnoremap <Leader>v :tabedit $MYVIMRC<cr>
 nnoremap <Leader>s :tabedit ~/.ssh/config<cr>
 nnoremap <Leader>z :tabedit $ZDOTDIR/.zshrc<cr>
 
+function SourceFileIfExist(filename)
+  let l:extra_file = fnamemodify(expand($MYVIMRC), ':p:h') . '/' . a:filename
+  if filereadable(l:extra_file)
+    execute ':so ' . l:extra_file
+  endif
+endfunc
+
+call SourceFileIfExist('extra.vim')
+

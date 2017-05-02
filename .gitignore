@@ -4,3 +4,5 @@ vim/bundle/
 *.swp
 *zcompdump*
 zsh/antigen/
+#Ignore extra.vim os it it possible to add more configs without the need to commit
+vim/extra.vim
