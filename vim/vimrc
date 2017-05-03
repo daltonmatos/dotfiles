@@ -280,6 +280,7 @@ nnoremap <leader>gs :Gstatus <cr>
 nnoremap <leader>gc :Gcommit <cr>
 nnoremap <leader>gd :Gvdiff <cr>
 nnoremap <leader>gp :Git push <cr>
+nnoremap <leader>gpr :Git pull --rebase <cr>
 
 " For Merginal
 nnoremap <leader>gb :MerginalToggle<cr>
