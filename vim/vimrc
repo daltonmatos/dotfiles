@@ -3,7 +3,7 @@
 set nocompatible
 let mapleader="\<Space>"
 set rtp+=~/.vim/bundle/Vundle.vim/
-set wildignore+=*.py~,build/*.*
+set wildignore+=*.py~,build/*.*,*.class
 set backupdir=/tmp,~/.vim/.backups,.
 set t_Co=256
 set guioptions-=T
