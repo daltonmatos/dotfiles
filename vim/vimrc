@@ -51,7 +51,10 @@ function! Salvar_setKeys()
   inoremap <silent> <C-S-S> <C-O>:wall<CR>
 endfunc
 
-au GUIEnter * call Salvar_setKeys()
+augroup Salvar
+  autocmd!
+  autocmd GUIEnter * call Salvar_setKeys()
+augroup END
 
 " Complete reference about what do you get with this vimrc {{{
 " Basic Docs about installed plugins
