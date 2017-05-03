@@ -18,6 +18,7 @@ set number
 set laststatus=2 "every window will show the statusline
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
+set hlsearch
 syntax on
 
 set ts=2
