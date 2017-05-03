@@ -339,3 +339,15 @@ endfunc
 
 call SourceFileIfExist('extra.vim')
 
+function! StripWhitespaceOnSave()
+  " If we have ntpeters/vim-better-whitespace lodaed, strip whitespaces when
+  " saving
+  if exists(':StripWhitespace') == 2 "Full match of command name
+    augroup Whitespace
+      autocmd!
+      autocmd BufWrite * StripWhitespace
+    augroup END
+  endif
+endfunction
+
+autocmd VimEnter * call StripWhitespaceOnSave()
