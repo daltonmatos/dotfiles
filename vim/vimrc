@@ -149,6 +149,10 @@ augroup Salvar
   autocmd GUIEnter * call Salvar_setKeys()
 augroup END
 
+" To easily close the location window, scrificing the q register
+" Ideally this mapping should exist only when there's a location list open
+nnoremap <silent> q :lclose<CR>
+
 colorscheme base16-solarflare
 
 " For xolox/vim-notes
