@@ -1,5 +1,5 @@
-" vim: foldmethod=marker
-" General Settings {{{
+" vim: foldmethod=marker foldlevel=2
+" General Settings {{{3
 set nocompatible
 let mapleader="\<Space>"
 set rtp+=~/.vim/bundle/Vundle.vim/
@@ -39,24 +39,7 @@ endif
 set guifont=Input\ Regular\ 12
 " }}} General Settings "
 
-" Thanks to @denilsonsa (https://github.com/denilsonsa)
-function! Salvar_setKeys()
-  "Use Ctrl+S to save
-  nnoremap <silent> <C-S>      :update<CR>
-  vnoremap <silent> <C-S> <C-C>:update<CR>
-  inoremap <silent> <C-S> <C-O>:update<CR>
-
-  nnoremap <silent> <C-S-S>      :wall<CR>
-  vnoremap <silent> <C-S-S> <C-C>:wall<CR>
-  inoremap <silent> <C-S-S> <C-O>:wall<CR>
-endfunc
-
-augroup Salvar
-  autocmd!
-  autocmd GUIEnter * call Salvar_setKeys()
-augroup END
-
-" Complete reference about what do you get with this vimrc {{{
+" Complete reference about what do you get with this vimrc {{{3
 " Basic Docs about installed plugins
 "
 "
@@ -92,8 +75,7 @@ augroup END
 "
 " }}} Complete reference about what do you get with this vimrc "
 
-
-" Plugin installation {{{
+" Plugin installation {{{2
 
 call vundle#begin()
 
@@ -152,6 +134,22 @@ Plugin 'chriskempson/base16-vim'
 call vundle#end()
 " }}} Plugin installation
 
+" Thanks to @denilsonsa (https://github.com/denilsonsa)
+function! Salvar_setKeys()
+  "Use Ctrl+S to save
+  nnoremap <silent> <C-S>      :update<CR>
+  vnoremap <silent> <C-S> <C-C>:update<CR>
+  inoremap <silent> <C-S> <C-O>:update<CR>
+
+  nnoremap <silent> <C-S-S>      :wall<CR>
+  vnoremap <silent> <C-S-S> <C-C>:wall<CR>
+  inoremap <silent> <C-S-S> <C-O>:wall<CR>
+endfunc
+
+augroup Salvar
+  autocmd!
+  autocmd GUIEnter * call Salvar_setKeys()
+augroup END
 
 colorscheme base16-solarflare
 
