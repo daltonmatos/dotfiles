@@ -103,7 +103,6 @@ Plugin 'vim-scripts/tComment'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-"Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'matze/vim-move'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'alvan/vim-closetag'
@@ -124,10 +123,9 @@ Plugin 'mileszs/ack.vim'
 Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'sandeepcr529/Buffet.vim'
 Plugin 'xolox/vim-notes'
-
 Plugin 'vim-scripts/indentpython.vim'
-
 Plugin 'ntpeters/vim-better-whitespace'
+
 " ColorSchemes
 Plugin 'chriskempson/base16-vim'
 
