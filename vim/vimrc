@@ -351,3 +351,6 @@ function! StripWhitespaceOnSave()
 endfunction
 
 autocmd VimEnter * call StripWhitespaceOnSave()
+" Close the QuickFix/Loc Windows hitting 'q'
+autocmd! FileType qf nnoremap <buffer> q :close<CR>
+
