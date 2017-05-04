@@ -211,6 +211,19 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+
+nnoremap <leader>en :lnext<CR>
+nnoremap <leader>ep :lprev<CR>
+nnoremap <leader>el :lopen<CR>
+"
+" Close the QuickFix/Loc Windows hitting 'q'
+"autocmd! FileType qf nnoremap <buffer> q :close<CR>
+
+augroup QuickFix
+  autocmd!
+  autocmd BufWinEnter quickfix nnoremap <buffer> q :lclose<CR>
+augroup END
 
 " For neocomplete
 let g:acp_enableAtStartup = 0
@@ -351,6 +364,5 @@ function! StripWhitespaceOnSave()
 endfunction
 
 autocmd VimEnter * call StripWhitespaceOnSave()
-" Close the QuickFix/Loc Windows hitting 'q'
-autocmd! FileType qf nnoremap <buffer> q :close<CR>
+
 
