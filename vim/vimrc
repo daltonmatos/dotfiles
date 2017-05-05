@@ -152,6 +152,7 @@ augroup END
 " To easily close the location window, scrificing the q register
 " Ideally this mapping should exist only when there's a location list open
 nnoremap <silent> q :lclose<CR>
+nnoremap <silent> <leader>w :setlocal wrap!<CR>
 
 colorscheme base16-solarflare
 
