@@ -361,6 +361,7 @@ function! StripWhitespaceOnSave()
     augroup Whitespace
       autocmd!
       autocmd BufWrite * StripWhitespace
+      autocmd FileType buffet :ToggleWhitespace
     augroup END
   endif
 endfunction
