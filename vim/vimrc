@@ -153,6 +153,8 @@ augroup END
 " Ideally this mapping should exist only when there's a location list open
 nnoremap <silent> q :lclose<CR>
 nnoremap <silent> <leader>w :setlocal wrap!<CR>
+" set CTRL-G to always show full path of current file when
+nnoremap <silent> <C-G>  1<C-G>
 
 colorscheme base16-solarflare
 
