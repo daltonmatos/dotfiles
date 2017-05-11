@@ -79,6 +79,9 @@ set guifont=Input\ Regular\ 12
 
 call vundle#begin()
 
+" Dependency for idanarye/vim-vebugger
+Plugin 'Shougo/vimproc.vim', {'do' : 'make'}
+
 " Dependencies for sirver/ultisnips
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -125,6 +128,7 @@ Plugin 'sandeepcr529/Buffet.vim'
 Plugin 'xolox/vim-notes'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'idanarye/vim-vebugger'
 
 " ColorSchemes
 Plugin 'chriskempson/base16-vim'
