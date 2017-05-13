@@ -92,8 +92,6 @@ Plugin 'xolox/vim-misc'
 
 Plugin 'sirver/ultisnips'
 
-Plugin 'ervandew/supertab'
-
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 
@@ -359,6 +357,7 @@ function! SourceFileIfExist(filename)
 endfunc
 
 call SourceFileIfExist('extra.vim')
+call SourceFileIfExist('java.vim')
 
 function! StripWhitespaceOnSave()
   " If we have ntpeters/vim-better-whitespace lodaed, strip whitespaces when
