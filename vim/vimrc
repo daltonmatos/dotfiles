@@ -250,6 +250,8 @@ let g:rooter_resolve_links = 1
 " For signify plugin
 let g:signify_vcs_list = ['git']
 let g:signify_realtime = 1
+let g:signify_cursorhold_normal = 0
+let g:signify_cursorhold_insert = 0
 
 nmap <leader>gj <plug>(signify-next-hunk)
 nmap <leader>gk <plug>(signify-prev-hunk)
