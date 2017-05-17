@@ -18,31 +18,31 @@ function! SetJavaMappings()
   nnoremap <silent> <buffer> <leader>dr :call DebugJavaFile()<CR>
 endfunction
 
+let s:debug_mappings = [
+  \ {'key': 'n', 'func': ':VBGstepOver'},
+  \ {'key': 's', 'func': ':VBGstepIn'},
+  \ {'key': 'c', 'func': ':VBGcontinue'},
+  \ {'key': 'S', 'func': ':VBGstepOut'},
+  \ {'key': 'b', 'func': ':VBGtoggleBreakpointThisLine'},
+  \ {'key': 'B', 'func': ':VBGclearBreakpoints'},
+  \ {'key': 'k', 'func': ':call KillJavaDebugger()'},
+  \ ]
+
 function! InjectDebugMappings()
-  nnoremap <silent> <buffer> n :VBGstepOver<CR>
-  nnoremap <silent> <buffer> s :VBGstepIn<CR>
-  nnoremap <silent> <buffer> c :VBGcontinue<CR>
-  nnoremap <silent> <buffer> S :VBGstepOut<CR>
-  nnoremap <silent> <buffer> b :VBGtoggleBreakpointThisLine<CR>
-  nnoremap <silent> <buffer> B :VBGclearBreakpoints<CR>
-  nnoremap <silent> <buffer> k :call KillJavaDebugger()<CR>
-  "  nnoremap <silent> <buffer>
+  for map in s:debug_mappings
+    exe 'nnoremap <silent> <buffer> ' . map['key'] . ' ' . map['func'] . '<CR>'
+  endfor
+endfunction
+
+function! RemoveDebugMappings()
+  for map in s:debug_mappings
+    exe 'nunmap <buffer> ' . map['key']
+  endfor
 endfunction
 
 function! KillJavaDebugger()
   VBGkill
   call RemoveDebugMappings()
-endfunction
-
-function! RemoveDebugMappings()
-  nunmap <buffer> n
-  nunmap <buffer> s
-  nunmap <buffer> c
-  nunmap <buffer> S
-  nunmap <buffer> k
-  nunmap <buffer> b
-  nunmap <buffer> B
-  "  nnoremap <silent> <buffer>
 endfunction
 
 augroup JavaMappings
