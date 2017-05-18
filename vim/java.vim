@@ -2,12 +2,24 @@
 function! DebugJavaFile()
   let l:ch = &cmdheight
   set cmdheight=3
-  let l:debugged_class = vebugger#util#getClassFromFilename(expand('%'))
+
+  let l:current_file = expand('%')
+  let l:current_path = fnamemodify(l:current_file, ':p:h')
+  let l:debugged_class = vebugger#util#getClassFromFilename(l:current_file)
+
+  let l:srcpath = l:current_path
+  if isdirectory('src/main/java')
+    let l:srcpath = 'src/main/java'
+  endif
 
   call RunMvnCompile()
+
   echo 'Launching debugger for class ' . l:debugged_class
   let &cmdheight = l:ch
-  return vebugger#jdb#start(l:debugged_class, {'srcpath': 'src/main/java'})
+  return vebugger#jdb#start(l:debugged_class, {
+        \ 'srcpath': l:srcpath,
+        \ 'classpath': l:current_path}
+  \ )
 endfunction
 
 function! InjectExtraClassPath()
