@@ -129,6 +129,7 @@ Plugin 'xolox/vim-notes'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'idanarye/vim-vebugger'
+Plugin 'gregsexton/gitv'
 
 " ColorSchemes
 Plugin 'chriskempson/base16-vim'
@@ -298,12 +299,19 @@ noremap <leader>t :tab sball<CR>
 
 
 " For fugitive.vim
-nnoremap <leader>gs :Gstatus <cr>
-nnoremap <leader>gc :Gcommit <cr>
-nnoremap <leader>gd :Gvdiff <cr>
-nnoremap <leader>gp :Git push <cr>
-nnoremap <leader>gb :Gblame <cr>
-nnoremap <leader>gpr :Git pull --rebase <cr>
+nnoremap <leader>gs   :Gstatus <cr>
+nnoremap <leader>gc   :Gcommit <cr>
+nnoremap <leader>gd   :Gvdiff <cr>
+nnoremap <leader>gp   :Git push <cr>
+nnoremap <leader>gb   :Gblame <cr>
+" git history for the current file
+nnoremap <leader>glh  :Gitv! <cr>
+" git history for the current branch
+nnoremap <leader>gh   :Gitv <cr>
+nnoremap <leader>gpr  :Git pull --rebase <cr>
+
+" When viewing git commits, star with hunks opened
+autocmd FileType git setlocal foldlevel=10
 
 " For Merginal
 nnoremap <leader>gb :MerginalToggle<cr>
