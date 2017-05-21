@@ -4,6 +4,10 @@ set nocompatible
 let mapleader="\<Space>"
 set rtp+=~/.vim/bundle/Vundle.vim/
 set wildignore+=*.py~,build/*.*,*.class
+
+" Helps when <tab> completing strings on vim's command line
+set wildmenu
+set wildmode=list:longest
 set backupdir=/tmp,~/.vim/.backups,.
 set t_Co=256
 set guioptions-=T
