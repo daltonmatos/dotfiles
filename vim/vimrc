@@ -92,9 +92,6 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
 
-" Dependencies for xolox/vim-notes
-Plugin 'xolox/vim-misc'
-
 Plugin 'sirver/ultisnips'
 
 Plugin 'bling/vim-airline'
@@ -126,7 +123,6 @@ Plugin 'alfredodeza/pytest.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'sandeepcr529/Buffet.vim'
-Plugin 'xolox/vim-notes'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'idanarye/vim-vebugger'
@@ -163,12 +159,6 @@ nnoremap <silent> <leader>w :setlocal wrap!<CR>
 nnoremap <silent> <C-G>  1<C-G>
 
 colorscheme base16-solarflare
-
-" For xolox/vim-notes
-let g:notes_directories = ['~/.vimnotes/']
-nnoremap <leader>nl :RecentNotes<CR>
-nnoremap <leader>ne :tabedit note:
-nnoremap <leader>nn :Note<CR>
 
 "Ctrl+F4 closes current buffer
 nnoremap <C-F4> :close<cr>
