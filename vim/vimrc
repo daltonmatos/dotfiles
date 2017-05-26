@@ -128,6 +128,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'idanarye/vim-vebugger'
 Plugin 'gregsexton/gitv'
 Plugin 'vimwiki/vimwiki'
+Plugin 'aquach/vim-http-client'
 
 " ColorSchemes
 Plugin 'chriskempson/base16-vim'
@@ -364,6 +365,7 @@ endfunc
 call SourceFileIfExist('extra.vim')
 call SourceFileIfExist('java.vim')
 call SourceFileIfExist('git.vim')
+call SourceFileIfExist('vim-http-client.vim')
 
 function! StripWhitespaceOnSave()
   " If we have ntpeters/vim-better-whitespace lodaed, strip whitespaces when
