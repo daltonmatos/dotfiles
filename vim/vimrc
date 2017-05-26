@@ -127,6 +127,7 @@ Plugin 'vim-scripts/indentpython.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'idanarye/vim-vebugger'
 Plugin 'gregsexton/gitv'
+Plugin 'vimwiki/vimwiki'
 
 " ColorSchemes
 Plugin 'chriskempson/base16-vim'
@@ -324,7 +325,7 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
 
-nnoremap <C-d> :CtrlPDir ~/
+nnoremap <C-D> :CtrlP ~/
 
 " Some interesting annotations about vim commands
 " Macros:
