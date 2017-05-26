@@ -1,5 +1,5 @@
 [core]
-  pager = 
+  pager =
 	excludesfile = /home/dalton/.global-gitignore
 [user]
 	name = Dalton Barreto
@@ -21,7 +21,9 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
   fo = fetch origin
 [push]
-	default = simple
+	default = current
 [commit]
 	verbose = true
   gpgsign = true
+[branch]
+	autosetuprebase = always
