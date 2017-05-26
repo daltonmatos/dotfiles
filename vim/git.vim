@@ -13,3 +13,9 @@ augroup Merginal_Options
   autocmd User Merginal_BranchList setlocal relativenumber
   autocmd User Merginal_HistoryLog nmap <buffer> j <C-N> | nmap k <C-P>
 augroup END
+
+let g:airline#extensions#branch#format = 'CustomBranchName'
+function! CustomBranchName(name)
+  let l:hash = fugitive#repo().rev_parse(fugitive#repo().head())[:8]
+  return substitute(a:name, 'feature', 'F', '') .  ' [' . l:hash . ']'
+endfunction
