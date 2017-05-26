@@ -16,6 +16,12 @@ augroup END
 
 let g:airline#extensions#branch#format = 'CustomBranchName'
 function! CustomBranchName(name)
-  let l:hash = fugitive#repo().rev_parse(fugitive#repo().head())[:8]
-  return substitute(a:name, 'feature', 'F', '') .  ' [' . l:hash . ']'
+  try
+    let l:head = fugitive#repo().head()
+    if l:head
+      let l:hash = fugitive#repo().rev_parse(l:head)[:8]
+      return substitute(a:name, 'feature', 'F', '') .  ' [' . l:hash . ']'
+    endif
+  endtry
+  return ''
 endfunction
