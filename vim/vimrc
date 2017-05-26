@@ -370,6 +370,7 @@ endfunc
 
 call SourceFileIfExist('extra.vim')
 call SourceFileIfExist('java.vim')
+call SourceFileIfExist('git.vim')
 
 function! StripWhitespaceOnSave()
   " If we have ntpeters/vim-better-whitespace lodaed, strip whitespaces when
@@ -384,5 +385,4 @@ function! StripWhitespaceOnSave()
 endfunction
 
 autocmd VimEnter * call StripWhitespaceOnSave()
-
 
