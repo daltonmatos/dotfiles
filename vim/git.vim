@@ -17,11 +17,9 @@ augroup END
 let g:airline#extensions#branch#format = 'CustomBranchName'
 function! CustomBranchName(name)
   try
-    let l:head = fugitive#repo().head()
-    if l:head
-      let l:hash = fugitive#repo().rev_parse(l:head)[:8]
-      return substitute(a:name, 'feature', 'F', '') .  ' [' . l:hash . ']'
-    endif
+    let l:hash = fugitive#repo().rev_parse(a:name)[:8]
+    return substitute(a:name, 'feature', 'F', '') .  ' [' . l:hash . ']'
+  catch "fugitive throws exception if repo has zero commits
+    return ''
   endtry
-  return ''
 endfunction
