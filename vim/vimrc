@@ -357,7 +357,7 @@ function! StripWhitespaceOnSave()
   if exists(':StripWhitespace') == 2 "Full match of command name
     augroup Whitespace
       autocmd!
-      autocmd BufWrite * StripWhitespace
+      autocmd BufWrite java,python StripWhitespace
       autocmd FileType buffet :ToggleWhitespace
     augroup END
   endif
