@@ -1,4 +1,26 @@
+" vim: foldmethod=marker foldlevel=2
 
+" Git mappings {{{2 "
+" For fugitive.vim
+nnoremap <leader>gs   :Gstatus <cr>
+nnoremap <leader>gc   :Gcommit <cr>
+nnoremap <leader>gd   :Gvdiff <cr>
+nnoremap <leader>gp   :Git push <cr>
+nnoremap <leader>gbl   :Gblame <cr>
+" git history for the current file
+nnoremap <leader>glh  :Gitv! <cr>
+" git history for the current branch
+nnoremap <leader>gh   :Gitv <cr>
+nnoremap <leader>gpr  :Git pull --rebase <cr>
+
+" When viewing git commits, star with hunks opened
+autocmd FileType git setlocal foldlevel=10
+
+" For Merginal
+nnoremap <leader>gb :MerginalToggle<cr>
+" }}} Git mappings "
+
+" Git configs {{{3 "
 augroup Fugitive_Options
   autocmd!
   autocmd BufWinEnter */.git/COMMIT_EDITMSG wincmd _
@@ -23,3 +45,4 @@ function! CustomBranchName(name)
     return ''
   endtry
 endfunction
+" }}} Git configs "
