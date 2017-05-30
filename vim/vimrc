@@ -366,6 +366,7 @@ call SourceFileIfExist('extra.vim')
 call SourceFileIfExist('java.vim')
 call SourceFileIfExist('git.vim')
 call SourceFileIfExist('vim-http-client.vim')
+call SourceFileIfExist('vim-wiki.vim')
 
 function! StripWhitespaceOnSave()
   " If we have ntpeters/vim-better-whitespace lodaed, strip whitespaces when
