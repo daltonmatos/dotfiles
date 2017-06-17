@@ -132,6 +132,7 @@ Plugin 'aquach/vim-http-client'
 
 Plugin 'vim-scripts/vim-do'
 
+Plugin 'janko-m/vim-test'
 Plugin 'LucHermitte/lh-vim-lib'
 Plugin 'LucHermitte/lh-tags'
 " ColorSchemes
@@ -350,6 +351,7 @@ call SourceFileIfExist('vim-http-client.vim')
 call SourceFileIfExist('vim-wiki.vim')
 call SourceFileIfExist('lh-tags.vim')
 call SourceFileIfExist('vim-do.vim')
+call SourceFileIfExist('vim-test.vim')
 
 function! StripWhitespaceOnSave()
   " If we have ntpeters/vim-better-whitespace lodaed, strip whitespaces when
