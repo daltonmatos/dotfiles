@@ -194,15 +194,6 @@ vmap <Leader>P "+P
 " Navigate to previous tag o tagstack
 nmap <leader>[ :pop<CR>
 
-
-" For alfredodeza/pytest.vim
-nnoremap <leader>tm :Pytest method<CR>
-nnoremap <leader>tm :Pytest method<CR>
-nnoremap <leader>tc :Pytest class<CR>
-nnoremap <leader>tf :Pytest file<CR>
-nnoremap <leader>tp :Pytest project<CR>
-
-
 " For Syntastic
 " Recomended settings
 set statusline+=%#warningmsg#
@@ -352,6 +343,7 @@ call SourceFileIfExist('vim-wiki.vim')
 call SourceFileIfExist('lh-tags.vim')
 call SourceFileIfExist('vim-do.vim')
 call SourceFileIfExist('vim-test.vim')
+call SourceFileIfExist('pytest.vim')
 
 function! StripWhitespaceOnSave()
   " If we have ntpeters/vim-better-whitespace lodaed, strip whitespaces when
