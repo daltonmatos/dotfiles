@@ -42,7 +42,7 @@ function! CustomBranchName(name)
     let l:hash = fugitive#repo().rev_parse(a:name)[:8]
     return substitute(a:name, 'feature', 'F', '') .  ' [' . l:hash . ']'
   catch "fugitive throws exception if repo has zero commits
-    return ''
+    return '[empty]'
   endtry
 endfunction
 " }}} Git configs "
