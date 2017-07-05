@@ -84,6 +84,13 @@ alias prettyxml='xmllint --format - < '
 alias avrasm2='wine ~/bin/AvrAssembler2/avrasm2.exe $*'
 alias avrasm32='wine ~/bin/AvrAssembler/avrasm32.exe $*'
 
+# GPG specifics
+GPG_TTY=$(tty)
+export GPG_TTY
+
+# Uses gpg-agent as ssh-agent, makes it possible to have your ssh key as a GPG authentication key
+# https://incenp.org/notes/2015/gnupg-for-ssh-authentication.html
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
 [[ -a ~/.shell-extras ]] && . ~/.shell-extras
 
