@@ -335,6 +335,7 @@ function! SourceFileIfExist(filename)
   endif
 endfunc
 
+call SourceFileIfExist('http-client.vim')
 call SourceFileIfExist('extra.vim')
 call SourceFileIfExist('java.vim')
 call SourceFileIfExist('git.vim')
