@@ -141,6 +141,8 @@ Plugin 'chriskempson/base16-vim'
 call vundle#end()
 " }}} Plugin installation
 
+
+
 " Thanks to @denilsonsa (https://github.com/denilsonsa)
 function! Salvar_setKeys()
   "Use Ctrl+S to save
@@ -158,11 +160,11 @@ augroup Salvar
   autocmd GUIEnter * call Salvar_setKeys()
 augroup END
 
+colorscheme base16-3024
+
 nnoremap <silent> <leader>w :setlocal wrap!<CR>
 " set CTRL-G to always show full path of current file when
 nnoremap <silent> <C-G>  1<C-G>
-
-colorscheme base16-solarflare
 
 "Ctrl+F4 closes current buffer
 nnoremap <C-F4> :close<cr>
