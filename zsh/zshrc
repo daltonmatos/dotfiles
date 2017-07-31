@@ -70,8 +70,14 @@ function archlinux_logo(){
 }
 
 POWERLEVEL9K_CUSTOM_WIFI_SSID="custom_wifi_ssid"
+CUSTOM_WIFI_SSID_IFACE_NAME="wlp2s0"
 function custom_wifi_ssid(){
-  echo "\uF012 $(iw dev wlp2s0 link | grep SSID | awk '{print $2}')"
+  output=$(iw dev $CUSTOM_WIFI_SSID_IFACE_NAME link 2>/dev/null)
+  if [[ $? -eq 0 ]];then
+    echo "\uF012 $(echo -n $output | grep SSID | awk '{print $2}')"
+  else
+    echo ""
+  fi
 }
 
 
