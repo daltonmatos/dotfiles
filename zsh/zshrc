@@ -3,9 +3,10 @@ source $(dirname ${ZDOTDIR}/.zshrc)/antigen/antigen.zsh
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
+POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 # Load the theme.
-antigen theme candy
-#antigen theme bhilburn/powerlevel9k powerlevel9k
+#antigen theme candy
+antigen theme bhilburn/powerlevel9k powerlevel9k
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle sudo
@@ -90,7 +91,7 @@ export GPG_TTY
 
 # Uses gpg-agent as ssh-agent, makes it possible to have your ssh key as a GPG authentication key
 # https://incenp.org/notes/2015/gnupg-for-ssh-authentication.html
-export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+#export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
 [[ -a ~/.shell-extras ]] && . ~/.shell-extras
 
