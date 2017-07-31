@@ -11,12 +11,12 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="> "
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_archlogo ssh context dir_writable dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time virtualenv battery)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time virtualenv custom_wifi_ssid battery)
 POWERLEVEL9K_CONTEXT_TEMPLATE="%n"
 
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=1
 
-POWERLEVEL9K_BATTERY_ICON=""
+POWERLEVEL9K_BATTERY_ICON=$'\uF011'
 POWERLEVEL9K_VCS_UNSTAGED_ICON=$'\uF09E'
 POWERLEVEL9K_PYTHON_ICON=$'\uE63C'
 
@@ -68,6 +68,12 @@ POWERLEVEL9K_ARCHLINUX_LOGO=$'\uF100'
 function archlinux_logo(){
   echo "$(print_icon 'ARCHLINUX_LOGO')"
 }
+
+POWERLEVEL9K_CUSTOM_WIFI_SSID="custom_wifi_ssid"
+function custom_wifi_ssid(){
+  echo "\uF012 $(iw dev wlp2s0 link | grep SSID | awk '{print $2}')"
+}
+
 
 EDITOR=vim
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
