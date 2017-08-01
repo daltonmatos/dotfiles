@@ -11,7 +11,7 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="> "
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_archlogo ssh context dir_writable dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time virtualenv custom_wifi_ssid battery)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time virtualenv custom_wifi_ssid custom_eth_info battery)
 POWERLEVEL9K_CONTEXT_TEMPLATE="%n"
 
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=1
@@ -88,6 +88,18 @@ function custom_wifi_ssid(){
   else
     echo ""
   fi
+}
+
+
+POWERLEVEL9K_CUSTOM_ETH_INFO="custom_eth_info"
+function custom_eth_info(){
+  is_link_up=$(ethtool $CUSTOM_ETH_IFACE_NAME 2>/dev/null | grep "Link detected" | awk '{print $3}')
+  if [[ "${is_link_up}" != "no" ]];then
+    ip_addr=$(ip a show $CUSTOM_ETH_IFACE_NAME 2>/dev/null | grep 'inet ' | awk '{print $2}' | head -1 | grep -oE "([0-9]+\.){3}[0-9]+")
+    echo "\uF0C1${ip_addr}"
+    return
+  fi
+  echo ""
 }
 
 
