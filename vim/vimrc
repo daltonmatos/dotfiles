@@ -280,7 +280,8 @@ let g:airline#extensions#virtualenv#enabled = 1
 let g:airline#extensions#hunks#enabled = 0 " We have signify enabled
 let g:virtualenv_stl_format = ' %n'
 let g:airline#extensions#tagbar#enabled = 0
-
+let g:airline_left_sep = ""
+let g:airline_right_sep = ""
 " New tab
 noremap <C-t> :tabnew<CR>
 noremap <leader>t :tab sball<CR>
