@@ -1,3 +1,7 @@
+
+export EDITOR=vim
+export TERM="xterm-256color"
+
 # Antigen init
 source $(dirname ${ZDOTDIR}/.zshrc)/antigen/antigen.zsh
 # Load the oh-my-zsh's library.
@@ -104,16 +108,14 @@ function custom_eth_info(){
   is_link_up=$(ethtool $CUSTOM_ETH_IFACE_NAME 2>/dev/null | grep "Link detected" | awk '{print $3}')
   if [[ "${is_link_up}" != "no" ]];then
     ip_addr=$(ip a show $CUSTOM_ETH_IFACE_NAME 2>/dev/null | grep 'inet ' | awk '{print $2}' | head -1 | grep -oE "([0-9]+\.){3}[0-9]+")
-    echo "\uF0C1 ${ip_addr}"
+    echo "\uF0C1 ${CUSTOM_ETH_IFACE_NAME}/${ip_addr}"
     return
   fi
   echo ""
 }
 
 
-EDITOR=vim
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
-export EDITOR
 export LANG=en_US.UTF-8
 # Customize to your needs...
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/i686-pc-linux-gnu/gcc-bin/4.5.3:/usr/i686-pc-linux-gnu/x86_64-pc-linux-gnu/gcc-bin/4.5.3:/usr/games/bin:/home/daltonmatos/src/less.js/bin/
