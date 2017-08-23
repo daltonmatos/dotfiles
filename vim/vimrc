@@ -171,6 +171,8 @@ nnoremap <C-F4> :close<cr>
 
 nnoremap <leader>b :Bufferlist<CR>
 
+"Desliga highlight search
+nnoremap <leader><space> :nohls <enter>
 
 " Mapping for search using :Ack
 nnoremap <leader>a :Ack <cword><CR>
