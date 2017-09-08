@@ -3,7 +3,7 @@
 set nocompatible
 let mapleader="\<Space>"
 set rtp+=~/.vim/bundle/Vundle.vim/
-set wildignore+=*.py~,build/*.*,*.class
+set wildignore+=*.py~,build/*.*,*.class,*.pyc,__pycache__*
 
 " Helps when <tab> completing strings on vim's command line
 set wildmenu
