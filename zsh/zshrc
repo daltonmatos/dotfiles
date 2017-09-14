@@ -90,7 +90,6 @@ function archlinux_logo(){
 }
 
 POWERLEVEL9K_CUSTOM_WIFI_SSID="custom_wifi_ssid"
-CUSTOM_WIFI_SSID_IFACE_NAME="wlp2s0"
 function custom_wifi_ssid(){
   output=$(iw dev $CUSTOM_WIFI_SSID_IFACE_NAME link 2>/dev/null)
   if [[ ! `grep -i "not connected" <<<${output}` ]];then
