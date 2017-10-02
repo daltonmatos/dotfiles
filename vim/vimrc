@@ -162,7 +162,10 @@ augroup END
 
 colorscheme base16-3024
 
-nnoremap <silent> <leader>w :setlocal wrap!<CR>
+nmap <leader>w <C-W>
+
+nnoremap <silent> <leader>wr :setlocal wrap!<CR>
+
 " set CTRL-G to always show full path of current file when
 nnoremap <silent> <C-G>  1<C-G>
 
