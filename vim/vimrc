@@ -167,7 +167,8 @@ nnoremap <silent> <leader>w :setlocal wrap!<CR>
 nnoremap <silent> <C-G>  1<C-G>
 
 "Ctrl+F4 closes current buffer
-nnoremap <C-F4> :close<cr>
+" nnoremap <C-F4> :close<cr>
+nnoremap <leader>q :close<cr>
 
 nnoremap <leader>b :Bufferlist<CR>
 
