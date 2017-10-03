@@ -172,7 +172,7 @@ export GPG_TTY
 # https://incenp.org/notes/2015/gnupg-for-ssh-authentication.html
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
-[[ -a ~/.shell-extras ]] && . ~/.shell-extras
+[[ -a ~/.shell-extras.sh ]] && . ~/.shell-extras.sh
 
 [[ -f /usr/share/nvm/init-nvm.sh ]] && source /usr/share/nvm/init-nvm.sh
 
