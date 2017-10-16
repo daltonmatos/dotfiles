@@ -18,6 +18,9 @@ autocmd FileType git setlocal foldlevel=10
 
 " For Merginal
 nnoremap <leader>gb :MerginalToggle<cr>
+let g:merginal_splitType=''
+let g:merginal_windowWidth=20
+
 " }}} Git mappings "
 
 " Git configs {{{3 "
