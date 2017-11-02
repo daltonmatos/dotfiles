@@ -354,6 +354,7 @@ call SourceFileIfExist('lh-tags.vim')
 call SourceFileIfExist('vim-do.vim')
 call SourceFileIfExist('vim-test.vim')
 call SourceFileIfExist('pytest.vim')
+call SourceFileIfExist('terminal.vim')
 
 function! StripWhitespaceOnSave()
   " If we have ntpeters/vim-better-whitespace lodaed, strip whitespaces when
