@@ -7,7 +7,7 @@ function! DebugJavaFile()
   let l:current_path = fnamemodify(l:current_file, ':p:h')
   let l:debugged_class = vebugger#util#getClassFromFilename(l:current_file)
 
-  let l:srcpath = l:current_path .  ':src/main/java'
+  let l:srcpath = [l:current_path, 'src/main/java']
 
   call RunMvnCompile()
 
