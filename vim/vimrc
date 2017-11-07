@@ -161,6 +161,8 @@ augroup Salvar
 augroup END
 
 colorscheme base16-3024
+" Better colors for the line numbers
+highlight LineNr guifg=White
 
 nmap <leader>w <C-W>
 
