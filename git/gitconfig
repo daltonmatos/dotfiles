@@ -27,3 +27,5 @@
   gpgsign = true
 [branch]
 	autosetuprebase = always
+[stash]
+	showPatch = true
