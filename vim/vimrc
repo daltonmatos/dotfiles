@@ -242,9 +242,6 @@ let g:neocomplete#sources#syntax#min_keyword_length = 1
 " For sirver/ultisnips
 let g:UltiSnipsExpandTrigger="<C-J>"
 
-" For artur-shaik/javacomplete2
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-
 " For airblade/vim-rooter
 let g:rooter_change_directory_for_non_project_files = 'home'
 let g:rooter_silent_chdir = 1

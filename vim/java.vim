@@ -1,4 +1,7 @@
 
+" For artur-shaik/javacomplete2
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
 function! DebugJavaFile()
   let l:ch = &cmdheight
   set cmdheight=3
