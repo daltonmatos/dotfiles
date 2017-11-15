@@ -102,8 +102,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/surround.vim'
 Plugin 'vim-scripts/tComment'
+Plugin 'davidhalter/jedi-vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Shougo/neocomplete.vim'
 Plugin 'matze/vim-move'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'alvan/vim-closetag'
@@ -233,12 +233,6 @@ augroup QuickFix
   autocmd BufWinEnter quickfix nnoremap <buffer> q :lclose<CR>
 augroup END
 
-" For neocomplete
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 1
-
 " For sirver/ultisnips
 let g:UltiSnipsExpandTrigger="<C-J>"
 
@@ -354,6 +348,7 @@ call SourceFileIfExist('vim-do.vim')
 call SourceFileIfExist('vim-test.vim')
 call SourceFileIfExist('pytest.vim')
 call SourceFileIfExist('terminal.vim')
+call SourceFileIfExist('python.vim')
 
 function! StripWhitespaceOnSave()
   " If we have ntpeters/vim-better-whitespace lodaed, strip whitespaces when
