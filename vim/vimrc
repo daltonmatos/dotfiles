@@ -40,6 +40,9 @@ if has('termguicolors')
   set termguicolors
 endif
 
+set noerrorbells
+set vb t_vb=
+
 " http://input.fontbureau.com/
 set guifont=Input\ Regular\ 12
 " }}} General Settings "
