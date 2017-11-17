@@ -47,6 +47,8 @@ set vb t_vb=
 set guifont=Input\ Regular\ 12
 " }}} General Settings "
 
+nnoremap ; :
+
 " Complete reference about what do you get with this vimrc {{{3
 " Basic Docs about installed plugins
 "
@@ -106,6 +108,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/surround.vim'
 Plugin 'vim-scripts/tComment'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'Shougo/neocomplete.vim'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
 Plugin 'matze/vim-move'
@@ -152,7 +155,7 @@ function! Salvar_setKeys()
   "Use Ctrl+S to save
   nnoremap <silent> <C-S>      :update<CR>
   vnoremap <silent> <C-S> <C-C>:update<CR>
-  inoremap <silent> <C-S> <C-O>:update<CR>
+  inoremap <silent> <C-S> <C-O>:wall<CR>
 
   nnoremap <silent> <C-S-S>      :wall<CR>
   vnoremap <silent> <C-S-S> <C-C>:wall<CR>
@@ -228,13 +231,19 @@ let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 nnoremap <leader>en :lnext<CR>
 nnoremap <leader>ep :lprev<CR>
 nnoremap <leader>el :lopen<CR>
-"
-" Close the QuickFix/Loc Windows hitting 'q'
-"autocmd! FileType qf nnoremap <buffer> q :close<CR>
 
-augroup QuickFix
+" Close the QuickFix/Loc Windows hitting 'q'
+
+augroup QuickCloser
   autocmd!
-  autocmd BufWinEnter quickfix nnoremap <buffer> q :lclose<CR>
+  autocmd BufWinEnter quickfix nnoremap <buffer> q :cclose<CR>
+  autocmd BufWinEnter quickfix nnoremap <buffer> <ESC> :cclose<CR>
+
+  autocmd BufWinEnter terminal nnoremap <buffer> <ESC> :close<CR>
+  autocmd BufWinEnter terminal nnoremap <buffer> q :close<CR>
+
+  autocmd FileType netrw nnoremap <buffer> q :close<CR>
+  autocmd FileType netrw nnoremap <buffer> <ESC> :close<CR>
 augroup END
 
 " For sirver/ultisnips
@@ -265,7 +274,7 @@ let g:tagbar_autoclose = 1
 noremap <Leader>l :TagbarToggle<CR>
 
 " NERDTree
-noremap <Leader>n :NERDTreeToggle<CR>
+noremap <Leader>n :25Lexplore<CR>
 let g:nerdtree_tabs_open_on_gui_startup = 0
 
 
