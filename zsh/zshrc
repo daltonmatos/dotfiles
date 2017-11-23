@@ -176,4 +176,20 @@ export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
 [[ -f /usr/share/nvm/init-nvm.sh ]] && source /usr/share/nvm/init-nvm.sh
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+_ssx_via(){
+  COMMAND=${1}
+  gateway=${2}
+  shift; shift
+  $COMMAND -o "ProxyCommand=ssh ${gateway} -W %h:%p" -o "StrictHostKeyChecking=no" $*
+}
+
+_ssh_via(){
+  _ssx_via 'ssh' $*
+}
+
+_scp_via(){
+  _ssx_via 'scp' $*
+}
+
+alias ssh-via=_ssh_via
+alias scp-via=_scp_via
