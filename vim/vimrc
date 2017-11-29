@@ -275,7 +275,7 @@ let g:tagbar_autoclose = 1
 noremap <Leader>l :TagbarToggle<CR>
 
 " NERDTree
-noremap <Leader>n :25Lexplore<CR>
+noremap <Leader>e :25Lexplore<CR>
 let g:nerdtree_tabs_open_on_gui_startup = 0
 
 
