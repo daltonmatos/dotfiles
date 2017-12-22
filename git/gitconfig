@@ -29,3 +29,5 @@
 	autosetuprebase = always
 [stash]
 	showPatch = true
+[merge]
+	ff = false
