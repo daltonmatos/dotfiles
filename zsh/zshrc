@@ -191,5 +191,11 @@ _scp_via(){
   _ssx_via 'scp' $*
 }
 
+decrypt_env() {
+  local env_name_sufix=$1
+  local env_name=CRYPT_${env_name_sufix}
+  gpg -d <<<${(P)env_name} 2>/dev/null
+}
+
 alias ssh-via=_ssh_via
 alias scp-via=_scp_via
