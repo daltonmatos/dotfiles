@@ -168,7 +168,7 @@ augroup Salvar
   autocmd GUIEnter * call Salvar_setKeys()
 augroup END
 
-colorscheme base16-3024
+colorscheme base16-dracula
 " Better colors for the line numbers
 highlight LineNr guifg=White
 
