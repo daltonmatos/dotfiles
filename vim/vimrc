@@ -315,6 +315,9 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
 
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](dist|node_modules)$',
+  \ }
 nnoremap <C-D> :CtrlP ~/
 
 " Some interesting annotations about vim commands
