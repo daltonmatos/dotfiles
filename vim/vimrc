@@ -100,7 +100,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'sirver/ultisnips'
 
 Plugin 'bling/vim-airline'
-Plugin 'bling/vim-bufferline'
 
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
@@ -295,6 +294,8 @@ let g:virtualenv_stl_format = ' %n'
 let g:airline#extensions#tagbar#enabled = 0
 let g:airline_left_sep = ""
 let g:airline_right_sep = ""
+let g:airline_section_c = airline#section#create(['Project: %{getcwd()}'])
+
 " New tab
 noremap <C-t> :tabnew<CR>
 noremap <leader>t :tab sball<CR>
