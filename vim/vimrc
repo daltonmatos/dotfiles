@@ -144,6 +144,7 @@ Plugin 'LucHermitte/lh-vim-lib'
 Plugin 'LucHermitte/lh-tags'
 " ColorSchemes
 Plugin 'chriskempson/base16-vim'
+Plugin 'Addisonbean/Vim-Xcode-Theme'
 
 call vundle#end()
 " }}} Plugin installation
