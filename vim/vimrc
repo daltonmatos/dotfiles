@@ -169,6 +169,9 @@ highlight LineNr guifg=White
 
 nmap <leader>w <C-W>
 
+" Expand %% (on the command line) to the directory of current file
+cnoremap %% <C-R>=expand('%:p:h').'/'<CR>
+
 nnoremap <silent> <leader>wr :setlocal wrap!<CR>
 
 " set CTRL-G to always show full path of current file when
