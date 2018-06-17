@@ -173,6 +173,8 @@ nmap <leader>w <C-W>
 cnoremap %% <C-R>=expand('%:p:h').'/'<CR>
 
 nnoremap <silent> <leader>wr :setlocal wrap!<CR>
+nnoremap <silent> <leader>x  :w<CR>
+nnoremap <silent> <leader>X  :x<CR>
 
 " set CTRL-G to always show full path of current file when
 nnoremap <silent> <C-G>  1<C-G>
