@@ -156,11 +156,6 @@ function! Salvar_setKeys()
   "Use Ctrl+S to save
   nnoremap <silent> <C-S>      :update<CR>
   vnoremap <silent> <C-S> <C-C>:update<CR>
-  inoremap <silent> <C-S> <C-O>:wall<CR>
-
-  nnoremap <silent> <C-S-S>      :wall<CR>
-  vnoremap <silent> <C-S-S> <C-C>:wall<CR>
-  inoremap <silent> <C-S-S> <C-O>:wall<CR>
 endfunc
 
 augroup Salvar
