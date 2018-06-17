@@ -125,7 +125,7 @@ Plugin 'airblade/vim-rooter'
 Plugin 'artur-shaik/vim-javacomplete2' " Run mvn complie inside .vim/bundle/vim-javacomplete2/libs/javavi
 Plugin 'idanarye/vim-merginal'
 Plugin 'elzr/vim-json' " checking for json files, highlighting errors
-Plugin 'vim-scripts/Syntastic'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'alfredodeza/pytest.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'jmcantrell/vim-virtualenv'
