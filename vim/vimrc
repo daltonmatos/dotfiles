@@ -186,6 +186,7 @@ nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 
 nnoremap <leader>b :Bufferlist<CR>
+nnoremap <silent> <leader>bW :bwipe!<CR>
 
 "Desliga highlight search
 nnoremap <leader><space> :nohls <enter>
