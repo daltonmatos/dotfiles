@@ -111,12 +111,10 @@ Plugin 'vim-scripts/tComment'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'ervandew/supertab'
-Plugin 'scrooloose/nerdtree'
 Plugin 'matze/vim-move'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'alvan/vim-closetag'
 Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'EinfachToll/DidYouMean'
 Plugin 'fatih/vim-go' " Run :GoInstallBinaries
 Plugin 'mhinz/vim-signify'
@@ -275,9 +273,7 @@ let g:tagbar_usearrows = 1
 let g:tagbar_autoclose = 1
 noremap <Leader>l :TagbarToggle<CR>
 
-" NERDTree
 noremap <Leader>e :25Lexplore<CR>
-let g:nerdtree_tabs_open_on_gui_startup = 0
 
 
 """ Vim-AirLine
