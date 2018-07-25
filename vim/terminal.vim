@@ -10,3 +10,5 @@ endfunc
 nnoremap <silent> <Leader>t :call OpenTerminal()<CR>
 tnoremap <Esc> <C-W>N
 
+tnoremap <C-W>p <C-W>"0
+tnoremap <C-W><Leader>p <C-W>"+
