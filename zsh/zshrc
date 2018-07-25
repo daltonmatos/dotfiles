@@ -128,11 +128,6 @@ compinit
 
 zstyle ':completion::complete:*' use-cache 1
 
-[[ -f /usr/bin/virtualenvwrapper.sh ]] && source /usr/bin/virtualenvwrapper.sh
-# Debian-likes
-[[ -f /usr/local/bin/virtualenvwrapper.sh ]] && source /usr/local/bin/virtualenvwrapper.sh
-
-
 # Arch Linux
 alias ainst='sudo pacman -S --needed'
 alias asearch='pacman -Ss'
