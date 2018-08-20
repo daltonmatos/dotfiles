@@ -29,7 +29,7 @@
   - hwclock --systohc
   - passwd
   - vim /etc/mkinitcpio.conf
-    - Adicoinar `encrypt` na linha `HOOKS=...`. Esse hook deve estar **antes** do hook `filesystems`.
+    - Adicionar `encrypt` na linha `HOOKS=...`. Esse hook deve estar **antes** do hook `filesystems`.
     - mkinitcpio -p linux
   - vim /etc/default/grub 
     - Descomentar a linha `GRUB_ENABLE_CRYPTODISK=y`
@@ -63,6 +63,7 @@
   - fc-cache -rv .fonts
     - Instalar `gnome-tweaks` e colocar a fonte regular como Input, 12.
   - Configurar Yubikey (https://daltonmatos.com/2018/07/preparando-uma-yubikey-4-nano-para-uso-diario/)
+  - Instalar browserpass (https://github.com/browserpass/browserpass)
 
 # Configurações adicionais
 
