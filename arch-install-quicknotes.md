@@ -58,7 +58,7 @@
   - $ sudo systemctl {enable,start} NetworkManager
   - $ _i noto-fonts ttf-bitstream-vera ttf-carlito ttf-croscore ttf-dejavu ttf-freefont ttf-droid ttf-liberation ttf-ubuntu-font-family
   - $ _i chromium
-  - $ _i pass openssh pv ack
+  - $ _i pass openssh pv ack hugo
   - bzcat .dotfiles/Input.ttf.bz2 > .fonts/Input.ttf
   - fc-cache -rv .fonts
     - Instalar `gnome-tweaks` e colocar a fonte regular como Input, 12.
