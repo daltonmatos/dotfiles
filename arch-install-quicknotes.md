@@ -54,11 +54,12 @@
 # Boot já no sistema novo
 
   - Install dotfiles (https://github.com/daltonmatos/dotfiles/)
+  - git clone https://github.com/pyenv/pyenv.git ~/.pyenv
   - $ _i gnome gdm [xf86-video-intel|nvidia]
   - $ sudo systemctl {enable,start} NetworkManager
   - $ _i noto-fonts ttf-bitstream-vera ttf-carlito ttf-croscore ttf-dejavu ttf-freefont ttf-droid ttf-liberation ttf-ubuntu-font-family
   - $ _i chromium
-  - $ _i pass openssh pv ack hugo
+  - $ _i pass openssh pv ack hugo gcc make
   - bzcat .dotfiles/Input.ttf.bz2 > .fonts/Input.ttf
   - fc-cache -rv .fonts
     - Instalar `gnome-tweaks` e colocar a fonte regular como Input, 12.
