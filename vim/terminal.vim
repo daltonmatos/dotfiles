@@ -12,3 +12,9 @@ tnoremap <Esc> <C-W>N
 
 tnoremap <C-W>p <C-W>"0
 tnoremap <C-W><Leader>p <C-W>"+
+
+
+augroup Terminal_Options
+  autocmd!
+  autocmd BufWinEnter terminal :ToggleWhitespace
+augroup END
