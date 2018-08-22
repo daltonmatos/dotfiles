@@ -1,6 +1,8 @@
 
 export EDITOR=vim
 export TERM="xterm-256color"
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
 
 # Antigen init
 source $(dirname ${ZDOTDIR}/.zshrc)/antigen/antigen.zsh
@@ -204,3 +206,9 @@ alias myip='curl https://httpbin.org/ip'
 # Dessa forma conseguimos abrir um terminal dentro do vim já caindo
 # no current directory
 [[ ! -z ${CHG_PWD} ]] && cd ${CHG_PWD}
+
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
