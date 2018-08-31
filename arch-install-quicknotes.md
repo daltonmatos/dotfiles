@@ -60,7 +60,7 @@
   - $ _i noto-fonts ttf-bitstream-vera ttf-carlito ttf-croscore ttf-dejavu ttf-freefont ttf-droid ttf-liberation ttf-ubuntu-font-family
   - $ _i gnome gdm xf86-video-intel (nvidia-utils, nvidia-settings, nvidia-lts)
   - $ _i chromium
-  - $ _i pass openssh pv ack hugo gcc make
+  - $ _i pass openssh pv ack hugo gcc make patch wget
   - bzcat .dotfiles/Input.ttf.bz2 > .fonts/Input.ttf
   - fc-cache -rv .fonts
     - Instalar `gnome-tweaks` e colocar a fonte regular como Input, 12.
@@ -75,6 +75,19 @@
     - gpg --edit-key daltonmatos@gmail.com
       - trust
   - git 
+
+## i3
+
+### Compilando polybar
+
+Instala python 2.7.15 via pyenv, copia o módulo xcbgen do python global (pode ser o 3.7) para dentro do `site-packages` do 2.7.15.
+
+
+pwd   
+/home/daltonmatos/.pyenv/versions/2.7.15/lib/python2.7/site-packages
+cp -a /usr/lib/python3.7/site-packages/xcbgen .
+
+
 
 # Se precisar da boot pelo ISO pra corrigir alguma coisa
 
