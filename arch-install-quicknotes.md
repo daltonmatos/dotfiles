@@ -78,6 +78,11 @@
 
 ## i3
 
+### Pacotes
+
+ xorg-*
+ xorg-xrandr xorg-xinput
+
 ### Compilando polybar
 
 Instala python 2.7.15 via pyenv, copia o módulo xcbgen do python global (pode ser o 3.7) para dentro do `site-packages` do 2.7.15.
