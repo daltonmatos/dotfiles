@@ -44,6 +44,8 @@
   - useradd -m -s /bin/zsh -U -G tty,network,docker,uucp,audio,wheel `<username>`
   - passwd `<daltonmatos>`
   - systemctl enable docker
+  - systemctl enable bluetooth
+  - systemctl start bluetooth
   - vim /etc/sudoers. Descomentar a linha que permite o grupo wheel fazer sudo
   - ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
   - vim /etc/locale.gen (`en_US*`, `pt_BR*`)
