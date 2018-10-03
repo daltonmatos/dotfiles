@@ -78,6 +78,7 @@ antigen bundle colorize #depends on package community/pygmentize
 antigen bundle systemd
 antigen bundle Tarrasch/zsh-autoenv
 antigen bundle t413/zsh-background-notify
+antigen bundle pass
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
@@ -87,7 +88,7 @@ antigen bundle zsh-users/zsh-completions src
 antigen apply
 
 POWERLEVEL9K_CUSTOM_ARCHLOGO="archlinux_logo"
-POWERLEVEL9K_ARCHLINUX_LOGO=$'\uF100'
+POWERLEVEL9K_ARCHLINUX_LOGO=$''
 function archlinux_logo(){
   echo "$(print_icon 'ARCHLINUX_LOGO')"
 }
@@ -130,68 +131,14 @@ compinit
 
 zstyle ':completion::complete:*' use-cache 1
 
-# Arch Linux
-alias ainst='sudo pacman -S --needed'
-alias asearch='pacman -Ss'
-alias auinst='sudo pacman -R'
-alias newvenv='mkvirtualenv -p /usr/bin/python2'
-alias srv='sudo systemctl'
-
-alias _i='ainst'
-alias _u='auinst'
-alias _s='asearch'
-alias _u='sudo pacman -Rs'
-alias _info='pacman -Qe'
-alias _files='pacman -Ql'
-alias _sync='sudo pacman -Syuw'
-alias _upgrade='sudo pacman -Syu'
-
-alias py='ipython'
-alias dfh='df -hP | sed -e "s/Sist. Arq./Sist.Arq./" | column -t'
-alias gf='git flow'
-
-# Tmux aliases
-alias tl='tmux ls'
-alias ta='tmux attach -t'
-
-alias json='python -mjson.tool'
-
-alias randpwd='dd if=/dev/random bs=1 count=12 2>/dev/null | md5sum -'
-
-alias prettyxml='xmllint --format - < '
-
-alias avrasm2='wine ~/bin/AvrAssembler2/avrasm2.exe $*'
-alias avrasm32='wine ~/bin/AvrAssembler/avrasm32.exe $*'
-
 # GPG specifics
 GPG_TTY=$(tty)
 export GPG_TTY
-
-# Uses gpg-agent as ssh-agent, makes it possible to have your ssh key as a GPG authentication key
-# https://incenp.org/notes/2015/gnupg-for-ssh-authentication.html
-# Only use gpg as a ssh-agent if we are not on a remote system
-if [ -z "${SSH_TTY}" ]; then
-  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
-fi
 
 [[ -a ~/.shell-extras.sh ]] && . ~/.shell-extras.sh
 
 [[ -f /usr/share/nvm/init-nvm.sh ]] && source /usr/share/nvm/init-nvm.sh
 
-_ssx_via(){
-  COMMAND=${1}
-  gateway=${2}
-  shift; shift
-  $COMMAND -o "ProxyCommand=ssh ${gateway} -W %h:%p" -o "StrictHostKeyChecking=no" $*
-}
-
-_ssh_via(){
-  _ssx_via 'ssh' $*
-}
-
-_scp_via(){
-  _ssx_via 'scp' $*
-}
 
 decrypt_env() {
   local env_name_sufix=$1
@@ -199,19 +146,8 @@ decrypt_env() {
   gpg -d <<<${(P)env_name} 2>/dev/null
 }
 
-alias ssh-via=_ssh_via
-alias scp-via=_scp_via
-alias myip='curl https://httpbin.org/ip'
-# Env adicionada pelo vim quando abre um terminal,
-# Dessa forma conseguimos abrir um terminal dentro do vim já caindo
-# no current directory
-[[ ! -z ${CHG_PWD} ]] && cd ${CHG_PWD} && unset VIRTUAL_ENV
-
-
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+source $(dirname ${ZDOTDIR}/.zshrc)/pyenv.zsh
+source $(dirname ${ZDOTDIR}/.zshrc)/vim.zsh
+source $(dirname ${ZDOTDIR}/.zshrc)/alias.zsh
+source $(dirname ${ZDOTDIR}/.zshrc)/ssh.zsh
 
