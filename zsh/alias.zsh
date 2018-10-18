@@ -25,7 +25,7 @@ alias ta='tmux attach -t'
 
 alias json='python -mjson.tool'
 
-alias randpwd='dd if=/dev/random bs=1 count=12 2>/dev/null | md5sum -'
+alias randpwd='dd if=/dev/random bs=1 count=64 2>/dev/null | tr -dc "[:alpha:]"'
 
 alias prettyxml='xmllint --format - < '
 
