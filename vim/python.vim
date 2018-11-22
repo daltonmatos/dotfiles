@@ -1,6 +1,21 @@
 
 autocmd FileType python setlocal completeopt-=preview
 
+let g:virtualenv_auto_activate = 0
+
+" for virtualenv
+
+function! Env()
+  call virtualenv#activate('', 1)
+endfunction
+
+augroup VirtualEnv
+  autocmd!
+  autocmd BufReadPost,BufEnter *.py call Env()
+augroup END
+
+
+
 " for jedi-vim
 let g:jedi#use_tabs_not_buffers = 1
 
