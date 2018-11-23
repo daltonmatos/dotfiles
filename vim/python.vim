@@ -9,6 +9,13 @@ augroup VirtualEnv
 augroup END
 
 
+function! python#empty_ft()
+  if &filetype =~# "python"
+    return ''
+  else
+    return airline#parts#filetype()
+  endif
+endfunction
 
 " for jedi-vim
 let g:jedi#use_tabs_not_buffers = 1
