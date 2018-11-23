@@ -1,6 +1,22 @@
 
 autocmd FileType python setlocal completeopt-=preview
 
+let g:virtualenv_auto_activate = 1
+
+augroup VirtualEnv
+  autocmd!
+  autocmd User RooterChDir call virtualenv#activate('', 1)
+augroup END
+
+
+function! python#empty_ft()
+  if &filetype =~# "python"
+    return ''
+  else
+    return airline#parts#filetype()
+  endif
+endfunction
+
 " for jedi-vim
 let g:jedi#use_tabs_not_buffers = 1
 
