@@ -295,6 +295,22 @@ let g:airline#extensions#tagbar#enabled = 0
 let g:airline_left_sep = ""
 let g:airline_right_sep = ""
 let g:airline_section_c = airline#section#create(['Project: %{getcwd()}'])
+let g:airline_mode_map = {
+      \ '__' : '-',
+      \ 'n'  : 'N',
+      \ 'i'  : 'I',
+      \ 'R'  : 'R',
+      \ 'c'  : 'C',
+      \ 'v'  : 'V',
+      \ 'V'  : 'V',
+      \ '' : 'V',
+      \ 's'  : 'S',
+      \ 'S'  : 'S',
+      \ '' : 'S',
+      \ }
+let g:airline_right_alt_sep = ''
+
+let g:airline_section_x = '%{airline#util#prepend("",0)}%{airline#util#wrap(python#empty_ft(),0)}'
 
 " New tab
 noremap <C-t> :tabnew<CR>
