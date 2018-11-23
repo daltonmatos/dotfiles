@@ -126,7 +126,7 @@ Plugin 'elzr/vim-json' " checking for json files, highlighting errors
 Plugin 'vim-syntastic/syntastic'
 Plugin 'alfredodeza/pytest.vim'
 Plugin 'mileszs/ack.vim'
-Plugin 'jmcantrell/vim-virtualenv'
+Plugin 'daltonmatos/vim-virtualenv'
 Plugin 'sandeepcr529/Buffet.vim'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'ntpeters/vim-better-whitespace'
