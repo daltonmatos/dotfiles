@@ -1,17 +1,11 @@
 
 autocmd FileType python setlocal completeopt-=preview
 
-let g:virtualenv_auto_activate = 0
-
-" for virtualenv
-
-function! Env()
-  call virtualenv#activate('', 1)
-endfunction
+let g:virtualenv_auto_activate = 1
 
 augroup VirtualEnv
   autocmd!
-  autocmd BufReadPost,BufEnter *.py call Env()
+  autocmd User RooterChDir call virtualenv#activate('', 1)
 augroup END
 
 
