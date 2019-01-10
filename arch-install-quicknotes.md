@@ -24,7 +24,7 @@
 ## Mínimo necessário para poder já dar boot no sistema novo
 
   - timedatectl set-ntp true
-  - pacstrap /mnt base git zsh vim grub intel-ucode docker dialog sudo wpa_supplicant
+  - pacstrap /mnt base git zsh vim grub intel-ucode docker dialog sudo wpa_supplicant automake autoconf make
   - arch-chroot /mnt
   - hwclock --systohc
   - passwd
@@ -68,6 +68,9 @@
     - Instalar `gnome-tweaks` e colocar a fonte regular como Input, 12.
   - Configurar Yubikey (https://daltonmatos.com/2018/07/preparando-uma-yubikey-4-nano-para-uso-diario/)
   - Instalar browserpass (https://github.com/browserpass/browserpass)
+  - Instalar AUR managaer: yay
+  - yay snapd
+  - systemctl enable/start snapd.socket
 
 # Configurações adicionais
 
