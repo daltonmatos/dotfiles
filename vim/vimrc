@@ -87,6 +87,12 @@ nnoremap ; :
 
 " Plugin installation {{{2
 
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   'python': ['black'],
+\}
+
+
 call vundle#begin()
 
 " Dependency for idanarye/vim-vebugger
@@ -136,6 +142,7 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'aquach/vim-http-client'
 
 Plugin 'vim-scripts/vim-do'
+Plugin 'w0rp/ale'
 
 Plugin 'janko-m/vim-test'
 Plugin 'LucHermitte/lh-vim-lib'
