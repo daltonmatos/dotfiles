@@ -7,7 +7,7 @@ nnoremap <leader>gc   :Gcommit <cr>
 nnoremap <leader>gd   :Gvdiff <cr>
 nnoremap <leader>gp   :Git push <cr>
 nnoremap <leader>gP   :Git push -f 
-nnoremap <leader>gbl   :Gblame <cr>
+
 " git history for the current file
 nnoremap <leader>glh  :Gitv! <cr>
 " git history for the current branch
