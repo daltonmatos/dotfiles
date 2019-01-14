@@ -103,6 +103,12 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
 
+
+" Syntax plugins
+Plugin 'cespare/vim-toml'
+
+" Plugins
+
 Plugin 'sirver/ultisnips'
 
 Plugin 'bling/vim-airline'
@@ -139,7 +145,6 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'idanarye/vim-vebugger'
 Plugin 'gregsexton/gitv'
 Plugin 'vimwiki/vimwiki'
-Plugin 'aquach/vim-http-client'
 
 Plugin 'vim-scripts/vim-do'
 Plugin 'w0rp/ale'
@@ -314,6 +319,7 @@ let g:airline_mode_map = {
       \ 's'  : 'S',
       \ 'S'  : 'S',
       \ '' : 'S',
+      \ 't' : 'T',
       \ }
 let g:airline_right_alt_sep = ''
 
@@ -370,8 +376,8 @@ augroup END
 nnoremap <Leader>v :tabedit $MYVIMRC<cr>
 nnoremap <Leader>s :tabedit ~/.ssh/config<cr>
 nnoremap <Leader>z :tabedit $ZDOTDIR/.zshrc<cr>
-nnoremap <C-S-PageUP> :tabm -1<CR>
-nnoremap <C-S-PageDOWN> :tabm +1<CR>
+nnoremap <silent> <C-S-PageUP> :tabm -1<CR>
+nnoremap <silent> <C-S-PageDOWN> :tabm +1<CR>
 
 function! SourceFileIfExist(filename)
   let l:extra_file = fnamemodify(expand($MYVIMRC), ':p:h') . '/' . a:filename
@@ -380,11 +386,9 @@ function! SourceFileIfExist(filename)
   endif
 endfunc
 
-call SourceFileIfExist('http-client.vim')
 call SourceFileIfExist('extra.vim')
 call SourceFileIfExist('java.vim')
 call SourceFileIfExist('git.vim')
-call SourceFileIfExist('vim-http-client.vim')
 call SourceFileIfExist('vim-wiki.vim')
 call SourceFileIfExist('lh-tags.vim')
 call SourceFileIfExist('vim-do.vim')
