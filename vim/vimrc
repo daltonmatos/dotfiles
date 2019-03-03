@@ -89,6 +89,7 @@ nnoremap ; :
 
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'python': ['black'],
 \}
 
@@ -98,6 +99,9 @@ call vundle#begin()
 " Dependency for idanarye/vim-vebugger
 Plugin 'Shougo/vimproc.vim', {'do' : 'make'}
 
+" Dependenxy to janko-m/vim-test
+Plugin 'tpope/vim-dispatch'
+
 " Dependencies for sirver/ultisnips
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -106,6 +110,7 @@ Plugin 'honza/vim-snippets'
 
 " Syntax plugins
 Plugin 'cespare/vim-toml'
+Plugin 'ekalinin/Dockerfile.vim'
 
 " Plugins
 
@@ -114,21 +119,17 @@ Plugin 'sirver/ultisnips'
 Plugin 'bling/vim-airline'
 
 Plugin 'kien/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-scripts/surround.vim'
-Plugin 'vim-scripts/tComment'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'ervandew/supertab'
 Plugin 'matze/vim-move'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'alvan/vim-closetag'
-Plugin 'ekalinin/Dockerfile.vim'
+
 Plugin 'EinfachToll/DidYouMean'
-Plugin 'fatih/vim-go' " Run :GoInstallBinaries
 Plugin 'mhinz/vim-signify'
 Plugin 'nathanaelkane/vim-indent-guides' " <leader>ig to toggle visbility
 Plugin 'airblade/vim-rooter'
@@ -140,18 +141,14 @@ Plugin 'alfredodeza/pytest.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'daltonmatos/vim-virtualenv'
 Plugin 'sandeepcr529/Buffet.vim'
-Plugin 'vim-scripts/indentpython.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'idanarye/vim-vebugger'
 Plugin 'gregsexton/gitv'
-Plugin 'vimwiki/vimwiki'
 
-Plugin 'vim-scripts/vim-do'
 Plugin 'w0rp/ale'
 
 Plugin 'janko-m/vim-test'
-Plugin 'LucHermitte/lh-vim-lib'
-Plugin 'LucHermitte/lh-tags'
+"
 " ColorSchemes
 Plugin 'chriskempson/base16-vim'
 Plugin 'Addisonbean/Vim-Xcode-Theme'
@@ -280,10 +277,6 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.xml"
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
-" Tagbar
-let g:tagbar_usearrows = 1
-let g:tagbar_autoclose = 1
-noremap <Leader>l :TagbarToggle<CR>
 
 noremap <Leader>e :25Lexplore<CR>
 
