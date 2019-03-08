@@ -281,68 +281,9 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 
 noremap <Leader>e :25Lexplore<CR>
 
-
-""" Vim-AirLine
-"
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#show_splits = 0 " Remove o nome do buffer no canto direito da tabline
-let g:airline#extensions#tabline#buf_label_first = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#tab_nr_type = 2 " splits and tab number
-let g:airline#extensions#tabline#fnamemod = ':p:.'
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline#extensions#tabline#show_close_button = 0
-let g:airline#extensions#virtualenv#enabled = 1
-let g:airline#extensions#hunks#enabled = 0 " We have signify enabled
-let g:virtualenv_stl_format = 'ጸ (%{get(g:, "virtualenv_name")})'
-let g:airline#extensions#tagbar#enabled = 0
-let g:airline_left_sep = ""
-let g:airline_right_sep = ""
-let g:airline_section_c = airline#section#create(['Project: %{getcwd()}'])
-let g:airline_mode_map = {
-      \ '__' : '-',
-      \ 'n'  : 'N',
-      \ 'i'  : 'I',
-      \ 'R'  : 'R',
-      \ 'c'  : 'C',
-      \ 'v'  : 'V',
-      \ 'V'  : 'V',
-      \ '' : 'V',
-      \ 's'  : 'S',
-      \ 'S'  : 'S',
-      \ '' : 'S',
-      \ 't' : 'T',
-      \ }
-let g:airline_right_alt_sep = ''
-
-let g:airline_section_x = '%{airline#util#prepend("",0)}%{airline#util#wrap(python#empty_ft(),0)}'
-
 " New tab
 noremap <C-t> :tabnew<CR>
 noremap <leader>t :tab sball<CR>
-
-""" CTRLP
-"
-let g:ctrlp_cmd = "CtrlP"
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_regexp = 1
-let g:ctrlp_switch_buffer = 'Et'
-let g:ctrlp_match_window = 'max:20'
-let g:ctrlp_use_caching = 1
-let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
-let g:ctrlp_max_depth = 10
-
-let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<c-t>'],
-    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-    \ }
-
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](dist|node_modules)$',
-  \ }
-nnoremap <C-D> :CtrlP ~/
 
 " Some interesting annotations about vim commands
 " Macros:
@@ -380,6 +321,8 @@ function! SourceFileIfExist(filename)
   endif
 endfunc
 
+call SourceFileIfExist('airline.vim')
+call SourceFileIfExist('ctrlp.vim')
 call SourceFileIfExist('extra.vim')
 call SourceFileIfExist('java.vim')
 call SourceFileIfExist('git.vim')
@@ -404,5 +347,3 @@ function! StripWhitespaceOnSave()
 endfunction
 
 autocmd VimEnter * call StripWhitespaceOnSave()
-
-
