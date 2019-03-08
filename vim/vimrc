@@ -259,17 +259,6 @@ augroup END
 " For sirver/ultisnips
 let g:UltiSnipsExpandTrigger="<C-J>"
 
-" For airblade/vim-rooter
-let g:rooter_change_directory_for_non_project_files = 'home'
-let g:rooter_silent_chdir = 1
-let g:rooter_resolve_links = 1
-
-" For signify plugin
-let g:signify_vcs_list = ['git']
-let g:signify_realtime = 1
-let g:signify_cursorhold_normal = 0
-let g:signify_cursorhold_insert = 0
-
 " For closetag plugin
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.xml"
@@ -333,6 +322,8 @@ call SourceFileIfExist('vim-test.vim')
 call SourceFileIfExist('pytest.vim')
 call SourceFileIfExist('terminal.vim')
 call SourceFileIfExist('python.vim')
+call SourceFileIfExist('vim-rooter.vim')
+call SourceFileIfExist('signify.vim')
 
 function! StripWhitespaceOnSave()
   " If we have ntpeters/vim-better-whitespace lodaed, strip whitespaces when
