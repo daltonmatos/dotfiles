@@ -1,4 +1,6 @@
 
+let g:ale_close_preview_on_insert = 1
+
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -19,4 +21,3 @@ let g:ale_linters = {
 \}
 
 set completeopt=menu,menuone,preview,noselect,noinsert
-imap <C-Space> <Plug>(ale_complete)

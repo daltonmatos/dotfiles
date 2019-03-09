@@ -176,62 +176,31 @@ colorscheme base16-dracula
 highlight LineNr guifg=White
 
 nmap <leader>w <C-W>
+nnoremap <silent> <leader>wr :setlocal wrap!<CR>
 
 " Expand %% (on the command line) to the directory of current file
 cnoremap %% <C-R>=expand('%:p:h').'/'<CR>
 
-nnoremap <silent> <leader>wr :setlocal wrap!<CR>
-nnoremap <silent> <leader>x  :w<CR>
-nnoremap <silent> <leader>X  :x<CR>
+"Desliga highlight search
+nnoremap <leader><space> :nohls <enter>
 
 " set CTRL-G to always show full path of current file when
 nnoremap <silent> <C-G>  1<C-G>
 
-"Ctrl+F4 closes current buffer
-" nnoremap <C-F4> :close<cr>
 nnoremap <leader>q :close<cr>
-nnoremap <C-h> <C-W>h
-nnoremap <C-l> <C-W>l
-nnoremap <C-j> <C-W>j
-nnoremap <C-k> <C-W>k
 
-nnoremap <leader>b :Bufferlist<CR>
 nnoremap <silent> <leader>bW :bwipe!<CR>
 
-"Desliga highlight search
-nnoremap <leader><space> :nohls <enter>
-
-" Mapping for search using :Ack
-nnoremap <leader>a :Ack <cword><CR>
-inoremap <C-F> <ESC>:Ack <cword><CR>
-" When on VISUAL mode:
-" yank current selected text to default register (y)
-" Selects Ack for search (:Ack)
-" Types default register's content back (<C-R>")
-" hits enter <CR>
-vnoremap <leader>a y:Ack <C-R>"<CR>
-
-nnoremap <leader>la :Ack <cword> %<CR>
-vnoremap <leader>la y:Ack <C-R>" %<CR>
-
 " Copy/Paste from/to clipboard
-vmap <Leader>y "+y
 nmap <Leader>p "+p
 nmap <Leader>P "+P
+vmap <Leader>y "+y
 vmap <Leader>p "+p
 vmap <Leader>P "+P
 
-
-" Navigate to previous tag o tagstack
-nmap <leader>[ :pop<CR>
-
-" For Syntastic
-" Recomended settings
 set statusline+=%#warningmsg#
 set statusline+=%*
 
-nnoremap <leader>en :lnext<CR>
-nnoremap <leader>ep :lprev<CR>
 nnoremap <leader>el :lopen<CR>
 
 " Close the QuickFix/Loc Windows hitting 'q'
@@ -241,45 +210,14 @@ augroup QuickCloser
   autocmd BufWinEnter quickfix nnoremap <buffer> q :close<CR>
   autocmd BufWinEnter quickfix nnoremap <buffer> <ESC> :close<CR>
 
-  autocmd BufWinEnter terminal nnoremap <buffer> <ESC> :close<CR>
-  autocmd BufWinEnter terminal nnoremap <buffer> q :close<CR>
-
   autocmd FileType netrw nnoremap <buffer> q :close<CR>
   autocmd FileType netrw nnoremap <buffer> <ESC> :close<CR>
 augroup END
-
-" For closetag plugin
-autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.xml"
 
 noremap <Leader>e :25Lexplore<CR>
 
 " New tab
 noremap <C-t> :tabnew<CR>
-noremap <leader>t :tab sball<CR>
-
-" Some interesting annotations about vim commands
-" Macros:
-" qa = inicia a gravação no registrador a (poderia ser qualquer letra)
-" q = termina a gravação
-" @a = executa a macro gravada em a
-" @@ = re-executa a última macro
-"
-" Copy-and-paste from different registers:
-" "a = Usa o registrador a (veja :help registers para lista de registradores)
-" "+ = buffer de ctrl+c e ctrl+v
-" "* = buffer de X11 primary selection
-" "/ = buffer de busca
-"
-" No modo de inserção (ou na linha de :comando):
-" ^R seguido de um registrador = insere o conteúdo daquele registrador
-"
-
-augroup Filetypes
-  autocmd!
-  autocmd BufRead,BufNewFile *.ino set filetype=cpp
-  autocmd BufRead,BufNewFile Dockerfile-* set syntax=dockerfile
-augroup END
 
 nnoremap <Leader>v :tabedit $MYVIMRC<cr>
 nnoremap <Leader>s :tabedit ~/.ssh/config<cr>
@@ -303,3 +241,7 @@ call SourceFileIfExist('vim-rooter.vim')
 call SourceFileIfExist('signify.vim')
 call SourceFileIfExist('supertab.vim')
 call SourceFileIfExist('ultisnips.vim')
+call SourceFileIfExist('ale-mappings.vim')
+call SourceFileIfExist('ack.vim')
+call SourceFileIfExist('buffet.vim')
+call SourceFileIfExist('closetag.vim')
