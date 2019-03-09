@@ -147,6 +147,7 @@ Plugin 'idanarye/vim-vebugger'
 Plugin 'gregsexton/gitv'
 
 Plugin 'w0rp/ale'
+Plugin 'easymotion/vim-easymotion'
 
 Plugin 'janko-m/vim-test'
 "
