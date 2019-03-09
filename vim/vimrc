@@ -85,30 +85,16 @@ nnoremap ; :
 "
 " }}} Complete reference about what do you get with this vimrc "
 
+function! SourceFileIfExist(filename)
+  let l:extra_file = fnamemodify(expand($MYVIMRC), ':p:h') . '/' . a:filename
+  if filereadable(l:extra_file)
+    execute ':so ' . l:extra_file
+  endif
+endfunc
+
+call SourceFileIfExist('ale.vim')
+
 " Plugin installation {{{2
-
-let g:ale_fix_on_save = 1
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['black', 'isort'],
-\}
-let g:ale_python_black_options = '--line-length 80'
-let g:ale_python_mypy_auto_pipenv = 1
-let g:ale_python_mypy_options = '--ignore-missing-imports'
-
-let g:ale_completion_enabled = 1
-let g:ale_completion_delay = 30
-"
-" Não sublinhar as linhas que o linter (pyls) acusar problemas
-let g:ale_set_highlights = 0
-
-let g:ale_linters = {
-      \ 'python': ['mypy', 'pyls'],
-\}
-
-set completeopt=menu,menuone,preview,noselect,noinsert
-imap <C-Space> <Plug>(ale_complete)
-
 
 call vundle#begin()
 
@@ -300,13 +286,6 @@ nnoremap <Leader>s :tabedit ~/.ssh/config<cr>
 nnoremap <Leader>z :tabedit $ZDOTDIR/.zshrc<cr>
 nnoremap <silent> <C-S-PageUP> :tabm -1<CR>
 nnoremap <silent> <C-S-PageDOWN> :tabm +1<CR>
-
-function! SourceFileIfExist(filename)
-  let l:extra_file = fnamemodify(expand($MYVIMRC), ':p:h') . '/' . a:filename
-  if filereadable(l:extra_file)
-    execute ':so ' . l:extra_file
-  endif
-endfunc
 
 call SourceFileIfExist('airline.vim')
 call SourceFileIfExist('ctrlp.vim')
