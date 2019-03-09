@@ -238,8 +238,8 @@ nnoremap <leader>el :lopen<CR>
 
 augroup QuickCloser
   autocmd!
-  autocmd BufWinEnter quickfix nnoremap <buffer> q :cclose<CR>
-  autocmd BufWinEnter quickfix nnoremap <buffer> <ESC> :cclose<CR>
+  autocmd BufWinEnter quickfix nnoremap <buffer> q :close<CR>
+  autocmd BufWinEnter quickfix nnoremap <buffer> <ESC> :close<CR>
 
   autocmd BufWinEnter terminal nnoremap <buffer> <ESC> :close<CR>
   autocmd BufWinEnter terminal nnoremap <buffer> q :close<CR>
