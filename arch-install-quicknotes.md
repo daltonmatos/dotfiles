@@ -1,4 +1,4 @@
-# Arch Install 
+# Arch Install
 
 # Boot
 
@@ -31,7 +31,7 @@
   - vim /etc/mkinitcpio.conf
     - Adicionar `encrypt` na linha `HOOKS=...`. Esse hook deve estar **antes** do hook `filesystems`.
     - mkinitcpio -p linux
-  - vim /etc/default/grub 
+  - vim /etc/default/grub
     - Descomentar a linha `GRUB_ENABLE_CRYPTODISK=y`
     - Adicionar linha: `GRUB_CMDLINE_LINUX="cryptdevice=UUID=<device-UUID>:cryptroot"`, onde `device-UUID` é o UUID da **partição** do disco.
     - grub-mkconfig -o /boot/grub/grub.cfg
@@ -39,7 +39,7 @@
   - ^D
   - shutdown -r now
 
-## Passos adicionais que podem ser feitos após o boot  
+## Passos adicionais que podem ser feitos após o boot
 
   - useradd -m -s /bin/zsh -U -G tty,network,docker,uucp,audio,wheel `<username>`
   - passwd `<daltonmatos>`
@@ -55,22 +55,26 @@
 
 # Boot já no sistema novo
 
-  - Install dotfiles (https://github.com/daltonmatos/dotfiles/)
-  - git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+
+## Configs gerais
   - $ _i gnome gdm [xf86-video-intel|nvidia]
   - $ sudo systemctl {enable,start} NetworkManager
   - $ _i noto-fonts ttf-bitstream-vera ttf-carlito ttf-croscore ttf-dejavu ttf-freefont ttf-droid ttf-liberation ttf-ubuntu-font-family
   - $ _i gnome gdm xf86-video-intel (nvidia-utils, nvidia-settings, nvidia-lts)
   - $ _i chromium
   - $ _i pass openssh pv ack hugo gcc make patch wget
-  - bzcat .dotfiles/Input.ttf.bz2 > .fonts/Input.ttf
   - fc-cache -rv .fonts
     - Instalar `gnome-tweaks` e colocar a fonte regular como Input, 12.
+
+## Configs para desenvolvimento
+
+  - Install dotfiles (https://github.com/daltonmatos/dotfiles/)
+  - git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+  - bzcat .dotfiles/Input.ttf.bz2 > .fonts/Input.ttf
   - Configurar Yubikey (https://daltonmatos.com/2018/07/preparando-uma-yubikey-4-nano-para-uso-diario/)
   - Instalar browserpass (https://github.com/browserpass/browserpass)
+  - pip install --user python-language-server[all] isort
   - Instalar AUR managaer: yay
-  - yay snapd
-  - systemctl enable/start snapd.socket
 
 # Configurações adicionais
 
@@ -79,7 +83,7 @@
     - fetch (pra pegar a chave pública)
     - gpg --edit-key daltonmatos@gmail.com
       - trust
-  - git 
+  - git
 
 ## i3
 
@@ -93,7 +97,7 @@
 Instala python 2.7.15 via pyenv, copia o módulo xcbgen do python global (pode ser o 3.7) para dentro do `site-packages` do 2.7.15.
 
 
-pwd   
+pwd
 /home/daltonmatos/.pyenv/versions/2.7.15/lib/python2.7/site-packages
 cp -a /usr/lib/python3.7/site-packages/xcbgen .
 
@@ -104,4 +108,3 @@ cp -a /usr/lib/python3.7/site-packages/xcbgen .
   - $ cryptsetup luksOpen `<partição>` crypt
   - $ mount /dev/mapper/crypt /mnt
   - $ pacstrap /mnt `<packages>`
-
