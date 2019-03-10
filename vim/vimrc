@@ -222,8 +222,6 @@ noremap <Leader>e :25Lexplore<CR>
 noremap <C-t> :tabnew<CR>
 
 nnoremap <Leader>v :tabedit $MYVIMRC<cr>
-nnoremap <Leader>s :tabedit ~/.ssh/config<cr>
-nnoremap <Leader>z :tabedit $ZDOTDIR/.zshrc<cr>
 nnoremap <silent> <C-S-PageUP> :tabm -1<CR>
 nnoremap <silent> <C-S-PageDOWN> :tabm +1<CR>
 
