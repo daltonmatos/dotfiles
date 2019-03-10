@@ -124,6 +124,7 @@ Plugin 'sirver/ultisnips'
 Plugin 'bling/vim-airline'
 
 Plugin 'kien/ctrlp.vim'
+Plugin 'jreybert/vimagit'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-scripts/surround.vim'
@@ -234,6 +235,7 @@ call SourceFileIfExist('closetag.vim')
 call SourceFileIfExist('ctrlp.vim')
 call SourceFileIfExist('git.vim')
 call SourceFileIfExist('java.vim')
+call SourceFileIfExist('magit.vim')
 call SourceFileIfExist('pytest.vim')
 call SourceFileIfExist('python.vim')
 call SourceFileIfExist('signify.vim')
