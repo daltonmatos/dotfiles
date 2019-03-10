@@ -4,4 +4,4 @@ let g:magit_auto_foldopen=0
 
 
 
-nnoremap <leader>gc   :Magit<CR>
+nnoremap <silent><leader>gc   :Magit<CR>
