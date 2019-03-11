@@ -6,7 +6,7 @@ font pango:Input 8
 
 
 default_border pixel 0
-hide_edge_borders both
+#hide_edge_borders both
 
 assign [class="Chromium"] 2
 bindsym $mod+l exec i3lock -c 000000
@@ -131,30 +131,10 @@ mode "resize" {
 
 bindsym $mod+r --release mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#        id bar-bottom
-#        font pango:Input 12
-#        #status_command i3status
-#        status_command ~/src/contrib/polybar/build/bin/polybar -c ~/.dotfiles/i3/polybar/config bottom
-##        mode hide
-##        hidden_state hide
-##        modifier Mod4
-#}
-#
-#bar {
-#    id bar-top
-#        font pango:Input 12
-#        status_command ~/src/contrib/polybar/build/bin/polybar -c ~/.dotfiles/i3/polybar/config top
-#
-#}
-
-
 exec --no-startup-id xset -b
 
 # Enable Tap to click
-exec --no-startup-id xinput set-prop 12 284 1
+exec --no-startup-id ~/.i3/scripts/enable-touch-click.sh
 
 # Disable power button, for now.
 exec --no-startup-id systemd-inhibit --what=handle-power-key sleep infinity
@@ -164,4 +144,22 @@ mode poweroff {
 
 
   bindsym Escape mode "default"
+}
+
+
+bar {
+  id bar-top
+	font pango:Inconsolata 10
+	position top
+	tray_output none
+  status_command /home/daltonmatos/.bumblebee-status/bumblebee-status -m date time -p time.format="%H:%M" -t solarized-powerline
+}
+bar {
+  id bar-bottom
+	font pango:Inconsolata 10
+	position bottom
+	#tray_output none
+  verbose yes
+  status_command /home/daltonmatos/.bumblebee-status/bumblebee-status -m  memory battery -t solarized-powerline
+  #status_command /home/daltonmatos/.bumblebee-status/bumblebee-status -m disk:home load cpu memory battery date time pasink pasource -p interval=2.5 time.format="%H:%M CW %V" date.format="%a, %b %d %Y" home.path=/home -t solarized-powerline
 }
