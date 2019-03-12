@@ -101,6 +101,8 @@ call vundle#begin()
 " Dependency for idanarye/vim-vebugger
 Plugin 'Shougo/vimproc.vim', {'do' : 'make'}
 
+Plugin 'vim-ctrlspace/vim-ctrlspace'
+
 " Dependenxy to janko-m/vim-test
 Plugin 'tpope/vim-dispatch'
 
@@ -123,7 +125,6 @@ Plugin 'sirver/ultisnips'
 
 Plugin 'bling/vim-airline'
 
-Plugin 'kien/ctrlp.vim'
 Plugin 'jreybert/vimagit'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
@@ -142,7 +143,6 @@ Plugin 'elzr/vim-json' " checking for json files, highlighting errors
 Plugin 'alfredodeza/pytest.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'daltonmatos/vim-virtualenv'
-Plugin 'sandeepcr529/Buffet.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'idanarye/vim-vebugger'
 Plugin 'gregsexton/gitv'
@@ -228,9 +228,7 @@ nnoremap <silent> <C-S-PageDOWN> :tabm +1<CR>
 call SourceFileIfExist('ack.vim')
 call SourceFileIfExist('airline.vim')
 call SourceFileIfExist('ale-mappings.vim')
-call SourceFileIfExist('buffet.vim')
 call SourceFileIfExist('closetag.vim')
-call SourceFileIfExist('ctrlp.vim')
 call SourceFileIfExist('easymotion.vim')
 call SourceFileIfExist('git.vim')
 call SourceFileIfExist('java.vim')
@@ -241,6 +239,7 @@ call SourceFileIfExist('signify.vim')
 call SourceFileIfExist('supertab.vim')
 call SourceFileIfExist('terminal.vim')
 call SourceFileIfExist('ultisnips.vim')
+call SourceFileIfExist('vim-ctrlspace.vim')
 call SourceFileIfExist('vimmove.vim')
 call SourceFileIfExist('vim-rooter.vim')
 call SourceFileIfExist('vim-test.vim')
