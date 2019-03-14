@@ -7,8 +7,10 @@ let g:airline#extensions#hunks#enabled = 0 " We have signify enabled
 let g:virtualenv_stl_format = 'ጸ (%{get(g:, "virtualenv_name")})'
 let g:airline#extensions#tagbar#enabled = 0
 let g:airline_left_sep = ""
+let g:airline_section_x = airline#section#create([''])
+let g:airline_section_y = airline#section#create([''])
+let g:airline_section_z = airline#section#create(['C:%c'])
 let g:airline_right_sep = ""
-let g:airline_section_c = airline#section#create(['Project: %{getcwd()}'])
 let g:airline_mode_map = {
       \ '__' : '-',
       \ 'n'  : 'N',
@@ -24,5 +26,3 @@ let g:airline_mode_map = {
       \ 't' : 'T',
       \ }
 let g:airline_right_alt_sep = ''
-
-let g:airline_section_x = '%{airline#util#prepend("",0)}%{airline#util#wrap(python#empty_ft(),0)}'
