@@ -8,7 +8,7 @@ nmap <C-J> <Plug>(ale_next_wrap)
 " Code Navigation
 " Namespace <leager>c (Code)
 
-nmap <silent> <leader>cd :ALEGoToDefinitionInTab <CR>
+nmap <silent> <leader>cd :ALEGoToDefinition <CR>
 nmap <silent> <leader>/cd :ALEGoToDefinitionInVSplit <CR>
 nmap <silent> <leader>-cd :ALEGoToDefinitionInSplit <CR>
 
