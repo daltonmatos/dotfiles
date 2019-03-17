@@ -115,12 +115,12 @@ exec --no-startup-id ~/.i3/scripts/enable-touch-click.sh
 exec --no-startup-id systemd-inhibit --what=handle-power-key sleep infinity
 
 mode poweroff {
-  bindsym $mod+l exec i3lock -c 000000
-
+  bindsym $mod+l exec i3lock -c 000000; mode "default";
 
   bindsym Escape mode "default"
 }
 
+bindsym $mod+x --release mode "poweroff"
 
 bar {
   id bar-top
