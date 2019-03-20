@@ -153,7 +153,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'janko-m/vim-test'
 "
 " ColorSchemes
-Plugin 'chriskempson/base16-vim'
+Plugin 'danielwe/base16-vim'
 Plugin 'Addisonbean/Vim-Xcode-Theme'
 
 call vundle#end()
