@@ -107,6 +107,7 @@ mode "resize" {
 bindsym $mod+r --release mode "resize"
 
 exec --no-startup-id xset -b
+exec --no-startup-id sleep 30; pactl set-sink-mute @DEFAULT_SINK@ 1
 
 # Enable Tap to click
 exec --no-startup-id ~/.i3/scripts/enable-touch-click.sh
