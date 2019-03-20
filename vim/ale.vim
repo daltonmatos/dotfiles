@@ -12,7 +12,8 @@ let g:ale_python_mypy_options = '--ignore-missing-imports'
 let g:ale_python_isort_options = '--apply --recursive --line-width 80 --use-parentheses --no-inline-sort --multi-line 3 --trailing-comma'
 
 let g:ale_completion_enabled = 1
-let g:ale_completion_delay = 30
+let g:ale_completion_delay = 200
+let g:ale_close_preview_on_insert = 1
 "
 " Não sublinhar as linhas que o linter (pyls) acusar problemas
 let g:ale_set_highlights = 0
