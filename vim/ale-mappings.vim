@@ -13,3 +13,4 @@ nmap <silent> <leader>/cd :ALEGoToDefinitionInVSplit <CR>
 nmap <silent> <leader>-cd :ALEGoToDefinitionInSplit <CR>
 
 nmap <silent> <leader>cf :ALEFindReferences <CR>
+nmap <silent> <leader>ci :ALEHover <CR>
