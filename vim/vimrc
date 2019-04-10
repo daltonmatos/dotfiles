@@ -178,6 +178,7 @@ colorscheme base16-dracula
 highlight LineNr guifg=White
 
 nmap <leader>w <C-W>
+nnoremap <leader>wX :wincmd _ \| wincmd \| <CR>
 nnoremap <silent> <leader>wr :setlocal wrap!<CR>
 
 " Expand %% (on the command line) to the directory of current file
