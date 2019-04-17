@@ -143,7 +143,6 @@ Plugin 'elzr/vim-json' " checking for json files, highlighting errors
 Plugin 'alfredodeza/pytest.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'daltonmatos/vim-virtualenv'
-Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'idanarye/vim-vebugger'
 Plugin 'gregsexton/gitv'
 
