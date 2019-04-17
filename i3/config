@@ -124,18 +124,10 @@ mode poweroff {
 bindsym $mod+x --release mode "poweroff"
 
 bar {
-  id bar-top
-	font pango:Inconsolata 10
-	position top
-	tray_output none
-  status_command /home/daltonmatos/.bumblebee-status/bumblebee-status -m date time -p time.format="%H:%M" -t solarized-powerline
-}
-bar {
   id bar-bottom
 	font pango:Inconsolata 10
 	position bottom
 	#tray_output none
   verbose yes
-  status_command /home/daltonmatos/.bumblebee-status/bumblebee-status -m  memory battery -t solarized-powerline
-  #status_command /home/daltonmatos/.bumblebee-status/bumblebee-status -m disk:home load cpu memory battery date time pasink pasource -p interval=2.5 time.format="%H:%M CW %V" date.format="%a, %b %d %Y" home.path=/home -t solarized-powerline
+  status_command /home/daltonmatos/.pyenv/shims/python /home/daltonmatos/.bumblebee-status/bumblebee-status -d -m nic memory battery pasink pasource bluetooth date time -p time.format="%H:%M" -t solarized-powerline
 }
