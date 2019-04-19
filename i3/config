@@ -34,6 +34,7 @@ bindsym $mod+minus split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f floating toggle
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -91,8 +92,8 @@ exec --no-startup-id systemd-inhibit --what=handle-power-key sleep infinity
 set $poweroff_mode "poweroff: [l]ock [h]ibernate"
 mode $poweroff_mode {
 
-  bindsym l exec i3lock -c 000000; mode $default_mode;
-  bindsym h exec i3lock -c 000000; exec sleep 2; mode $default_mode;  exec systemctl suspend;
+  bindsym l exec ~/.i3/scripts/lock.sh; mode $default_mode;
+  bindsym h exec ~/.i3/scripts/lock.sh; exec sleep 2; mode $default_mode;  exec systemctl suspend;
 
   bindsym Escape mode $default_mode
 }

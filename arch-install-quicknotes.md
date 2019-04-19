@@ -87,21 +87,14 @@
 
 ## i3
 
+  - Instalar o i3lock-color via PKGBUILD. O script de lock depende dele
+    - Baixar o PKGBUILD
+    - makepkg -si
+
 ### Pacotes
 
  xorg-*
  xorg-xrandr xorg-xinput
-
-### Compilando polybar
-
-Instala python 2.7.15 via pyenv, copia o módulo xcbgen do python global (pode ser o 3.7) para dentro do `site-packages` do 2.7.15.
-
-
-pwd
-/home/daltonmatos/.pyenv/versions/2.7.15/lib/python2.7/site-packages
-cp -a /usr/lib/python3.7/site-packages/xcbgen .
-
-
 
 # Se precisar da boot pelo ISO pra corrigir alguma coisa
 
