@@ -1,8 +1,9 @@
 for_window [class="^.*"] border pixel 2
 for_window [window_role="pop-up"] floating enable
 
-gaps inner 8
-gaps outer 8
+gaps inner 5
+gaps outer 0
+default_border pixel 3
 set $mod Mod4
 
 set $default_mode "default"
@@ -105,6 +106,6 @@ bar {
 	font pango:Inconsolata 10
 	position bottom
 	#tray_output none
-  verbose yes
-  status_command /home/daltonmatos/.pyenv/shims/python /home/daltonmatos/.bumblebee-status/bumblebee-status -d -m nic memory battery pasink pasource bluetooth date time -p time.format="%H:%M" -t solarized-powerline
+  vgnomeerbose yes
+  status_command /home/daltonmatos/.pyenv/shims/python /home/daltonmatos/.bumblebee-status/bumblebee-status -d -m nic memory battery pasink pasource bluetooth date time -p time.format="%H:%M" -p memory.format="{percent:5.0f}%" -p nic.format="{intf} {ip} {ssid}" -p nic.exclude="lo,virbr,docker,vboxnet,veth,br-" -t solarized-powerline
 }
