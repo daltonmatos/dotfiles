@@ -106,6 +106,5 @@ bar {
 	font pango:Inconsolata 10
 	position bottom
 	#tray_output none
-  vgnomeerbose yes
   status_command /home/daltonmatos/.pyenv/shims/python /home/daltonmatos/.bumblebee-status/bumblebee-status -d -m nic memory battery pasink pasource bluetooth date time -p time.format="%H:%M" -p memory.format="{percent:5.0f}%" -p nic.format="{intf} {ip} {ssid}" -p nic.exclude="lo,virbr,docker,vboxnet,veth,br-" -t solarized-powerline
 }
