@@ -102,7 +102,7 @@ bindsym $mod+x --release mode $poweroff_mode
 
 bar {
   id bar-bottom
-	font pango:Inconsolata 10
+	font pango:Input Regular 10
 	position bottom
   status_command /home/daltonmatos/.pyenv/shims/python \
       /home/daltonmatos/.bumblebee-status/bumblebee-status -d \
