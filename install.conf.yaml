@@ -1,0 +1,10 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- link:
+    ~/.config/xfce4/terminal/accels.scm:
+      path: term/accels.scm
+    ~/.config/xfce4/terminal/terminalrc:
+      path: term/terminalrc

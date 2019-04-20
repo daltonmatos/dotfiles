@@ -69,6 +69,8 @@
 ## Configs para desenvolvimento
 
   - Install dotfiles (https://github.com/daltonmatos/dotfiles/)
+    - pip install --user dotbot
+    - cd .dotfiles; dotbot -c install.conf.yaml
   - git clone https://github.com/pyenv/pyenv.git ~/.pyenv
   - bzcat .dotfiles/Input.ttf.bz2 > .fonts/Input.ttf
   - Configurar Yubikey (https://daltonmatos.com/2018/07/preparando-uma-yubikey-4-nano-para-uso-diario/)
