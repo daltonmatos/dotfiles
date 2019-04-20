@@ -1,4 +1,4 @@
-for_window [class="^.*"] border pixel 2
+for_window [class="[pP]avucontrol|Arandr"] floating enable
 for_window [window_role="pop-up"] floating enable
 
 gaps inner 5
