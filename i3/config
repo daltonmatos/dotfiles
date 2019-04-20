@@ -1,3 +1,5 @@
+# vim: filetype=i3
+
 for_window [class="[pP]avucontrol|Arandr"] floating enable
 for_window [window_role="pop-up"] floating enable
 
@@ -32,6 +34,12 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 bindsym $mod+a focus parent
+
+# Move
+bindsym $mod+Shift+h		move left
+bindsym $mod+Shift+j		move down
+bindsym $mod+Shift+k		move up
+bindsym $mod+Shift+l 	move right
 
 # split in horizontal orientation
 bindsym $mod+bar split h
