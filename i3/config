@@ -33,7 +33,6 @@ bindsym $mod+bar split h
 # split in vertical orientation
 bindsym $mod+minus split v
 
-# enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f floating toggle
 
@@ -105,6 +104,12 @@ bar {
   id bar-bottom
 	font pango:Inconsolata 10
 	position bottom
-	#tray_output none
-  status_command /home/daltonmatos/.pyenv/shims/python /home/daltonmatos/.bumblebee-status/bumblebee-status -d -m nic memory battery pasink pasource bluetooth date time -p time.format="%H:%M" -p memory.format="{percent:5.0f}%" -p nic.format="{intf} {ip} {ssid}" -p nic.exclude="lo,virbr,docker,vboxnet,veth,br-" -t solarized-powerline
+  status_command /home/daltonmatos/.pyenv/shims/python \
+      /home/daltonmatos/.bumblebee-status/bumblebee-status -d \
+      -m nic memory battery pasink pasource bluetooth date time \
+      -p time.format="%H:%M" \
+      -p memory.format="{percent:5.0f}%" \
+      -p nic.format="{intf} {ip} {ssid}" \
+      -p nic.exclude="lo,virbr,docker,vboxnet,veth,br-" \
+      -t solarized-powerline
 }
