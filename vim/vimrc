@@ -155,6 +155,9 @@ Plugin 'janko-m/vim-test'
 Plugin 'danielwe/base16-vim'
 Plugin 'Addisonbean/Vim-Xcode-Theme'
 
+" Syntax schemes
+Plugin 'PotatoesMaster/i3-vim-syntax'
+
 call vundle#end()
 " }}} Plugin installation
 
