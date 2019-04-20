@@ -21,6 +21,11 @@ bindsym $mod+Shift+q kill
 
 bindsym $mod+r exec dmenu_run
 
+bindsym Print exec maim ~/Pictures/screenshot-$(date +"%s").jpg
+bindsym Shift+Print exec maim -s ~/Pictures/screenshot-$(date +"%s").jpg
+
+
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down

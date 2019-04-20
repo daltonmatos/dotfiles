@@ -62,7 +62,7 @@
   - $ _i noto-fonts ttf-bitstream-vera ttf-carlito ttf-croscore ttf-dejavu ttf-freefont ttf-droid ttf-liberation ttf-ubuntu-font-family
   - $ _i gdm xf86-video-intel (nvidia-utils, nvidia-settings, nvidia-lts)
   - $ _i chromium
-  - $ _i pass openssh pv ack hugo gcc make patch wget
+  - $ _i pass openssh pv ack hugo gcc make patch wget maim xdotool
   - fc-cache -rv .fonts
     - Instalar `gnome-tweaks` e colocar a fonte regular como Input, 12.
 
