@@ -9,5 +9,6 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 autoload -U compinit promptinit
 compinit
+export TERMINAL="xfce4-terminal"
 
 zstyle ':completion::complete:*' use-cache 1
