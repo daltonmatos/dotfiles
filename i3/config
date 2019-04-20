@@ -31,6 +31,7 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
+bindsym $mod+a focus parent
 
 # split in horizontal orientation
 bindsym $mod+bar split h
