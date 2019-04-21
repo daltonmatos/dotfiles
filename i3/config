@@ -26,7 +26,8 @@ bindsym $mod+r exec dmenu_run
 bindsym Print exec maim ~/Pictures/screenshot-$(date +"%s").jpg
 bindsym Shift+Print exec maim -s ~/Pictures/screenshot-$(date +"%s").jpg
 
-
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # change focus
 bindsym $mod+h focus left
