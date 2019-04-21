@@ -18,8 +18,8 @@ i3lock \
 --blur 5              \
 --clock               \
 --bar-indicator       \
---timestr="%H:%M:%S"  \
---datestr="%A, %m %Y" \
+--timestr="%H:%M:%S" \
+--datestr="%A, %d %b %Y" \
 --keylayout 2         \
 
 # --veriftext="Drinking verification can..."
