@@ -8,3 +8,17 @@
       path: term/accels.scm
     ~/.config/xfce4/terminal/terminalrc:
       path: term/terminalrc
+    ~/.zshenv:
+      path: zsh/zshenv
+    ~/.zsh:
+      path: zsh
+    ~/.gitconfig:
+      path: git/gitconfig
+    ~/.i3:
+      path: i3
+    ~/.vim:
+      path: vim
+    ~/.gnupg/gpg.conf:
+      path: gpg/gpg.conf
+    ~/.gnupg/gpg-agent.conf:
+      path: gpg/gpg-agent.conf
