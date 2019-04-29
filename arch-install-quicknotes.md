@@ -24,7 +24,13 @@
 ## Mínimo necessário para poder já dar boot no sistema novo
 
   - timedatectl set-ntp true
-  - pacstrap /mnt base git zsh vim grub intel-ucode docker dialog sudo wpa_supplicant automake autoconf make xfce4-terminal
+  - pacstrap /mnt base git zsh vim grub intel-ucode docker \
+            dialog sudo wpa_supplicant automake \
+            autoconf make xfce4-terminal \
+            netctl i3 gdm chromium \
+            pass openssh pv ack hugo \
+            gcc make patch wget \
+            maim xdotool xorg-xev
   - arch-chroot /mnt
   - hwclock --systohc
   - passwd
@@ -57,21 +63,20 @@
 
 
 ## Configs gerais
-  - $ _i i3[-gaps?] gdm [xf86-video-intel|nvidia]
-  - $ sudo systemctl {enable,start} NetworkManager
+  - $ _i [xf86-video-intel|nvidia]
+  - $ sudo systemctl {enable,start} netctl
   - $ _i noto-fonts ttf-bitstream-vera ttf-carlito ttf-croscore ttf-dejavu ttf-freefont ttf-droid ttf-liberation ttf-ubuntu-font-family
-  - $ _i gdm xf86-video-intel (nvidia-utils, nvidia-settings, nvidia-lts)
-  - $ _i chromium
-  - $ _i pass openssh pv ack hugo gcc make patch wget maim xdotool xorg-xev
+  - $ _i xf86-video-intel (nvidia-utils, nvidia-settings, nvidia-lts)
+
   - fc-cache -rv .fonts
     - Instalar `gnome-tweaks` e colocar a fonte regular como Input, 12.
 
 ## Configs para desenvolvimento
 
-  - Install dotfiles (https://github.com/daltonmatos/dotfiles/)
+  - git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+  - git clone https://github.com/daltonmatos/dotfiles/ ~/.dotfilles
     - pip install --user dotbot
     - cd .dotfiles; dotbot -c install.conf.yaml
-  - git clone https://github.com/pyenv/pyenv.git ~/.pyenv
   - bzcat .dotfiles/Input.ttf.bz2 > .fonts/Input.ttf
   - Configurar Yubikey (https://daltonmatos.com/2018/07/preparando-uma-yubikey-4-nano-para-uso-diario/)
   - Instalar browserpass (https://github.com/browserpass/browserpass)
