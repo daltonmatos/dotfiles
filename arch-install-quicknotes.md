@@ -30,7 +30,7 @@
             netctl i3 gdm chromium \
             pass openssh pv ack hugo \
             gcc make patch wget \
-            maim xdotool xorg-xev
+            maim xdotool xorg-xev dunst
   - arch-chroot /mnt
   - hwclock --systohc
   - passwd
@@ -74,6 +74,8 @@
 ## Configs para desenvolvimento
 
   - git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+  - git clone https://github.com/tobi-wan-kenobi/bumblebee-status .bumblebee-status
+    - pip install --user netifaces psutil
   - git clone https://github.com/daltonmatos/dotfiles/ ~/.dotfilles
     - pip install --user dotbot
     - cd .dotfiles; dotbot -c install.conf.yaml
