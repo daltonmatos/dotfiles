@@ -18,8 +18,10 @@ let g:ale_close_preview_on_insert = 1
 " Não sublinhar as linhas que o linter (pyls) acusar problemas
 let g:ale_set_highlights = 0
 
+" Needs npm install typescript (which brings tsserver executable)
 let g:ale_linters = {
       \ 'python': ['mypy', 'pyls'],
+      \ 'javascript': ['tsserver', 'eslint', 'prettier'],
 \}
 
 set completeopt=menu,menuone,preview,noselect,noinsert
