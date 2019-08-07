@@ -10,7 +10,12 @@ function! OpenTerminal()
   endfor
 
   let l:dir = getcwd()
-  let l:opts = {"term_name": "Terminal", "term_finish": "close", "env": {"CHG_PWD": l:dir}}
+  let l:opts = {"term_name": "Terminal", "term_finish": "close", "env":
+        \{
+          \"CHG_PWD": l:dir,
+          \"VIM_CURRENT_SERVERNAME": v:servername
+        \}
+        \}
   let l:bufnr = term_start("zsh --login -i", l:opts)
   let l:winid = bufwinid(l:bufnr)
 
