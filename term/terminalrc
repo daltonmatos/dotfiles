@@ -2,7 +2,7 @@
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
-MiscBordersDefault=TRUE
+MiscBordersDefault=FALSE
 MiscCursorBlinks=TRUE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_UNDERLINE
 MiscDefaultGeometry=80x24
@@ -23,7 +23,7 @@ MiscShowRelaunchDialog=TRUE
 MiscRewrapOnResize=TRUE
 MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
-MiscNewTabAdjacent=FALSE
+MiscNewTabAdjacent=TRUE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
 CommandLoginShell=TRUE
 FontName=Input Semi-Condensed 12
@@ -31,4 +31,6 @@ ColorPalette=#000000;#cc0000;#4e9a06;#c4a000;#3465a4;#75507b;#06989a;#d3d7cf;#55
 ShortcutsNoHelpkey=TRUE
 ShortcutsNoMenukey=TRUE
 ShortcutsNoMnemonics=TRUE
+MiscSearchDialogOpacity=100
+MiscShowUnsafePasteDialog=TRUE
 
