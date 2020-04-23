@@ -22,3 +22,7 @@
       path: gpg/gpg.conf
     ~/.gnupg/gpg-agent.conf:
       path: gpg/gpg-agent.conf
+    ~/.config/code:
+      path: code
+    '~/.config/Code - OSS':
+      path: code

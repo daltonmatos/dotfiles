@@ -84,6 +84,7 @@
   - Instalar browserpass (https://github.com/browserpass/browserpass)
   - pip install --user python-language-server[all] isort
   - Instalar AUR managaer: yay
+  - $ _i code
 
 # Configurações adicionais
 

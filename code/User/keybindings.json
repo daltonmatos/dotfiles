@@ -1,0 +1,12 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+k ctrl+e",
+        "command": "workbench.view.explorer",
+        "when": "editorTextFocus"
+    },{
+        "key": "ctrl+k ctrl+s",
+        "command": "workbench.view.scm",
+        "when": "editorTextFocus"
+    }
+]
