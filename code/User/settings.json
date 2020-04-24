@@ -13,4 +13,10 @@
     "terminal.integrated.splitCwd": "workspaceRoot",
     "terminal.integrated.fontSize": 16,
     "editor.minimap.enabled": false,
+    "terminal.integrated.allowChords": true,
+    "terminal.integrated.commandsToSkipShell": [
+        "-workbench.action.quickOpen",
+        "-workbench.action.zoomOut",
+        "-workbench.action.zoomIn"
+    ]
 }
