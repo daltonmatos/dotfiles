@@ -2,6 +2,7 @@
     "extensions": [
         "ms-python.python"
     ],
+    "workbench.startupEditor": "none",
     "window.menuBarVisibility": "hidden",
     "workbench.colorTheme": "Solarized Dark",
     "git.suggestSmartCommit": false,
