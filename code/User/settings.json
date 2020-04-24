@@ -12,4 +12,5 @@
     "window.zoomLevel": 0,
     "terminal.integrated.splitCwd": "workspaceRoot",
     "terminal.integrated.fontSize": 16,
+    "editor.minimap.enabled": false,
 }
