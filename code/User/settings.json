@@ -10,7 +10,6 @@
     "editor.formatOnSave": true,
     "editor.fontSize": 16,
     "window.zoomLevel": 0,
-    "terminal.integrated.splitCwd": "workspaceRoot",
     "terminal.integrated.fontSize": 16,
     "editor.minimap.enabled": false,
     "terminal.integrated.allowChords": true,
@@ -18,5 +17,8 @@
         "-workbench.action.quickOpen",
         "-workbench.action.zoomOut",
         "-workbench.action.zoomIn"
-    ]
+    ],
+    "terminal.integrated.env.linux": {
+        "VSCODE_CHG_PWD": "${workspaceFolder}"
+    }
 }
