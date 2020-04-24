@@ -23,5 +23,6 @@
     ],
     "terminal.integrated.env.linux": {
         "VSCODE_CHG_PWD": "${workspaceFolder}"
-    }
+    },
+    "editor.cursorStyle": "line",
 }
