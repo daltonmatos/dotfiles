@@ -1,4 +1,7 @@
 {
+    "extensions": [
+        "ms-python.python"
+    ],
     "window.menuBarVisibility": "hidden",
     "workbench.colorTheme": "Solarized Dark",
     "git.suggestSmartCommit": false,
