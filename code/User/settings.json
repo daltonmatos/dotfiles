@@ -1,3 +1,15 @@
 {
-    "workbench.activityBar.visible": false
+    "window.menuBarVisibility": "hidden",
+    "workbench.colorTheme": "Solarized Dark",
+    "git.suggestSmartCommit": false,
+    "workbench.activityBar.visible": false,
+    "breadcrumbs.enabled": false,
+    "window.titleBarStyle": "custom",
+    "editor.fontLigatures": false,
+    "editor.fontFamily": "'Input'",
+    "editor.formatOnSave": true,
+    "editor.fontSize": 16,
+    "window.zoomLevel": 0,
+    "terminal.integrated.splitCwd": "workspaceRoot",
+    "terminal.integrated.fontSize": 16,
 }
