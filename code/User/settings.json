@@ -1,14 +1,21 @@
 {
     "extensions": [
-        "ms-python.python",
-        "JoeBerria.statusbarerror"
+        "dbankier.vscode-quick-select",
+        "Equinusocio.vsc-community-material-theme",
+        "Equinusocio.vsc-material-theme",
+        "equinusocio.vsc-material-theme-icons",
+        "JoeBerria.statusbarerror",
+        "ms-python.python"
     ],
+    // Se um arquivo já estivere aberto (visível), GoToDefinition
+    // vai até esse painel já aberto em vez de abrir o arquivo 
+    "workbench.editor.revealIfOpen": true,
     "workbench.startupEditor": "none",
     "statusbarerror.gutter.hint.show": false,
     "statusbarerror.gutter.info.show": false,
-    "workbench.editor.showTabs": false,
+    "workbench.editor.showTabs": true,
     "window.menuBarVisibility": "hidden",
-    "workbench.colorTheme": "Solarized Dark",
+    "workbench.colorTheme": "Material Theme Darker",
     "git.suggestSmartCommit": false,
     "workbench.activityBar.visible": false,
     "breadcrumbs.enabled": false,
