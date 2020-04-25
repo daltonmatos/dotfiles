@@ -1,6 +1,7 @@
 {
     "extensions": [
-        "ms-python.python"
+        "ms-python.python",
+        "JoeBerria.statusbarerror"
     ],
     "workbench.startupEditor": "none",
     "statusbarerror.gutter.hint.show": false,
