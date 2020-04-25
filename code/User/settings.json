@@ -3,6 +3,9 @@
         "ms-python.python"
     ],
     "workbench.startupEditor": "none",
+    "statusbarerror.gutter.hint.show": false,
+    "statusbarerror.gutter.info.show": false,
+    "workbench.editor.showTabs": false,
     "window.menuBarVisibility": "hidden",
     "workbench.colorTheme": "Solarized Dark",
     "git.suggestSmartCommit": false,
@@ -26,4 +29,19 @@
         "VSCODE_CHG_PWD": "${workspaceFolder}"
     },
     "editor.cursorStyle": "line",
+    "python.linting.pylintEnabled": false,
+    "python.linting.mypyEnabled": true,
+    "python.linting.enabled": true,
+    "python.formatting.provider": "black",
+    "python.sortImports.args": [
+        "-rc"
+    ],
+    "python.formatting.blackArgs": [
+        "--line-length=80"
+    ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    }
 }
