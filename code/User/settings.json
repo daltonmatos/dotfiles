@@ -25,6 +25,7 @@
     "editor.formatOnSave": true,
     "editor.fontSize": 16,
     "window.zoomLevel": 0,
+    "workbench.statusBar.visible": true,
     "terminal.integrated.fontSize": 16,
     "editor.minimap.enabled": false,
     "terminal.integrated.allowChords": true,
@@ -34,7 +35,7 @@
         "-workbench.action.zoomIn"
     ],
     "terminal.integrated.env.linux": {
-        "VSCODE_CHG_PWD": "${workspaceFolder}"
+        "VSCODE_CHG_PWD": "${workspaceFolder}",
     },
     "editor.cursorStyle": "line",
     "python.linting.pylintEnabled": false,
@@ -44,6 +45,7 @@
     "python.sortImports.args": [
         "-rc"
     ],
+    "python.pipenvPath": "/home/daltonmatos/.pyenv/shims/pipenv",
     "python.formatting.blackArgs": [
         "--line-length=80"
     ],
@@ -51,5 +53,6 @@
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
         }
-    }
+    },
+    "python.terminal.activateEnvironment": false,
 }
