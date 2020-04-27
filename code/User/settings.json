@@ -55,4 +55,14 @@
         }
     },
     "python.terminal.activateEnvironment": false,
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.showIcons": false,
+    "workbench.editor.tabCloseButton": "off",
+    "window.enableMenuBarMnemonics": false, // Permite usar Alt+ como atalhos de editor.
+    "zenMode.centerLayout": false,
+    "zenMode.hideLineNumbers": false,
+    "window.openFoldersInNewWindow": "on",
+    "window.title": "${dirty}${rootName}/${activeEditorMedium}"
 }
