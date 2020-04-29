@@ -26,6 +26,7 @@
     "editor.fontSize": 16,
     "window.zoomLevel": 0,
     "workbench.statusBar.visible": true,
+    "workbench.sideBar.location": "right",
     "terminal.integrated.fontSize": 16,
     "editor.minimap.enabled": false,
     "terminal.integrated.allowChords": true,
