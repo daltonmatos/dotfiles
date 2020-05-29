@@ -100,6 +100,7 @@
   - Instalar o i3lock-color via PKGBUILD. O script de lock depende dele
     - Baixar o PKGBUILD
     - makepkg -si
+  - Instalar `rofi`: _i rofi
 
 ### Pacotes
 
