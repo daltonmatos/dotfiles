@@ -16,6 +16,8 @@
       path: git/gitconfig
     ~/.i3:
       path: i3
+    ~/.config/rofi:
+      path: i3/rofi
     ~/.vim:
       path: vim
     ~/.gnupg/gpg.conf:
