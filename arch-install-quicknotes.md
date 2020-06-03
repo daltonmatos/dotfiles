@@ -12,12 +12,29 @@
       - 64MB, tipo: 1 (EFI)
       - Todo o restante do disco, tipo: 20 (Linux Filesystem)
 
+# Se tiveer com multi-disco
+
+    - /var/log/
+    - /var/cache/pacman
+    - /home/daltonmatos/Documents
+    - /home/daltonmatos/Videos
+    - /home/daltonmatos/Downloads
+
+
 # Preparando o disco
 
   - $ cryptsetup luksFormat `<partição>`
   - $ cryptsetup luksOpen `<partição>` crypt-root
   - $ mke2fs -t ext4 /dev/mapper/crypt-root
   - $ mount /dev/mapper/crypt-root /mnt
+
+# LVM
+
+ sudo pvcreate /dev/mapper/crypt-ssd
+ sudo vgcreate vg01 /dev/mapper/crypt-ssd
+ sudo lvcreate -L 20G -n root vg01
+ sudo lvcreate -L XGB -n home vg01
+
 
 # Instalação
 
