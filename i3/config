@@ -4,6 +4,7 @@ set $open_in_terminal xfce4-terminal -e
 
 for_window [class="[pP]avucontrol|Arandr"] floating enable
 for_window [window_role="pop-up"] floating enable
+for_window [class="zoom"] floating enable
 
 gaps inner 5
 gaps outer 0
@@ -11,6 +12,7 @@ default_border pixel 3
 set $mod Mod4
 
 set $default_mode "default"
+
 
 exec --no-startup-id ~/.i3/scripts/check-dunst.sh
 # Enable Tap to click
@@ -21,6 +23,7 @@ exec --no-startup-id sleep 30; pactl set-sink-mute @DEFAULT_SINK@ 1
 
 # Disable power button, for now.
 exec --no-startup-id systemd-inhibit --what=handle-power-key sleep infinity
+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -131,6 +134,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 
 workspace $ws10 output HDMI1
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
