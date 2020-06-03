@@ -30,7 +30,7 @@
             netctl i3 gdm chromium \
             pass openssh pv ack hugo \
             gcc make patch wget \
-            maim xdotool xorg-xev dunst
+            maim xdotool xorg-xev dunst xrand arandr rofi
   - arch-chroot /mnt
   - hwclock --systohc
   - passwd
