@@ -53,6 +53,7 @@
             maim xdotool xorg-xev dunst xorg-xrandr arandr rofi
   - timedatectl set-ntp true
   - arch-chroot /mnt
+  - systemctl enable gdm.service
   - hwclock --systohc
   - passwd
   - vim /etc/mkinitcpio.conf
