@@ -40,14 +40,18 @@
 
 ## Mínimo necessário para poder já dar boot no sistema novo
 
-  - timedatectl set-ntp true
-  - pacstrap /mnt base git zsh vim grub intel-ucode docker \
+  - kernel
+
+
+
+  - pacstrap /mnt base lvm2 mkinitcpio dhcpcd git zsh vim grub intel-ucode docker \
             dialog sudo wpa_supplicant automake \
             autoconf make xfce4-terminal \
             netctl i3 gdm chromium \
             pass openssh pv ack hugo \
             gcc make patch wget \
-            maim xdotool xorg-xev dunst xrand arandr rofi
+            maim xdotool xorg-xev dunst xorg-xrandr arandr rofi
+  - timedatectl set-ntp true
   - arch-chroot /mnt
   - hwclock --systohc
   - passwd
