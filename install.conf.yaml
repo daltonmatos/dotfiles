@@ -4,6 +4,8 @@
       create: true
 
 - link:
+    ~/.gitconfig
+      path: git/config
     ~/.config/xfce4/terminal/accels.scm:
       path: term/accels.scm
     ~/.config/xfce4/terminal/terminalrc:
