@@ -80,6 +80,7 @@
   - vim /etc/locale.conf
     - Adicionar linha `LANG=en_US.UTF-8`
   - vim /etc/hostname
+  - setxkbmap -layput br
 
 # Boot já no sistema novo
 
@@ -95,21 +96,33 @@
 
 ## Configs para desenvolvimento
 
+
+### Python
+
+
   - git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-  - git clone https://github.com/tobi-wan-kenobi/bumblebee-status .bumblebee-status
-    - pip install --user netifaces psutil
+  - escolher qual python usar, com pyenv
+  - Instalar:
+    - bumblebee-status
+    - netifaces
+    - parso
+    - pipenv
+    - psutil
+    - python-language-server[all]
+    - dotbot
+
+### Geral
+
   - git clone https://github.com/daltonmatos/dotfiles/ ~/.dotfilles
-    - pip install --user dotbot
     - cd .dotfiles; dotbot -c install.conf.yaml
   - bzcat .dotfiles/Input.ttf.bz2 > .fonts/Input.ttf
-  - Configurar Yubikey (https://daltonmatos.com/2018/07/preparando-uma-yubikey-4-nano-para-uso-diario/)
   - Instalar browserpass (https://github.com/browserpass/browserpass)
-  - pip install --user python-language-server[all] isort
   - Instalar AUR managaer: yay
   - $ _i code
 
 # Configurações adicionais
 
+  - Configurar Yubikey (https://daltonmatos.com/2018/07/preparando-uma-yubikey-4-nano-para-uso-diario/)
   - gnupg
     - gpg --card-edit
     - fetch (pra pegar a chave pública)
@@ -119,9 +132,7 @@
 
 ## i3
 
-  - Instalar o i3lock-color via PKGBUILD. O script de lock depende dele
-    - Baixar o PKGBUILD
-    - makepkg -si
+  - Instalar o i3lock-color via pacman. O script de lock depende dele
   - Instalar `rofi`: _i rofi
 
 ### Pacotes
