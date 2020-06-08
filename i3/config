@@ -29,7 +29,7 @@ exec --no-startup-id systemd-inhibit --what=handle-power-key sleep infinity
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+c exec $open_in_terminal vim
 bindsym $mod+w exec chromium
 
@@ -162,8 +162,7 @@ bar {
   id bar-bottom
 	font pango:Input Regular 10
 	position bottom
-  status_command /home/daltonmatos/.pyenv/shims/python \
-      /home/daltonmatos/.bumblebee-status/bumblebee-status \
+  status_command /home/daltonmatos/.pyenv/shims/bumblebee-status \
       -m nic cpu memory battery pasink pasource bluetooth date \
       -p date.format="%d/%m/%Y %H:%M%z" \
       -p memory.format="{percent:.0f}%" \
