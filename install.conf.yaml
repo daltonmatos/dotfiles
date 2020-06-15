@@ -4,7 +4,7 @@
       create: true
 
 - link:
-    ~/.gitconfig
+    ~/.gitconfig:
       path: git/config
     ~/.config/xfce4/terminal/accels.scm:
       path: term/accels.scm
@@ -20,6 +20,8 @@
       path: i3
     ~/.config/rofi:
       path: i3/rofi
+    ~/.config/bumblebee-status:
+      path: i3/bumblebee-status
     ~/.vim:
       path: vim
     ~/.gnupg/gpg.conf:
