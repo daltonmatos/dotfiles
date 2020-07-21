@@ -164,7 +164,7 @@ bar {
 	position bottom
   status_command /home/daltonmatos/.pyenv/shims/bumblebee-status \
       -m nic cpu memory battery pasink pasource bluetooth date layout \
-      -p date.format="%d/%m/%Y %H:%M%z" \
+      -p date.format="%a %d/%b %H:%M%z" \
       -p memory.format="{percent:.0f}%" \
       -p nic.format="{intf} {ip} {ssid}" \
       -p nic.exclude="lo,virbr,docker,vboxnet,veth,br-" \
