@@ -162,9 +162,10 @@ bar {
   id bar-bottom
 	font pango:Input Regular 10
 	position bottom
+  # bluetooth
   status_command /home/daltonmatos/.pyenv/shims/bumblebee-status \
-      -m nic cpu memory battery pasink pasource bluetooth date layout \
-      -p date.format="%a %d/%b %H:%M%z" \
+      -m nic cpu memory battery pasink pasource time layout \
+      -p time.format="%a %d/%b %H:%M%z" \
       -p memory.format="{percent:.0f}%" \
       -p nic.format="{intf} {ip} {ssid}" \
       -p nic.exclude="lo,virbr,docker,vboxnet,veth,br-" \
