@@ -20,6 +20,7 @@ exec --no-startup-id ~/.i3/scripts/enable-touch-click.sh
 
 exec --no-startup-id xset -b
 exec --no-startup-id sleep 30; pactl set-sink-mute @DEFAULT_SINK@ 1
+exec --no-startup-id ~/.i3/scripts/setxkbmap.sh
 
 # Disable power button, for now.
 exec --no-startup-id systemd-inhibit --what=handle-power-key sleep infinity
