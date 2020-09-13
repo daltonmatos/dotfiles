@@ -7,3 +7,7 @@ TOUCH_PROP_ID=$(xinput list-props ${DEVICE_ID} | grep "Tapping Enabled (" | grep
 
 
 xinput set-prop ${DEVICE_ID} ${TOUCH_PROP_ID} 1
+
+if [ $? -ne 0 ]; then
+  notify-send "Erro habilitando Tapping do Touchpad"
+fi
