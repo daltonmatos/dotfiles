@@ -17,9 +17,9 @@ let g:ale_terraform_terraform_options = 'fmt'
 
 let g:ale_terraform_langserver_options =  'serve'
 
-let g:ale_completion_enabled = 1
-let g:ale_completion_delay = 200
-let g:ale_close_preview_on_insert = 1
+" let g:ale_completion_enabled = 1
+" let g:ale_completion_delay = 200
+" let g:ale_close_preview_on_insert = 1
 "
 " Não sublinhar as linhas que o linter (pyls) acusar problemas
 let g:ale_set_highlights = 0
@@ -31,5 +31,3 @@ let g:ale_linters = {
       \ 'go': ['gopls'],
       \ 'terraform': ['terraform_lsp'],
 \}
-
-set completeopt=menu,menuone,preview,noselect,noinsert

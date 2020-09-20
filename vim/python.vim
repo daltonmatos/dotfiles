@@ -18,8 +18,11 @@ function! python#empty_ft()
 endfunction
 
 
-" For neocomplete
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 1
+" Torna complete muito lento
+" augroup lsp_folding
+" 	autocmd!
+" 	autocmd FileType python setlocal
+" 	    \ foldmethod=expr
+" 	    \ foldexpr=lsp#ui#vim#folding#foldexpr()
+" 	    \ foldtext=lsp#ui#vim#folding#foldtext()
+" augroup end
