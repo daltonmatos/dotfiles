@@ -1,10 +1,3 @@
-au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'allowlist': ['python'],
-        \ })
-
-
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
@@ -43,3 +36,6 @@ imap <c-space> <Plug>(asyncomplete_force_refresh)
 " no meu de autocomplete
 let g:lsp_documentation_float = 0
 let g:lsp_preview_float = 0
+
+" Muito útil para debugar um LSP server não funcional
+" let g:lsp_log_file = '/tmp/lsp-log.txt'

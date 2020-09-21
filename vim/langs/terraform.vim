@@ -1,4 +1,8 @@
-
+au User lsp_setup call lsp#register_server({
+        \ 'name': 'terraform',
+        \ 'cmd': {server_info->['terraform-lsp']},
+        \ 'allowlist': ['terraform'],
+        \ })
 
 " https://github.com/juliosueiras/terraform-lsp
 " Apesar de ser para terraform <=0.12.0 funcoina melhor do
