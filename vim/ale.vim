@@ -29,5 +29,4 @@ let g:ale_linters = {
       \ 'python': ['mypy', 'pyls'],
       \ 'javascript': ['tsserver', 'eslint', 'prettier'],
       \ 'go': ['gopls'],
-      \ 'terraform': ['terraform_lsp'],
 \}
