@@ -1,3 +1,5 @@
+let g:lsp_signature_help_enabled = 0
+
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
@@ -28,6 +30,7 @@ augroup END
 
 let g:lsp_async_completion = 1
 let g:asyncomplete_auto_completeopt = 0
+let g:asyncomplete_min_chars = 3
 
 " Não funciona no vim, apens no gVim
 imap <c-space> <Plug>(asyncomplete_force_refresh)
