@@ -152,6 +152,7 @@ Plugin 'gregsexton/gitv'
 Plugin 'prabirshrestha/vim-lsp'
 Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
+Plugin 'prabirshrestha/asyncomplete-ultisnips.vim'
 
 Plugin 'w0rp/ale'
 Plugin 'easymotion/vim-easymotion'
