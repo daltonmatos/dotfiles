@@ -153,6 +153,7 @@ Plugin 'prabirshrestha/vim-lsp'
 Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 Plugin 'prabirshrestha/asyncomplete-ultisnips.vim'
+Plugin 'prabirshrestha/asyncomplete-emoji.vim'
 
 Plugin 'w0rp/ale'
 Plugin 'easymotion/vim-easymotion'
@@ -261,3 +262,9 @@ call SourceFileIfExist('vim-test.vim')
 call SourceFileIfExist('langs/go.vim')
 call SourceFileIfExist('langs/python.vim')
 call SourceFileIfExist('langs/terraform.vim')
+
+au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#emoji#get_source_options({
+    \ 'name': 'emoji',
+    \ 'whitelist': ['*'],
+    \ 'completor': function('asyncomplete#sources#emoji#completor'),
+    \ }))

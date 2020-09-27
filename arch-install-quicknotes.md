@@ -88,7 +88,7 @@
 ## Configs gerais
   - $ _i [xf86-video-intel|nvidia]
   - $ sudo systemctl {enable,start} netctl
-  - $ _i noto-fonts ttf-bitstream-vera ttf-carlito ttf-croscore ttf-dejavu ttf-freefont ttf-droid ttf-liberation ttf-ubuntu-font-family
+  - $ _i noto-fonts{,-emoji} ttf-bitstream-vera ttf-carlito ttf-croscore ttf-dejavu ttf-freefont ttf-droid ttf-liberation ttf-ubuntu-font-family
   - $ _i xf86-video-intel (nvidia-utils, nvidia-settings, nvidia-lts)
 
   - fc-cache -rv .fonts
