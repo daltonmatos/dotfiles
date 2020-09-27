@@ -6,6 +6,11 @@ nnoremap <leader>gs   :Gstatus <cr>
 nnoremap <leader>gd   :Gvdiff <cr>
 nnoremap <leader>gp   :Git push <cr>
 nnoremap <leader>gP   :Git push -f
+nnoremap <leader>dp   :diffput <cr>
+nnoremap <leader>dg   :diffget <cr>
+
+vnoremap <leader>dg   :diffget <cr>
+vnoremap <leader>dp   :diffput <cr>
 
 " git history for the current file
 nnoremap <leader>glh  :Gitv! <cr>
