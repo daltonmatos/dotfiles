@@ -63,28 +63,28 @@ bindsym $mod+Shift+l 	move right
 
 
 
-set $resize_mode "Resize Mode (Shift to reverse): E[x]pand"
-
-mode $resize_mode {
-
-  bindsym $mod+j resize shrink up 100 px
-  bindsym $mod+k resize grow up 100 px
-  bindsym $mod+h resize shrink right 100 px
-  bindsym $mod+l resize grow right 100 px
-  bindsym $mod+x resize grow right 100 px;\
-                 resize grow up 100 px;\
-                 resize grow left 100 px;\
-                 resize grow down 100 px;\
-                 move position center;
-  bindsym $mod+Shift+x resize shrink right 100 px;\
-                 resize shrink up 100 px;\
-                 resize shrink left 100 px;\
-                 resize shrink down 100 px;\
-                 move position center;
-
-  bindsym Escape mode $default_mode
-}
-bindsym $mod+Shift+s mode $resize_mode
+#set $resize_mode "Resize Mode (Shift to reverse): E[x]pand"
+#
+#mode $resize_mode {
+#
+#  bindsym $mod+j resize shrink up 100 px
+#  bindsym $mod+k resize grow up 100 px
+#  bindsym $mod+h resize shrink right 100 px
+#  bindsym $mod+l resize grow right 100 px
+#  bindsym $mod+x resize grow right 100 px;\
+#                 resize grow up 100 px;\
+#                 resize grow left 100 px;\
+#                 resize grow down 100 px;\
+#                 move position center;
+#  bindsym $mod+Shift+x resize shrink right 100 px;\
+#                 resize shrink up 100 px;\
+#                 resize shrink left 100 px;\
+#                 resize shrink down 100 px;\
+#                 move position center;
+#
+#  bindsym Escape mode $default_mode
+#}
+#bindsym $mod+Shift+s mode $resize_mode
 
 
 # split in horizontal orientation
