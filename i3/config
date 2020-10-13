@@ -172,7 +172,8 @@ bar {
       -m nic cpu memory battery pasink pasource time layout \
       -p time.format="%a %d/%b %H:%M%z" \
       -p memory.format="{percent:.0f}%" \
-      -p nic.format="{intf} {ip} {ssid}" \
+      -p cpu.format="{:.0f}%" \
+      -p nic.format="{ssid}" \
       -p nic.exclude="lo,virbr,docker,vboxnet,veth,br-" \
       -t solarized-powerline
 }
