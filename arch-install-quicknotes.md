@@ -50,7 +50,8 @@
             netctl i3 gdm chromium \
             pass openssh pv ack hugo \
             gcc make patch wget \
-            maim xdotool xorg-xev dunst xorg-xrandr arandr rofi
+            maim xdotool xorg-xev dunst xorg-xrandr arandr rofi \
+            wireless_tools
   - timedatectl set-ntp true
   - arch-chroot /mnt
   - systemctl enable gdm.service
