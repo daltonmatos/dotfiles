@@ -9,6 +9,9 @@ for_window [class="zoom"] floating enable
 gaps inner 5
 gaps outer 0
 default_border pixel 3
+
+font pango:Input Regular 10
+
 set $mod Mod4
 
 set $default_mode "default"
