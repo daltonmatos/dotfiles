@@ -34,7 +34,6 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec xfce4-terminal
-bindsym $mod+c exec $open_in_terminal vim
 bindsym $mod+w exec chromium
 
 bindsym $mod+space exec "rofi -modi window,run -show window"
