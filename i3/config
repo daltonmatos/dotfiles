@@ -42,7 +42,7 @@ bindsym $mod+space exec "rofi -modi window,run -show window"
 # kill focused window
 bindsym $mod+Shift+q kill
 
-bindsym $mod+r exec dmenu_run
+bindsym $mod+r exec "rofi -modi run -show run"
 
 bindsym Print exec maim ~/Pictures/screenshot-$(date +"%s").jpg
 bindsym Shift+Print exec maim -s ~/Pictures/screenshot-$(date +"%s").jpg
