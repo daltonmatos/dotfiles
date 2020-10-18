@@ -56,7 +56,7 @@
             pass openssh pv ack hugo \
             gcc make patch wget \
             maim xdotool xorg-xev dunst xorg-xrandr arandr rofi \
-            wireless_tools bluez-utils
+            wireless_tools bluez-utils extra/tcl extra/tk
   - timedatectl set-ntp true
   - arch-chroot /mnt
   - mount /dev/<EFI-part> /efi
