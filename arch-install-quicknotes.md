@@ -23,10 +23,14 @@
 
 # Preparando o disco
 
-  - $ cryptsetup luksFormat `<partição>`
+  - $ cryptsetup --type=luks1 luksFormat `<partição>`
   - $ cryptsetup luksOpen `<partição>` crypt-root
   - $ mke2fs -t ext4 /dev/mapper/crypt-root
   - $ mount /dev/mapper/crypt-root /mnt
+
+## Partição EFI
+ - mkfs.fat -F32 /dev/<particao>
+
 
 # LVM
 
@@ -36,13 +40,14 @@
  sudo lvcreate -L XGB -n home vg01
 
 
+## Delsigando volumes LVM
+ sudo lvchange -an vg01
+
 # Instalação
 
 ## Mínimo necessário para poder já dar boot no sistema novo
 
   - kernel
-
-
 
   - pacstrap /mnt base lvm2 mkinitcpio dhcpcd git zsh vim grub intel-ucode docker \
             dialog sudo wpa_supplicant automake \
@@ -51,9 +56,10 @@
             pass openssh pv ack hugo \
             gcc make patch wget \
             maim xdotool xorg-xev dunst xorg-xrandr arandr rofi \
-            wireless_tools
+            wireless_tools bluez-utils
   - timedatectl set-ntp true
   - arch-chroot /mnt
+  - mount /dev/<EFI-part> /efi
   - systemctl enable gdm.service
   - hwclock --systohc
   - passwd
@@ -64,7 +70,7 @@
     - Descomentar a linha `GRUB_ENABLE_CRYPTODISK=y`
     - Adicionar linha: `GRUB_CMDLINE_LINUX="cryptdevice=UUID=<device-UUID>:cryptroot"`, onde `device-UUID` é o UUID da **partição** do disco.
     - grub-mkconfig -o /boot/grub/grub.cfg
-    - grub-install --target=i386-pc `/dev/sdX`
+    - grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
   - ^D
   - shutdown -r now
 
