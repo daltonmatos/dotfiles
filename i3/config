@@ -169,7 +169,7 @@ bar {
 	position bottom
   # bluetooth
   status_command /home/daltonmatos/.pyenv/shims/bumblebee-status \
-      -m nic cpu memory battery pasink pasource time layout \
+      -m nic cpu memory battery pasink pasource time bluetooth layout \
       -p time.format="%a %d/%b %H:%M%z" \
       -p memory.format="{percent:.0f}%" \
       -p cpu.format="{:.0f}%" \
