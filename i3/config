@@ -112,6 +112,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 workspace $ws10 output HDMI1
 
+workspace_layout stacked
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
