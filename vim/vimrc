@@ -102,6 +102,8 @@ call SourceFileIfExist('ale.vim')
 
 call vundle#begin()
 
+
+Plugin 'mattn/vim-lsp-settings'
 " Dependency for idanarye/vim-vebugger
 Plugin 'Shougo/vimproc.vim', {'do' : 'make'}
 
