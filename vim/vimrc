@@ -118,7 +118,7 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
 
 
-Plugin 'ervandew/supertab'
+" Plugin 'ervandew/supertab'
 
 " Syntax plugins
 Plugin 'cespare/vim-toml'
