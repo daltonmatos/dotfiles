@@ -261,7 +261,6 @@ call SourceFileIfExist('vim-test.vim')
 
 " Suporte a linguages
 " Configuração de Language Server Protocols
-call SourceFileIfExist('langs/go.vim')
 call SourceFileIfExist('langs/python.vim')
 call SourceFileIfExist('langs/terraform.vim')
 
