@@ -59,6 +59,8 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+Return scratchpad show
 # split in horizontal orientation
 bindsym $mod+bar split h
 
