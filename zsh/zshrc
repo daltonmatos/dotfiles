@@ -2,6 +2,7 @@ export EDITOR=vim
 export TERM="xterm-256color"
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
+export SUDO_ASKPASS=~/.i3/scripts/askpass.sh
 
 source $(dirname ${ZDOTDIR}/.zshrc)/prompt.zsh
 source $(dirname ${ZDOTDIR}/.zshrc)/general.zsh

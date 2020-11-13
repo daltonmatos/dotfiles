@@ -1,4 +1,7 @@
 
+
+alias sudo='sudo -A'
+
 # Arch Linux
 alias ainst='sudo pacman -S --needed'
 alias asearch='pacman -Ss'
