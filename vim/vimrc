@@ -32,7 +32,7 @@ set ts=2
 set sw=2
 set et
 
-filetype plugin indent on
+
 set autoindent
 set autoread
 
@@ -99,7 +99,7 @@ endfunc
 call SourceFileIfExist('ale.vim')
 
 " Plugin installation {{{2
-
+filetype off
 call vundle#begin()
 
 
@@ -170,6 +170,8 @@ Plugin 'Addisonbean/Vim-Xcode-Theme'
 Plugin 'PotatoesMaster/i3-vim-syntax'
 
 call vundle#end()
+
+filetype plugin indent on
 " }}} Plugin installation
 
 
