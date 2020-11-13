@@ -104,6 +104,8 @@ call vundle#begin()
 
 
 Plugin 'mattn/vim-lsp-settings'
+Plugin 'puremourning/vimspector'
+
 " Dependency for idanarye/vim-vebugger
 Plugin 'Shougo/vimproc.vim', {'do' : 'make'}
 
