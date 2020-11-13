@@ -168,6 +168,7 @@ Plugin 'Addisonbean/Vim-Xcode-Theme'
 
 " Syntax schemes
 Plugin 'PotatoesMaster/i3-vim-syntax'
+Plugin 'google/vim-jsonnet'
 
 call vundle#end()
 
