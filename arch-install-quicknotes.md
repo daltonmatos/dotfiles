@@ -56,7 +56,7 @@
             pass openssh pv ack hugo \
             gcc make patch wget \
             maim xdotool xorg-xev dunst xorg-xrandr arandr rofi \
-            wireless_tools bluez-utils extra/tcl extra/tk
+            wireless_tools bluez-utils extra/tcl extra/tk fakeroot
   - timedatectl set-ntp true
   - arch-chroot /mnt
   - mount /dev/<EFI-part> /efi
@@ -141,6 +141,7 @@
 
   - Instalar o i3lock-color via pacman. O script de lock depende dele
   - Instalar `rofi`: _i rofi
+  - yay rofi-bluetooth-git
 
 ### Pacotes
 
