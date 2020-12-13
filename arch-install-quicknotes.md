@@ -56,7 +56,13 @@
             pass openssh pv ack hugo \
             gcc make patch wget \
             maim xdotool xorg-xev dunst xorg-xrandr arandr rofi \
-            wireless_tools bluez-utils extra/tcl extra/tk fakeroot
+            wireless_tools bluez-utils extra/tcl extra/tk fakeroot \
+            p7zip unrar gvfs-google \
+            file-roller gvfs-gphoto2 gvfs-mtp gvfs-google gtk3 \
+            gvfs xfce4-panel tumbler \
+            thunar-volman thunar-archive-plugin thunar-media-tags-plugin \
+            thunar
+
   - timedatectl set-ntp true
   - arch-chroot /mnt
   - mount /dev/<EFI-part> /efi
