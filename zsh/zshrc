@@ -25,7 +25,6 @@ source $(dirname ${ZDOTDIR}/.zshrc)/alias.zsh
 source $(dirname ${ZDOTDIR}/.zshrc)/ssh.zsh
 source $(dirname ${ZDOTDIR}/.zshrc)/vscode.zsh
 
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
@@ -34,7 +33,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f ~/google-cloud-sdk/path.zsh.inc ]; then
+  . ~/google-cloud-sdk/path.zsh.inc;
+fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f ~/google-cloud-sdk/completion.zsh.inc ]; then
+  . ~/google-cloud-sdk/completion.zsh.inc;
+fi
