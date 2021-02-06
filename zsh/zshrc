@@ -41,3 +41,8 @@ fi
 if [ -f ~/google-cloud-sdk/completion.zsh.inc ]; then
   . ~/google-cloud-sdk/completion.zsh.inc;
 fi
+
+
+if [ -f '/usr/share/fzf/key-bindings.zsh' ]; then
+  source /usr/share/fzf/key-bindings.zsh
+fi
