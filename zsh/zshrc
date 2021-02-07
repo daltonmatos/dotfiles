@@ -24,6 +24,7 @@ source $(dirname ${ZDOTDIR}/.zshrc)/vim.zsh
 source $(dirname ${ZDOTDIR}/.zshrc)/alias.zsh
 source $(dirname ${ZDOTDIR}/.zshrc)/ssh.zsh
 source $(dirname ${ZDOTDIR}/.zshrc)/vscode.zsh
+source $(dirname ${ZDOTDIR}/.zshrc)/fzf.zsh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -40,9 +41,4 @@ fi
 # The next line enables shell command completion for gcloud.
 if [ -f ~/google-cloud-sdk/completion.zsh.inc ]; then
   . ~/google-cloud-sdk/completion.zsh.inc;
-fi
-
-
-if [ -f '/usr/share/fzf/key-bindings.zsh' ]; then
-  source /usr/share/fzf/key-bindings.zsh
 fi
