@@ -61,7 +61,7 @@
             file-roller gvfs-gphoto2 gvfs-mtp gvfs-google gtk3 \
             gvfs xfce4-panel tumbler \
             thunar-volman thunar-archive-plugin thunar-media-tags-plugin \
-            thunar
+            thunar fd
 
   - timedatectl set-ntp true
   - arch-chroot /mnt
