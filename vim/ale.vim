@@ -7,6 +7,7 @@ let g:ale_fixers = {
 \   'python': ['black', 'isort'],
 \   'terraform': ['terraform'],
 \   'go': ['gofmt'],
+\   'rust': ['rustfmt'],
 \}
 
 let g:ale_python_black_options = '--line-length 80'
