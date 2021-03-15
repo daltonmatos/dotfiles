@@ -87,27 +87,3 @@ POWERLEVEL9K_ARCHLINUX_LOGO=$'\uf303'
 function archlinux_logo(){
   echo "$(print_icon 'ARCHLINUX_LOGO')"
 }
-
-POWERLEVEL9K_CUSTOM_WIFI_SSID="custom_wifi_ssid"
-function custom_wifi_ssid(){
-  output=$(iw dev $CUSTOM_WIFI_SSID_IFACE_NAME link 2>/dev/null)
-  if [[ ! `grep -i "not connected" <<<${output}` ]];then
-    ssid=$(echo -n $output | grep SSID | awk '{print $2}')
-    ip_addr=$(ip a show $CUSTOM_WIFI_SSID_IFACE_NAME | grep 'inet ' | awk '{print $2}' | head -1 | grep -oE "([0-9]+\.){3}[0-9]+")
-    echo "\uF012 ${ssid}/${ip_addr}"
-  else
-    echo ""
-  fi
-}
-
-
-POWERLEVEL9K_CUSTOM_ETH_INFO="custom_eth_info"
-function custom_eth_info(){
-  is_link_up=$(ethtool $CUSTOM_ETH_IFACE_NAME 2>/dev/null | grep "Link detected" | awk '{print $3}')
-  if [[ "${is_link_up}" != "no" ]];then
-    ip_addr=$(ip a show $CUSTOM_ETH_IFACE_NAME 2>/dev/null | grep 'inet ' | awk '{print $2}' | head -1 | grep -oE "([0-9]+\.){3}[0-9]+")
-    echo "\uF0C1 ${CUSTOM_ETH_IFACE_NAME}/${ip_addr}"
-    return
-  fi
-  echo ""
-}
