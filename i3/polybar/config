@@ -1,134 +1,50 @@
 [colors]
 accent = #fba922
+foreground = #ffffff
+background = #000000
+fg = #002b36
+bg = #859900
+
+[fonts]
+fira = 1
+input = 2
 
 [bar/top]
+font-0 = FiraMono Nerd Font:style=Regular:size=11;0
+font-1 = Input:style=Regular
+
 enable-ipc = true
-monitor = eDP-1
+monitor = eDP1
 width = 100%
 height = 27
+border-size = 0
 
-;background = #222
-background = #1f1f1f
-foreground = #eee
+background = ${colors.background}
+foreground = ${colors.foreground}
 
 border-bottom-size = 1
-border-bottom-color = #333
+border-bottom-color = #000
 
 overline-size = 10
 overline-color = ${self.background}
 underline-size = 10
 underline-color = ${self.background}
 
-padding-left = 0
-padding-right = 0
-module-margin-left = 3
-module-margin-right = 3
+padding-left = 1
+padding-right = 1
+module-margin-left = 1
+module-margin-right = 0
 
-font-0 = NotoSans-Regular:size=8;0
-font-1 = MaterialIcons:size=10;2
-font-2 = Termsynu:size=8;0
-font-3 = Siji:pixelsize=10;1
-font-4 = FontAwesome:size=10;0
-
-modules-left = powermenu
+modules-left = next-spacex-launch
 modules-center = xwindow
-modules-right = alsa wireless-network wired-network battery clock
+modules-right = wired-network wireless-network cpu memory battery sound mic clock
 
 wm-restack = i3
-
 tray-position = right
-
-[bar/bottom]
-monitor = eDP-1
-bottom = true
-width = 100%
-height = 27
-
-background = #1c1c1c
-foreground = #eefafafa
-
-overline-size = 3
-overline-color = ${colors.accent}
-underline-size = 3
-underline-color = ${colors.accent}
-
-;border-color = #ff0000
-border-top = 3
-border-top-color = #3d3d3d
-;border-bottom = 0
-;border-bottom-color = #333333
-
-spacing = 1
-;padding-right = 4
-padding-left = 0
-padding-right = 0
-module-margin-left = 0
-module-margin-right = 6
-
-font-0 = Input:size=10;0
-font-1 = FontAwesome:size=8;0
-#font-0 = NotoSans-Regular:size=8;0
-#font-1 = Unifont:size=5;0
-#font-3 = NotoSans-Regular:size=8;-1
-#font-4 = Unifont:size=5;0
-#font-5 = Termsynu:size=7;0
-
-modules-left = bspwm i3
-;modules-center =
-modules-right = xbacklight cpu memory clock
-;modules-right = memory
-
-wm-restack = i3
-
-
-[bar/external]
-enable-ipc = true
-monitor = HDMI-1
-bottom = true
-;dock = true
-width = ${bar/bottom.width}
-height = ${bar/bottom.height}
-
-background = ${bar/bottom.background}
-foreground = ${bar/bottom.foreground}
-
-underline-size = ${bar/bottom.underline-size}
-underline-color = ${bar/bottom.underline-color}
-overline-size = ${bar/bottom.overline-size}
-overline-color = ${bar/bottom.overline-color}
-
-border-bottom.= ${bar/bottom.border-bottom}
-border-bottom.color = ${bar/bottom.border-bottom-color}
-
-spacing = ${bar/bottom.spacing}
-padding-left = ${bar/bottom.padding-left}
-padding-right = ${bar/bottom.padding-right}
-module-margin-left = 0
-module-margin-right = ${bar/bottom.module-margin-right}
-
-font-0 = ${bar/bottom.font-0}
-font-1 = ${bar/bottom.font-1}
-font-2 = ${bar/bottom.font-2}
-font-3 = ${bar/bottom.font-3}
-font-4 = ${bar/bottom.font-4}
-font-5 = ${bar/bottom.font-5}
-
-modules-left = bspwm i3
-modules-center = xwindow
-modules-right = fs-root clock
-
-wm-restack = ${bar/bottom.wm-restack}
-
-
-[module/fs-root]
-type = internal/fs
-mount-0 = /
-label-mounted = %{F#e60053}%percentage_used%%%{F-} used of %mountpoint%
-
 
 [module/xbacklight]
 type = internal/xbacklight
-output = eDP-1
+output = eDP1
 format = <ramp> <bar>
 
 ramp-0 = 
@@ -160,144 +76,20 @@ ramp-2 = 
 ramp-foreground = #666
 interactive = true
 
-
-[module/bspwm]
-type = internal/bspwm
-format = <label-state> <label-mode>
-
-ws-icon-0 = term;
-ws-icon-1 = web;
-ws-icon-2 = code;
-ws-icon-3 = music;
-ws-icon-4 = irssi;
-ws-icon-default = 
-
-label-dimmed-underline = ${root.background}
-
-label-focused = %icon%  %name%
-label-focused-foreground = #f3f3f3
-label-focused-background = #3f3f3f
-;label-focused-underline = ${colors.accent}
-label-focused-underline = #9f78e1
-label-focused-font = 4
-label-focused-padding = 4
-
-label-occupied = %icon%  %name%
-label-occupied-underline = #555555
-label-occupied-font = 4
-label-occupied-padding = 4
-
-label-urgent = %icon%  %name%
-label-urgent-foreground = #000000
-label-urgent-background = #bd2c40
-label-urgent-underline = #9b0a20
-label-urgent-font = 4
-label-urgent-padding = 4
-
-label-empty = %icon%  %name%
-label-empty-foreground = #55ffffff
-label-empty-font = 4
-label-empty-padding = 4
-
-
-[module/i3]
-type = internal/i3
-format = <label-state> <label-mode>
-pin-workspaces = true
-
-ws-icon-0 = term;
-ws-icon-1 = web;
-ws-icon-2 = code;
-ws-icon-3 = music;
-ws-icon-4 = irssi;
-ws-icon-default = 
-
-label-dimmed-underline = ${root.background}
-
-label-focused = %icon%  %name%
-label-focused-foreground = #f3f3f3
-label-focused-background = #3f3f3f
-;label-focused-underline = #${colors.accent}
-label-focused-underline = #9f78e1
-label-focused-font = 4
-label-focused-padding = 4
-
-label-unfocused = %icon%  %name%
-label-unfocused-underline = #555555
-label-unfocused-font = 4
-label-unfocused-padding = 4
-
-label-urgent = %icon%  %name%
-label-urgent-foreground = #000000
-label-urgent-background = #bd2c40
-label-urgent-underline = #9b0a20
-label-urgent-font = 4
-label-urgent-padding = 4
-
-label-visible = %icon%  %name%
-label-visible-foreground = #55ffffff
-label-visible-font = 4
-label-visible-padding = 4
-
-
 [module/cpu]
 type = internal/cpu
 interval = 1.5
-
-format = <label> <ramp-coreload>
-
-label = ፩
-label-font = 3
-label-foreground = #99
-
-ramp-coreload-0 = ▁
-ramp-coreload-0-font = 2
-ramp-coreload-0-foreground = #aaff77
-ramp-coreload-1 = ▂
-ramp-coreload-1-font = 2
-ramp-coreload-1-foreground = #aaff77
-ramp-coreload-2 = ▃
-ramp-coreload-2-font = 2
-ramp-coreload-2-foreground = #aaff77
-ramp-coreload-3 = ▄
-ramp-coreload-3-font = 2
-ramp-coreload-3-foreground = #aaff77
-ramp-coreload-4 = ▅
-ramp-coreload-4-font = 2
-ramp-coreload-4-foreground = #fba922
-ramp-coreload-5 = ▆
-ramp-coreload-5-font = 2
-ramp-coreload-5-foreground = #fba922
-ramp-coreload-6 = ▇
-ramp-coreload-6-font = 2
-ramp-coreload-6-foreground = #ff5555
-ramp-coreload-7 = █
-ramp-coreload-7-font = 2
-ramp-coreload-7-foreground = #ff5555
+format =  <label>%
+label = %percentage%
+label-font = ${fonts.fira}
 
 [module/memory]
 type = internal/memory
 interval = 0.2
-format = <label> <bar-used>
+format = <label>%
 
-label = RAM
-label-font = 3
-label-foreground = #99
-
-bar-used-width = 30
-bar-used-gradient = true
-bar-used-foreground-0 = #449f3d
-bar-used-foreground-1 = #2f8419
-bar-used-foreground-2 = #f5a70a
-bar-used-foreground-3 = #ed5456
-bar-used-indicator = █
-bar-used-indicator-font = 5
-bar-used-indicator-foreground = #fff
-bar-used-fill = █
-bar-used-fill-font = 5
-bar-used-empty = █
-bar-used-empty-font = 5
-bar-used-empty-foreground = #44
+label =  %percentage_used%
+label-font = ${fonts.fira}
 
 [module/wireless-network]
 type = internal/network
@@ -305,115 +97,98 @@ interface = wlp2s0
 interval = 2.0
 ping-interval = 10
 
-format-connected = <ramp-signal> <label-connected>
-label-connected = %essid% (%local_ip%)
-label-disconnected =    not connected
-label-disconnected-foreground = #66
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-
-animation-packetloss-0 = 
-animation-packetloss-0-foreground = #ffa64c
-animation-packetloss-1 = 
-animation-packetloss-1-foreground = ${bar/top.foreground}
-animation-packetloss-framerate = 500
+format-connected = 直 <label-connected>
+label-connected = %essid%
+label-disconnected = 
+label-connected-font = ${fonts.fira}
 
 [module/wired-network]
 type = internal/network
 interface = enp3s0
 interval = 2.0
 
-label-connected =   (%local_ip%)
-label-disconnected =  
-label-disconnected-foreground = #66
+label-connected =  (%local_ip%)
+label-disconnected = 
 
 [module/clock]
 type = internal/date
-interval = 5
-format-padding = 5
-format-background = #000
-format-foreground = #fff
-date = %%{F#bb}%Y-%m-%d%%{F-}  %%{F#ee}%H:%M%%{F-}
+interval = 1
+format-padding = 1
+date = %a %d/%b
+time = %H:%M
+label = %date% %time%
+label-font = ${fonts.fira}
+format =  <label>
 
-[module/alsa]
+[module/sound]
 type = internal/pulseaudio
-speaker-mixer = Speaker
-headphone-mixer = Headphone
-headphone-id = 9
-
+sink = alsa_output.pci-0000_00_1f.3.analog-stereo
 format-volume = <ramp-volume> <label-volume>
 
-label-volume = volume %percentage%%
-label-volume-foreground = #ff
+label-volume-font = ${fonts.fira}
+label-volume = %percentage%%
 
-format-muted-prefix = " "
-format-muted-foreground = #66
-label-muted = sound muted
-label-muted-foreground = #99ffffff
+label-muted = 婢 %percentage%%
+format-muted = <label-muted>
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-3 = 
-ramp-volume-foreground = #9f78e1
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 墳
+ramp-volume-3 = 
 
-ramp-headphones-0 = 
-ramp-headphones-1 = 
-ramp-headphones-foreground = #9f78e1
+[module/mic]
+type = custom/script
+interval = 1
+format = <label>
+exec = ~/.i3/polybar/scripts/mic-volume.sh show-vol
+
+click-left = ~/.i3/polybar/scripts/mic-volume.sh mute-vol
+scroll-up = ~/.i3/polybar/scripts/mic-volume.sh inc-vol
+scroll-down = ~/.i3/polybar/scripts/mic-volume.sh dec-vol
 
 [module/battery]
 type = internal/battery
-full-at = 98
-format-charging = %{T3}Battery <label-charging> %{T-}
-format-discharging = %{T3}Battery <label-discharging> %{T-}
-;format-full = %{T3}Battery <label-full>
-label-charging-font = 3
-label-discharging-font = 3
-label-full =
-;label-full-font = 3
+full-at = 100
+battery = BAT0
+
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+animation-discharging-framerate = 750
+
+label-full =   %percentage%% ﮣ
+
+label-discharging = %percentage%
+format-discharging = <animation-discharging>  <label-discharging>% 
+
+label-charging = %percentage%
+format-charging = <animation-charging>  <label-charging>% ﮣ
 
 [module/xwindow]
 type = internal/xwindow
 label-maxlen = 75
 label-foreground = #bbb
 
-[module/powermenu]
-type = custom/menu
-
-format-padding = 3
-format-background = #000
-format-foreground = #fff
-
-label-open = 
-label-close = 
-label-separator = " - "
-
-menu-0-0 = Terminate WM
-menu-0-0-foreground = ${colors.accent}
-menu-0-0-exec = bspc quit -1
-menu-0-1 = Reboot
-menu-0-1-foreground = ${colors.accent}
-menu-0-1-exec = menu-open-1
-menu-0-2 = Power off
-menu-0-2-foreground = ${colors.accent}
-menu-0-2-exec = menu-open-2
-
-menu-1-0 = Cancel
-menu-1-0-foreground = ${colors.accent}
-menu-1-0-exec = menu-open-0
-menu-1-1 = Reboot
-menu-1-1-foreground = ${colors.accent}
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = Power off
-menu-2-0-foreground = ${colors.accent}
-menu-2-0-exec = sudo poweroff
-menu-2-1 = Cancel
-menu-2-1-foreground = ${colors.accent}
-menu-2-1-exec = menu-open-0
+[module/next-spacex-launch]
+type = custom/script
+exec = ~/.i3/polybar/scripts/spacex-next-launch.sh
+interval = 600
 
 ; vim:ft=dosini
+;
