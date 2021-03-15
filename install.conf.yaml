@@ -32,3 +32,5 @@
       path: code
     '~/.config/Code - OSS':
       path: code
+    ~/.fonts:
+      path: fonts
