@@ -27,7 +27,7 @@ border-bottom-color = #000
 
 overline-size = 10
 overline-color = ${self.background}
-underline-size = 10
+underline-size = 2
 underline-color = ${self.background}
 
 padding-left = 1
@@ -35,38 +35,32 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 0
 
-modules-left = next-spacex-launch
-modules-center = xwindow
-modules-right = wired-network wireless-network cpu memory battery sound mic clock
+modules-left = i3 xwindow
+#modules-center = xwindow
+modules-right = next-spacex-launch jblbt wired-network wireless-network cpu memory battery sound mic backlight clock
 
 wm-restack = i3
 tray-position = right
 
-[module/xbacklight]
-type = internal/xbacklight
-output = eDP1
-format = <ramp> <bar>
+[module/i3]
+type = internal/i3
 
-ramp-0 = 
-ramp-0-foreground = #666
-ramp-1 = 
-ramp-1-foreground = #999
-ramp-2 = 
-ramp-2-foreground = #fff
+label-focused = %index%
+label-focused-foreground = #ffffff
+label-focused-background = #3f3f3f
+label-focused-underline = #fba922
+label-focused-padding = 1
 
-bar-width = 12
-bar-indicator = |
-bar-indicator-font = 6
-bar-indicator-foreground = #bbffffff
-bar-fill = ─
-bar-fill-font = 6
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 6
-bar-empty-foreground = #44
+label-unfocused = %index%
+label-unfocused-padding = 1
+
+label-urgent = %index%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = 1
 
 
-[module/backlight]
+[module/backlightioo]
 type = internal/backlight
 card = intel_backlight
 format = <ramp> <label>
@@ -189,6 +183,20 @@ label-foreground = #bbb
 type = custom/script
 exec = ~/.i3/polybar/scripts/spacex-next-launch.sh
 interval = 600
+
+[module/jblbt]
+type = custom/script
+exec = ~/.i3/polybar/scripts/jbltune500-bt-status.sh
+interval = 5
+
+
+[module/backlight]
+type = internal/backlight
+
+card = intel_backlight
+enable-scroll = true
+format =   <label>
+label = %percentage%%
 
 ; vim:ft=dosini
 ;
