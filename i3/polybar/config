@@ -1,3 +1,7 @@
+[configs]
+primary_monitor = eDP1
+primary_battery = BAT0
+
 [colors]
 accent = #fba922
 foreground = #ffffff
@@ -14,7 +18,7 @@ font-0 = FiraMono Nerd Font:style=Regular:size=11;0
 font-1 = Input:style=Regular
 
 enable-ipc = true
-monitor = eDP1
+monitor = ${configs.primary_monitor}
 width = 100%
 border-size = 0
 bottom = true
@@ -38,7 +42,6 @@ module-margin-left = 1
 module-margin-right = 0
 
 modules-left = i3 xwindow
-#modules-center = xwindow
 modules-right = next-spacex-launch jblbt wired-network wireless-network cpu memory battery sound mic backlight clock
 
 wm-restack = i3
@@ -60,17 +63,6 @@ label-urgent = %index%
 label-urgent-foreground = #000000
 label-urgent-background = #bd2c40
 label-urgent-padding = 1
-
-
-[module/backlightioo]
-type = internal/backlight
-card = intel_backlight
-format = <ramp> <label>
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = #666
-interactive = true
 
 [module/cpu]
 type = internal/cpu
@@ -144,7 +136,7 @@ scroll-down = ~/.i3/polybar/scripts/mic-volume.sh dec-vol
 [module/battery]
 type = internal/battery
 full-at = 100
-battery = BAT0
+battery = ${configs.primary_battery}
 
 
 ramp-capacity-0 = 
@@ -189,7 +181,6 @@ interval = 600
 type = custom/script
 exec = ~/.i3/polybar/scripts/jbltune500-bt-status.sh
 interval = 5
-
 
 [module/backlight]
 type = internal/backlight
