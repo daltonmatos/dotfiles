@@ -20,6 +20,7 @@ exec --no-startup-id ~/.i3/scripts/enable-touch-click.sh
 exec --no-startup-id xset -b
 exec --no-startup-id sleep 30; pactl set-sink-mute @DEFAULT_SINK@ 1
 exec --no-startup-id ~/.i3/scripts/setxkbmap.sh
+exec --no-startup-id polybar --config=~/.i3/polybar/config main
 
 # Disable power button, for now.
 exec --no-startup-id systemd-inhibit --what=handle-power-key sleep infinity
@@ -115,11 +116,8 @@ workspace $ws10 output HDMI1
 
 workspace_layout stacked
 
-# reload the configuration file
 bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+r exec polybar-msg cmd restart; restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 
@@ -137,16 +135,16 @@ mode $poweroff_mode {
 
 bindsym $mod+x --release mode $poweroff_mode
 
-bar {
-  id bar-bottom
-  font pango:Input Regular 10
-  position bottom
-  status_command /home/daltonmatos/.pyenv/shims/bumblebee-status \
-    -m nic cpu memory battery pasink pasource time \
-    -p time.format="%a %d/%b %H:%M%z" \
-    -p memory.format="{percent:.0f}%" \
-    -p cpu.format="{:.0f}%" \
-    -p nic.format="{ssid}" \
-    -p nic.exclude="lo,virbr,docker,vboxnet,veth,br-,eno" \
-    -t solarized-powerline
-}
+#bar {
+#  id bar-bottom
+#  font pango:Input Regular 10
+#  position bottom
+#  status_command /home/daltonmatos/.pyenv/shims/bumblebee-status \
+#    -m nic cpu memory battery pasink pasource time \
+#    -p time.format="%a %d/%b %H:%M%z" \
+#    -p memory.format="{percent:.0f}%" \
+#    -p cpu.format="{:.0f}%" \
+#    -p nic.format="{ssid}" \
+#    -p nic.exclude="lo,virbr,docker,vboxnet,veth,br-,eno" \
+#    -t solarized-powerline
+#}

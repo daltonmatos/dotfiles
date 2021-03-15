@@ -9,19 +9,21 @@ bg = #859900
 fira = 1
 input = 2
 
-[bar/top]
+[bar/main]
 font-0 = FiraMono Nerd Font:style=Regular:size=11;0
 font-1 = Input:style=Regular
 
 enable-ipc = true
 monitor = eDP1
 width = 100%
-height = 27
 border-size = 0
+bottom = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
+border-top-size = 5
+border-top-color = #000
 border-bottom-size = 1
 border-bottom-color = #000
 
@@ -93,7 +95,7 @@ ping-interval = 10
 
 format-connected = 直 <label-connected>
 label-connected = %essid%
-label-disconnected = 
+label-disconnected = 睊
 label-connected-font = ${fonts.fira}
 
 [module/wired-network]
