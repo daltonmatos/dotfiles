@@ -104,7 +104,7 @@ interface = enp3s0
 interval = 2.0
 
 label-connected =  (%local_ip%)
-label-disconnected = 
+label-disconnected =
 
 [module/clock]
 type = internal/date
