@@ -118,22 +118,11 @@ workspace_layout stacked
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r exec polybar-msg cmd restart; restart
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
-
-set $poweroff_mode "poweroff: [l]ock [h]ibernate"
-mode $poweroff_mode {
-
-  bindsym l exec ~/.i3/scripts/lock.sh; mode $default_mode;
-  bindsym h exec ~/.i3/scripts/lock.sh; exec sleep 2; mode $default_mode;  exec systemctl suspend;
-
-  bindsym Escape mode $default_mode
-}
-
-bindsym $mod+x --release mode $poweroff_mode
+bindsym $mod+p exec ~/.i3/polybar/scripts/powermenu/main.sh
 
 #bar {
 #  id bar-bottom
