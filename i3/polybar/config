@@ -84,7 +84,7 @@ label-font = ${fonts.fira}
 
 [module/wireless-network]
 type = internal/network
-interface = wlo1
+interface = ${configs.wifi_interface}
 interval = 2.0
 ping-interval = 10
 
@@ -99,7 +99,7 @@ label-connected-font = ${fonts.fira}
 
 [module/wired-network]
 type = internal/network
-interface = enp3s0
+interface = ${configs.wired_interface}
 interval = 2.0
 
 label-connected =  (%local_ip%)
