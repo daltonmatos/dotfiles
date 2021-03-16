@@ -5,9 +5,11 @@ bluetooth_print() {
             devices_paired=$(bluetoothctl paired-devices | grep TUNE | grep Device | cut -d ' ' -f 2)
             device_info=$(bluetoothctl info "${devices_paired}")
 
+            bat_level=$(/home/daltonmatos/.pyenv/shims/bluetooth_battery "${devices_paired}" | cut -d ' ' -f 6)
             if echo "$device_info" | grep -q "Connected: yes"; then
                 device_alias=$(echo "$device_info" | grep "Alias" | cut -d ' ' -f 2-)
-                printf " %s" "$device_alias"
+                #printf " %s" "$(echo $device_alias | cut -d ' ' -f 1) ${bat_level}"
+                printf " %s" "${bat_level}"
               else
                 echo ""
             fi

@@ -146,9 +146,10 @@ full-at = 100
 battery = ${configs.primary_battery}
 format-discharging-padding = 1
 format-charging-padding = 1
+format-full-padding = 1
 format-discharging-background = ${colors.background-alt}
 format-charging-background = ${colors.background-alt}
-
+format-full-background = ${colors.background-alt}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -194,6 +195,9 @@ format-padding = 1
 type = custom/script
 exec = ~/.i3/polybar/scripts/jbltune500-bt-status.sh
 interval = 5
+
+format-padding = 1
+format-background = ${colors.background-alt}
 
 [module/backlight]
 type = internal/backlight

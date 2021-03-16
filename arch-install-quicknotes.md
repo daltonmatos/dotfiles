@@ -116,6 +116,7 @@
   - git clone https://github.com/pyenv/pyenv.git ~/.pyenv
   - escolher qual python usar, com pyenv
   - Instalar:
+    - bluetooth-battery
     - bumblebee-status
     - netifaces
     - parso
