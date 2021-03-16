@@ -1,7 +1,7 @@
 #!/bin/sh
 # https://github.com/polybar/polybar-scripts/tree/master/polybar-scripts/notification-spacex
 
-spacex_launch=$(curl -sf https://api.spacexdata.com/v3/launches/next)
+spacex_launch=$(curl -sf https://api.spacexdata.com/v4/launches/next)
 
 if [ -n "$spacex_launch" ]; then
     spacex_precision=$(echo "$spacex_launch" | jq -r '.tentative_max_precision' )
