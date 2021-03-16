@@ -1,6 +1,8 @@
 [configs]
-primary_monitor = eDP1
+primary_monitor = eDP-1
 primary_battery = BAT0
+wifi_interface = wlo1
+wired_interface = eno0
 
 [colors]
 background = #272727
@@ -80,7 +82,7 @@ label-font = ${fonts.fira}
 
 [module/wireless-network]
 type = internal/network
-interface = wlp2s0
+interface = wlo1
 interval = 2.0
 ping-interval = 10
 
@@ -172,7 +174,6 @@ animation-discharging-4 = 
 animation-discharging-framerate = 750
 
 label-full =   %percentage%% ﮣ
-
 label-discharging = %percentage%
 format-discharging = <animation-discharging>  <label-discharging>% 
 
