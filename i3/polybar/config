@@ -3,49 +3,43 @@ primary_monitor = eDP1
 primary_battery = BAT0
 
 [colors]
-accent = #fba922
-foreground = #ffffff
-background = #000000
-fg = #002b36
-bg = #859900
+background = #272727
+background-alt = #383838
+foreground = #CACACA
+foreground-alt = #CACACA
+alert = #EF5350
+warn = #FFEE58
 
 [fonts]
 fira = 1
 input = 2
 
-[bar/main]
-font-0 = FiraMono Nerd Font:style=Regular:size=11;0
+[bar/base]
+font-0 = FiraMono Nerd Font:style=Regular:size=11;3
 font-1 = Input:style=Regular
-
-enable-ipc = true
-monitor = ${configs.primary_monitor}
-width = 100%
-border-size = 0
-bottom = true
-
 background = ${colors.background}
 foreground = ${colors.foreground}
+module-margin-left = 1
+width = 100%
+enable-ipc = true
+monitor = ${configs.primary_monitor}
+wm-restack = i3
+tray-position = right
+
+
+[bar/main]
+inherit = bar/base
+bottom = true
 
 border-top-size = 5
 border-top-color = #000
-border-bottom-size = 1
+border-bottom-size = 3
 border-bottom-color = #000
 
-overline-size = 10
-overline-color = ${self.background}
 underline-size = 2
-underline-color = ${self.background}
-
-padding-left = 1
-padding-right = 1
-module-margin-left = 1
-module-margin-right = 0
 
 modules-left = i3 xwindow
 modules-right = next-spacex-launch jblbt wired-network wireless-network cpu memory battery sound mic backlight clock
-
-wm-restack = i3
-tray-position = right
 
 [module/i3]
 type = internal/i3
@@ -70,11 +64,16 @@ interval = 1.5
 format =  <label>%
 label = %percentage%
 label-font = ${fonts.fira}
+format-padding = 1
+format-background = ${colors.background-alt}
 
 [module/memory]
 type = internal/memory
 interval = 0.2
 format = <label>%
+warn-perecentage = 1
+format-warn = <label-warn>
+label-warn = "!! %percentage%"
 
 label =  %percentage_used%
 label-font = ${fonts.fira}
@@ -87,7 +86,9 @@ ping-interval = 10
 
 format-connected = 直 <label-connected>
 label-connected = %essid%
+
 label-disconnected = 睊
+format-disconnected-underline = ${colors.alert}
 label-connected-font = ${fonts.fira}
 
 [module/wired-network]
@@ -101,12 +102,14 @@ label-disconnected =
 [module/clock]
 type = internal/date
 interval = 1
-format-padding = 1
 date = %a %d/%b
 time = %H:%M
 label = %date% %time%
 label-font = ${fonts.fira}
 format =  <label>
+
+format-background = ${colors.background-alt}
+format-padding = 1
 
 [module/sound]
 type = internal/pulseaudio
@@ -117,6 +120,7 @@ label-volume = %percentage%%
 
 label-muted = 婢 %percentage%%
 format-muted = <label-muted>
+format-muted-underline = ${colors.alert}
 
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -132,11 +136,18 @@ exec = ~/.i3/polybar/scripts/mic-volume.sh show-vol
 click-left = ~/.i3/polybar/scripts/mic-volume.sh mute-vol
 scroll-up = ~/.i3/polybar/scripts/mic-volume.sh inc-vol
 scroll-down = ~/.i3/polybar/scripts/mic-volume.sh dec-vol
+format-padding = 1
+format-background = ${colors.background-alt}
+
 
 [module/battery]
 type = internal/battery
 full-at = 100
 battery = ${configs.primary_battery}
+format-discharging-padding = 1
+format-charging-padding = 1
+format-discharging-background = ${colors.background-alt}
+format-charging-background = ${colors.background-alt}
 
 
 ramp-capacity-0 = 
@@ -176,6 +187,8 @@ label-foreground = #bbb
 type = custom/script
 exec = ~/.i3/polybar/scripts/spacex-next-launch.sh
 interval = 600
+format-background = ${colors.background-alt}
+format-padding = 1
 
 [module/jblbt]
 type = custom/script
