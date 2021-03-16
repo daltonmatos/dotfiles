@@ -11,7 +11,7 @@ bluetooth_print() {
                 #printf " %s" "$(echo $device_alias | cut -d ' ' -f 1) ${bat_level}"
                 printf " %s" "${bat_level}"
               else
-                echo ""
+                echo "ﳌ"
             fi
         fi
 }
