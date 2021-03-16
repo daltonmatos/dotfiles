@@ -21,7 +21,9 @@ font-0 = FiraMono Nerd Font:style=Regular:size=11;3
 font-1 = Input:style=Regular
 background = ${colors.background}
 foreground = ${colors.foreground}
-module-margin-left = 1
+module-margin-left = 0
+format-padding = 1
+
 width = 100%
 enable-ipc = true
 monitor = ${configs.primary_monitor}
@@ -76,7 +78,7 @@ format = <label>%
 warn-perecentage = 1
 format-warn = <label-warn>
 label-warn = "!! %percentage%"
-
+format-padding = 1
 label =  %percentage_used%
 label-font = ${fonts.fira}
 
@@ -86,6 +88,8 @@ interface = wlo1
 interval = 2.0
 ping-interval = 10
 
+format-connected-padding = 1
+format-disconnected-padding = 1
 format-connected = 直 <label-connected>
 label-connected = %essid%
 
@@ -123,6 +127,8 @@ label-volume = %percentage%%
 label-muted = 婢 %percentage%%
 format-muted = <label-muted>
 format-muted-underline = ${colors.alert}
+format-muted-padding = 1
+padding = 0
 
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -207,6 +213,7 @@ card = intel_backlight
 enable-scroll = true
 format =   <label>
 label = %percentage%%
+format-padding = 1
 
 ; vim:ft=dosini
 ;
