@@ -66,7 +66,7 @@ label-urgent-padding = 1
 type = internal/cpu
 interval = 1.5
 format =  <label>%
-label = %percentage%
+label = %percentage:2%
 label-font = ${fonts.fira}
 format-padding = 1
 format-background = ${colors.background-alt}
@@ -79,7 +79,7 @@ warn-perecentage = 1
 format-warn = <label-warn>
 label-warn = "!! %percentage%"
 format-padding = 1
-label =  %percentage_used%
+label =  %percentage_used:2%
 label-font = ${fonts.fira}
 
 [module/wireless-network]
@@ -120,11 +120,12 @@ format-padding = 1
 [module/sound]
 type = internal/pulseaudio
 format-volume = <ramp-volume> <label-volume>
+format-volume-padding = 1
 
 label-volume-font = ${fonts.fira}
-label-volume = %percentage%%
+label-volume = %percentage:2%%
 
-label-muted = 婢 %percentage%%
+label-muted = 婢 %percentage:2%%
 format-muted = <label-muted>
 format-muted-underline = ${colors.alert}
 format-muted-padding = 1
@@ -180,10 +181,10 @@ animation-discharging-4 = 
 animation-discharging-framerate = 750
 
 label-full =   %percentage%% ﮣ
-label-discharging = %percentage%
+label-discharging = %percentage:2%
 format-discharging = <animation-discharging>  <label-discharging>% 
 
-label-charging = %percentage%
+label-charging = %percentage:2%
 format-charging = <animation-charging>  <label-charging>% ﮣ
 
 [module/xwindow]
@@ -212,7 +213,7 @@ type = internal/backlight
 card = intel_backlight
 enable-scroll = true
 format =   <label>
-label = %percentage%%
+label = %percentage:2%%
 format-padding = 1
 
 ; vim:ft=dosini
