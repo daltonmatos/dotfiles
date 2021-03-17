@@ -11,6 +11,7 @@ foreground = #CACACA
 foreground-alt = #CACACA
 alert = #EF5350
 warn = #FFEE58
+ok = #00FF00
 
 [fonts]
 fira = 1
@@ -39,7 +40,6 @@ border-top-size = 5
 border-top-color = #000
 border-bottom-size = 3
 border-bottom-color = #000
-
 underline-size = 2
 
 modules-left = i3 xwindow
@@ -159,6 +159,7 @@ format-full-padding = 1
 format-discharging-background = ${colors.background-alt}
 format-charging-background = ${colors.background-alt}
 format-full-background = ${colors.background-alt}
+format-full-underline = ${colors.ok}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -180,7 +181,8 @@ animation-discharging-3 = 
 animation-discharging-4 = 
 animation-discharging-framerate = 750
 
-label-full =   %percentage%% ﮣ
+#label-full =   %percentage%% ﮣ
+format-full =   
 label-discharging = %percentage:2%
 format-discharging = <animation-discharging>  <label-discharging>% 
 
