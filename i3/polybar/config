@@ -59,7 +59,7 @@ label-unfocused-padding = 1
 
 label-urgent = %index%
 label-urgent-foreground = #000000
-label-urgent-background = #bd2c40
+label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
 [module/cpu]
@@ -190,7 +190,8 @@ format-charging = <animation-charging>  <label-charging>% ﮣ
 [module/xwindow]
 type = internal/xwindow
 label-maxlen = 75
-label-foreground = #bbb
+label-foreground = ${colors.foreground-alt}
+format-padding = 1
 
 [module/next-spacex-launch]
 type = custom/script
