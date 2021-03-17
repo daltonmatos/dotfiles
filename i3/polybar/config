@@ -43,7 +43,7 @@ border-bottom-color = #000
 underline-size = 2
 
 modules-left = i3 xwindow
-modules-right = next-spacex-launch jblbt wired-network wireless-network cpu memory battery sound mic backlight clock
+modules-right = next-spacex-launch jbl-tunebt-500 wired-network wireless-network cpu memory battery sound mic backlight clock
 
 [module/i3]
 type = internal/i3
@@ -75,9 +75,9 @@ format-background = ${colors.background-alt}
 type = internal/memory
 interval = 0.2
 format = <label>%
-warn-perecentage = 1
-format-warn = <label-warn>
-label-warn = "!! %percentage%"
+warn-percentage = 90
+label-warn = "!! %percentage_used%"
+format-warn = "WARN"
 format-padding = 1
 label =  %percentage_used:2%
 label-font = ${fonts.fira}
@@ -200,9 +200,9 @@ interval = 600
 format-background = ${colors.background-alt}
 format-padding = 1
 
-[module/jblbt]
+[module/jbl-tunebt-500]
 type = custom/script
-exec = ~/.i3/polybar/scripts/jbltune500-bt-status.sh
+exec = ~/.i3/polybar/scripts/jbl-bt-status.sh "TUNE"
 interval = 5
 
 format-padding = 1
