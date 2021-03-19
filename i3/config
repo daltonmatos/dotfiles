@@ -35,6 +35,7 @@ bindsym $mod+w exec chromium
 bindsym $mod+b exec rofi-bluetooth
 
 bindsym $mod+space exec "rofi -modi window,run -show window"
+bindsym $mod+v exec "~/.i3/scripts/rofi-menu.sh ~/rofi-menu-vpn/"
 
 
 # kill focused window
