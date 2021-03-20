@@ -12,7 +12,7 @@ _exit() {
 
 declare -A MAP
 
-files=$(find ${OPTIONS_FOLDER} -maxdepth 1 -type f -name 'rofi-menu-*.sh')
+files=$(find ${OPTIONS_FOLDER} -executable -maxdepth 1 -type f -name 'rofi-menu-*.sh')
 
 options=""
 
