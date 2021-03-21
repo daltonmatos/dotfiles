@@ -30,7 +30,7 @@ enable-ipc = true
 monitor = ${configs.primary_monitor}
 wm-restack = i3
 tray-position = right
-
+underline-size = 2
 
 [bar/main]
 inherit = bar/base
@@ -40,7 +40,6 @@ border-top-size = 5
 border-top-color = #000
 border-bottom-size = 3
 border-bottom-color = #000
-underline-size = 2
 
 modules-left = i3 xwindow
 modules-right = next-spacex-launch openvpn-nt-prod openvpn-trex-stg openvpn-trex-prd jbl-tunebt-500 wired-network wireless-network cpu memory battery sound mic backlight clock
@@ -145,7 +144,6 @@ exec = ~/.i3/polybar/scripts/mic-volume.sh show-vol
 click-left = ~/.i3/polybar/scripts/mic-volume.sh mute-vol
 scroll-up = ~/.i3/polybar/scripts/mic-volume.sh inc-vol
 scroll-down = ~/.i3/polybar/scripts/mic-volume.sh dec-vol
-format-padding = 1
 format-background = ${colors.background-alt}
 
 
