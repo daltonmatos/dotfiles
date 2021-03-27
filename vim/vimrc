@@ -242,7 +242,6 @@ call SourceFileIfExist('ale-mappings.vim')
 call SourceFileIfExist('closetag.vim')
 call SourceFileIfExist('easymotion.vim')
 call SourceFileIfExist('git.vim')
-call SourceFileIfExist('java.vim')
 call SourceFileIfExist('pytest.vim')
 
 call SourceFileIfExist('signify.vim')
