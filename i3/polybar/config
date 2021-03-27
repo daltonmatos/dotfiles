@@ -209,27 +209,21 @@ format-background = ${colors.background-alt}
 
 [module/openvpn-trex-prd]
 type = custom/script
-exec = ~/.i3/polybar/scripts/openvpn-status.sh "trex-prod" "PRD"
-interval = 1
-format-padding = 1
+exec = ~/.i3/polybar/scripts/openvpn-status.sh "trex-prod" "rex/prod"
 format-background = ${colors.background}
-format-underline = ${colors.ok}
+tail = true
 
 [module/openvpn-trex-stg]
 type = custom/script
-exec = ~/.i3/polybar/scripts/openvpn-status.sh "trex-stg" "STG"
-interval = 1
-format-padding = 1
+exec = ~/.i3/polybar/scripts/openvpn-status.sh "trex-stg" "rex/stg"
 format-background = ${colors.background}
-format-underline = ${colors.ok}
+tail = true
 
 [module/openvpn-nt-prod]
 type = custom/script
 exec = ~/.i3/polybar/scripts/openvpn-status.sh "nt-prod" "newatil/prod"
-interval = 1
-format-padding = 1
 format-background = ${colors.background}
-format-underline = ${colors.ok}
+tail = true
 
 [module/backlight]
 type = internal/backlight
