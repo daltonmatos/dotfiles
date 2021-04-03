@@ -34,14 +34,14 @@ bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+w exec chromium
 bindsym $mod+b exec rofi-bluetooth
 
-bindsym $mod+space exec "rofi -modi window,run -show window"
+bindsym $mod+space exec "rofi -modi window -show window -theme ~/.i3/rofi/dialogs/listpick-wide.rasi"
 bindsym $mod+v exec "~/.i3/scripts/rofi-menu.sh ~/rofi-menu-vpn/"
+bindsym $mod+r exec "rofi -modi run -show run -theme ~/.i3/rofi/dialogs/listpick.rasi"
 
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
-bindsym $mod+r exec "rofi -modi run -show run"
 
 bindsym Print exec maim ~/Pictures/screenshot-$(date +"%s").jpg
 bindsym Shift+Print exec maim -s ~/Pictures/screenshot-$(date +"%s").jpg
