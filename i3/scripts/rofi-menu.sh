@@ -27,7 +27,6 @@ for f in ${files}; do
   options="${options}${name}\n"
 done
 
-#echo "${MAP[@]}"
-selected=$(echo -e ${options} | rofi -dmenu -p "Choose VPN")
+selected=$(echo -e ${options} | rofi -dmenu -p "聯 VPN :" -theme dialogs/listpick.rasi)
 
 ${MAP[${selected}]} ${selected}
