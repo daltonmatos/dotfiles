@@ -1,3 +1,4 @@
 export ZDOTDIR=${HOME}/.zsh
 export TERM=xterm-256color
 export EDITOR=vim
+export INCLUDE=${ZDOTDIR}/include

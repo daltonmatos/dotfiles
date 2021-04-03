@@ -1,0 +1,9 @@
+
+import () {
+  #echo "Importing from ${INCLUDE}/${1}.zsh"
+  source ${INCLUDE}/${1}.zsh
+}
+
+from () {
+  echo "from: $*"
+}

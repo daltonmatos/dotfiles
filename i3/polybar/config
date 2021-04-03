@@ -42,7 +42,7 @@ border-bottom-size = 3
 border-bottom-color = #000
 
 modules-left = i3 xwindow
-modules-right = next-spacex-launch openvpn-nt-prod openvpn-trex-stg openvpn-trex-prd jbl-tunebt-500 wired-network wireless-network cpu memory battery sound mic backlight clock
+modules-right = next-spacex-launch vpn-pg-prd openvpn-nt-prod openvpn-trex-stg openvpn-trex-prd jbl-tunebt-500 wired-network wireless-network cpu memory battery sound mic backlight clock
 
 [module/i3]
 type = internal/i3
@@ -216,6 +216,12 @@ tail = true
 [module/openvpn-trex-stg]
 type = custom/script
 exec = ~/.i3/polybar/scripts/openvpn-status.sh "trex-stg" "rex/stg"
+format-background = ${colors.background}
+tail = true
+
+[module/vpn-pg-prd]
+type = custom/script
+exec = ~/.i3/polybar/scripts/openvpn-status.sh "pg-prd" "pg/prd"
 format-background = ${colors.background}
 tail = true
 
