@@ -38,6 +38,12 @@ bindsym $mod+space exec "rofi -modi window -show window -theme ~/.i3/rofi/dialog
 bindsym $mod+v exec "~/.i3/scripts/rofi-menu.sh ~/rofi-menu-vpn/"
 bindsym $mod+r exec "rofi -modi run -show run -theme ~/.i3/rofi/dialogs/listpick.rasi"
 
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r exec polybar-msg cmd restart; restart
+
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+bindsym $mod+p exec ~/.i3/polybar/scripts/powermenu/main.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -116,14 +122,6 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 workspace $ws10 output HDMI1
 
 workspace_layout stacked
-
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r exec polybar-msg cmd restart; restart
-
-
-bindsym $mod+Tab workspace next
-bindsym $mod+Shift+Tab workspace prev
-bindsym $mod+p exec ~/.i3/polybar/scripts/powermenu/main.sh
 
 #bar {
 #  id bar-bottom
