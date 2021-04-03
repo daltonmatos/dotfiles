@@ -1,4 +1,6 @@
 #!/usr/bin/env zsh
+source ${INCLUDE}/base
+import "vars/sudo"
 
 # Para usar o openvpn com --user é preciso criar o TUN/TAP device de forma
 # persistente e já com a permissão correta. Caso contrário o openvpn vai falhar
@@ -12,7 +14,6 @@ OPENVPN_PROFILE_PATH=""
 STATUS_SCRIPT="${HOME}/.i3/polybar/scripts/openvpn-status.sh"
 
 _connect() {
-  export SUDO_ASKPASS=/home/daltonmatos/.i3/scripts/askpass.sh
   sudo \
     -A \
     openvpn \
