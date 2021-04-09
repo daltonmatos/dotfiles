@@ -54,8 +54,9 @@ endfun
 
 
 
-"nnoremap <leader>d :call vimspector#Launch()<CR>
-"nnoremap <leader>db :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <leader>dt :call DebugCurrentTestCase()<CR>
+nnoremap <leader>b :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <leader>bl :call vimspector#ListBreakpoints()<CR>
 "
 "let s:vimspector_keys = {
 "    \ 'c': function('vimspector#Continue'),
