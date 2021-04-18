@@ -13,14 +13,7 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
     nmap <buffer> K <plug>(lsp-hover)
 
-    " nmap <silent> <buffer> <leader>cd <plug>(lsp-definition)
-    " nmap <silent> <buffer> <leader>/cd :ALEGoToDefinition -vsplit <CR>
-    " nmap <silent> <buffer> <leader>-cd :ALEGoToDefinition -split <CR>
-
-    " nmap <silent> <buffer> <leader>cf <plug>(lsp-references)
-    " nmap <silent> <buffer> <leader>ci <plug>(lsp-hover)
-
-    " refer to doc to add more commands
+    nmap <silent> <buffer> <leader>/cd :leftabove LspDefinition<CR>
 endfunction
 
 augroup lsp_install_python
@@ -30,13 +23,9 @@ augroup END
 
 let g:lsp_async_completion = 1
 let g:asyncomplete_auto_completeopt = 0
+let g:lsp_completion_documentation_enabled = 0
 let g:asyncomplete_min_chars = 3
 
-" Não funciona no vim, apens no gVim
-imap <c-space> <Plug>(asyncomplete_force_refresh)
-
-" Não mostra flot com documentação do item que foi selecionado
-" no meu de autocomplete
 let g:lsp_documentation_float = 0
 let g:lsp_preview_float = 0
 
