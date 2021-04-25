@@ -31,3 +31,5 @@
 	showPatch = true
 [merge]
 	ff = false
+[init]
+	defaultBranch = main
