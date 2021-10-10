@@ -21,6 +21,7 @@ alias _upgrade='sudo pacman -Syu'
 alias py='ipython'
 alias dfh='df -hP | sed -e "s/Sist. Arq./Sist.Arq./" | column -t'
 alias gf='git flow'
+alias t='terraform'
 
 # Tmux aliases
 alias tl='tmux ls'
@@ -37,4 +38,3 @@ alias avrasm32='wine ~/bin/AvrAssembler/avrasm32.exe $*'
 alias myip='curl https://httpbin.org/ip'
 
 alias _p='compdef _pass pass'
-
