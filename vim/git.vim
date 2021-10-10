@@ -2,7 +2,7 @@
 
 " Git mappings {{{2 "
 " For fugitive.vim
-nnoremap <leader>gs   :Gstatus <cr>
+nnoremap <leader>gs   :Git <cr>
 nnoremap <leader>gd   :Gvdiff <cr>
 nnoremap <leader>gp   :Git push <cr>
 nnoremap <leader>gP   :Git push -f
