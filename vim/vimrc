@@ -100,70 +100,70 @@ call SourceFileIfExist('ale.vim')
 
 " Plugin installation {{{2
 filetype off
-call vundle#begin()
 
+call plug#begin('~/.vim/plugged')
 
-Plugin 'mattn/vim-lsp-settings'
-Plugin 'puremourning/vimspector'
+Plug 'mattn/vim-lsp-settings'
+Plug 'puremourning/vimspector'
 
 " Dependency for idanarye/vim-vebugger
-Plugin 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
-Plugin 'vim-ctrlspace/vim-ctrlspace'
+Plug 'vim-ctrlspace/vim-ctrlspace'
 
 " Dependenxy to janko-m/vim-test
-Plugin 'tpope/vim-dispatch'
+Plug 'tpope/vim-dispatch'
 
 " Dependencies for sirver/ultisnips
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'honza/vim-snippets'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'honza/vim-snippets'
 
 " Plugins
-Plugin 'sirver/ultisnips'
+Plug 'sirver/ultisnips'
 
-Plugin 'bling/vim-airline'
+Plug 'bling/vim-airline'
 
-Plugin 'tpope/vim-rhubarb' "Auto-complete para Issues/PR do Github na mensagem de commit
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'vim-scripts/surround.vim'
-Plugin 'matze/vim-move'
-Plugin 'myusuf3/numbers.vim'
-Plugin 'alvan/vim-closetag'
+Plug 'tpope/vim-rhubarb' "Auto-complete para Issues/PR do Github na mensagem de commit
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-scripts/surround.vim'
+Plug 'matze/vim-move'
+Plug 'myusuf3/numbers.vim'
+Plug 'alvan/vim-closetag'
 
-Plugin 'mhinz/vim-signify'
-Plugin 'nathanaelkane/vim-indent-guides' " <leader>ig to toggle visbility
-Plugin 'airblade/vim-rooter'
-Plugin 'idanarye/vim-merginal'
-Plugin 'elzr/vim-json' " checking for json files, highlighting errors
-Plugin 'alfredodeza/pytest.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'daltonmatos/vim-virtualenv'
-Plugin 'gregsexton/gitv'
+Plug 'mhinz/vim-signify'
+Plug 'nathanaelkane/vim-indent-guides' " <leader>ig to toggle visbility
+Plug 'airblade/vim-rooter'
+Plug 'idanarye/vim-merginal'
+Plug 'elzr/vim-json' " checking for json files, highlighting errors
+Plug 'alfredodeza/pytest.vim'
+Plug 'mileszs/ack.vim'
+Plug 'daltonmatos/vim-virtualenv'
+Plug 'gregsexton/gitv'
 
-Plugin 'prabirshrestha/vim-lsp'
-Plugin 'prabirshrestha/asyncomplete.vim'
-Plugin 'prabirshrestha/asyncomplete-lsp.vim'
-Plugin 'prabirshrestha/asyncomplete-ultisnips.vim'
-Plugin 'prabirshrestha/asyncomplete-emoji.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
+Plug 'prabirshrestha/asyncomplete-emoji.vim'
 
-Plugin 'w0rp/ale'
-Plugin 'easymotion/vim-easymotion'
+Plug 'w0rp/ale'
+Plug 'easymotion/vim-easymotion'
 
-Plugin 'janko-m/vim-test'
+Plug 'janko-m/vim-test'
 
 " ColorSchemes
-Plugin 'danielwe/base16-vim'
-Plugin 'Addisonbean/Vim-Xcode-Theme'
+Plug 'danielwe/base16-vim'
+Plug 'Addisonbean/Vim-Xcode-Theme'
 
 " Syntax plugins
-Plugin 'PotatoesMaster/i3-vim-syntax'
-Plugin 'google/vim-jsonnet'
-Plugin 'cespare/vim-toml'
-Plugin 'ekalinin/Dockerfile.vim'
+Plug 'PotatoesMaster/i3-vim-syntax'
+Plug 'google/vim-jsonnet'
+Plug 'cespare/vim-toml'
+Plug 'ekalinin/Dockerfile.vim'
 
-call vundle#end()
+call plug#end()
 
 filetype plugin indent on
 " }}} Plugin installation
