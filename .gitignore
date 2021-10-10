@@ -1,6 +1,7 @@
 vim/.backups
 *~
 vim/bundle/
+vim/plugged/
 *.swp
 *zcompdump*
 zsh/antigen/
