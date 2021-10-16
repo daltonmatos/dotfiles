@@ -11,13 +11,17 @@
 window {
     width:      			210px;
     padding:    			10px;
-    border:					0px 0px 0px 0px;
+    border:					0px 0px 1px 0px;
     border-radius:          0px;
     border-color:           @ac;
     location:               center;
+    height: 50px;
 }
 
 entry {
     expand: 				true;
     text-color:				@ac;
+    border:					0px 0px 0px 1px;
+    border-color: @bga;
+    padding: 0px 0px 0px 10px;
 }

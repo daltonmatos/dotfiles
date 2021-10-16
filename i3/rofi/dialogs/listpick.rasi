@@ -25,17 +25,17 @@ window {
     transparency:                   "real";
     background-color:               @bg;
     text-color:                     @fg;
-	border:							0px 0px 4px 0px;
-	border-color:					@ac;
+    border:							0px 0px 4px 0px;
+    border-color:					@ac;
     border-radius:                  0px;
-	width:							300px;
+    width:							300px;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
 }
 
 prompt {
-    enabled: 						true;
+  enabled: 						true;
 	padding: 						2px 0px 0px 10px;
 	background-color: 				@al;
 	text-color: 					@fg;
@@ -61,13 +61,13 @@ entry {
 }
 
 inputbar {
-	children: 						[ textbox-prompt-colon, prompt, entry ];
+    children: 						[ textbox-prompt-colon, prompt, entry ];
     background-color:               @bga;
     text-color:                     @fg;
     expand:                         false;
-	border:							0px;
+    border:							            0px;
     border-radius:                  0px;
-	border-color:					@ac;
+    border-color:					          @ac;
     margin:                         0px;
     padding:                        8px;
 }
@@ -85,9 +85,9 @@ listview {
 
 mainbox {
     background-color:               @al;
-	border:							0px;
+    border:							            0px;
     border-radius:                  0px;
-	border-color:					@ac;
+    border-color:					          @ac;
     children:                       [ inputbar, listview ];
     spacing:                       	6px;
     padding:                        6px;
@@ -95,6 +95,7 @@ mainbox {
 
 element {
     background-color:               @al;
+    border-color:                   @fg;
     text-color:                     @fga;
     orientation:                    horizontal;
     border-radius:                  0px;
@@ -104,19 +105,24 @@ element {
 element-icon {
     size:                           24px;
     border:                         0px;
+    padding:                        0px 0px 0px -8px;
 }
 
+element-text selected {
+    background-color:  @bga;
+}
 element-text {
     expand:                         true;
     horizontal-align:               0;
     vertical-align:                 0.5;
     margin:                         0px 2.5px 0px 2.5px;
+    text-color: @fga;
 }
 
 element selected {
     background-color:               @bga;
-    text-color:                     @fg;
-	border:							0px 0px 0px 0px;
+    text-color:                     @al;
+    border:							0px 0px 0px 0px;
     border-radius:                  0px;
     border-color:                  	@ac;
 }

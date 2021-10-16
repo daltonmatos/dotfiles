@@ -106,11 +106,16 @@ element-icon {
     border:                         0px;
 }
 
+element-text selected {
+    background-color:  @bga;
+}
+
 element-text {
     expand:                         true;
     horizontal-align:               0;
     vertical-align:                 0.5;
     margin:                         0px 2.5px 0px 2.5px;
+    text-color: @fga;
 }
 
 element selected {
