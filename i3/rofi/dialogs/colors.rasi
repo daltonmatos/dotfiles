@@ -7,4 +7,5 @@
   fga:  #CACACAFF;
   fg:   #CACACAFF;
   ac:   #e53935FF;
+  background-color: inherit;
 }
