@@ -95,7 +95,8 @@ ping-interval = 10
 
 format-connected-padding = 1
 format-disconnected-padding = 1
-format-connected = 直 <label-connected>
+format-connected = 直
+#format-connected = 直 <label-connected>
 label-connected = %essid%
 
 label-disconnected = 睊
