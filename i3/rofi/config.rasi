@@ -1,3 +1,1 @@
-configuration {
-	theme: "dialogs/listpick.rasi";
-}
+@theme "dialogs/listpick.rasi"
