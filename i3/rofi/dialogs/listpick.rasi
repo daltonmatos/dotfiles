@@ -36,18 +36,9 @@ window {
 
 prompt {
   enabled: 						true;
-	padding: 						2px 0px 0px 10px;
+	padding: 						0px 10px 0px 5px;
 	background-color: 				@al;
 	text-color: 					@fg;
-}
-
-textbox-prompt-colon {
-	padding: 						2px 0px 0px 5px;
-	background-color: 				@al;
-	text-color: 					@fg;
-	expand: false;
-	str: "";
-  location:                       center;
 }
 
 entry {
@@ -61,7 +52,7 @@ entry {
 }
 
 inputbar {
-    children: 						[ textbox-prompt-colon, prompt, entry ];
+    children: 						[ prompt, entry ];
     background-color:               @bga;
     text-color:                     @fg;
     expand:                         false;
