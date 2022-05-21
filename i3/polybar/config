@@ -36,9 +36,9 @@ underline-size = 2
 inherit = bar/base
 bottom = true
 
-border-top-size = 5
+border-top-size = 2
 border-top-color = #000
-border-bottom-size = 3
+border-bottom-size = 2
 border-bottom-color = #000
 
 modules-left = i3 xwindow
