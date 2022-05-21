@@ -33,4 +33,5 @@ ShortcutsNoMenukey=TRUE
 ShortcutsNoMnemonics=TRUE
 MiscSearchDialogOpacity=100
 MiscShowUnsafePasteDialog=TRUE
+ScrollingUnlimited=TRUE
 
