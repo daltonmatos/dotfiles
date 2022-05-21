@@ -1,12 +1,12 @@
 # vim: filetype=i3
 
-for_window [class="[pP]avucontrol|Arandr"] floating enable
+for_window [class="[pP]avucontrol|[Aa]randr"] floating enable, resize set 60ppt 50ppt, move position center;
 for_window [window_role="pop-up"] floating enable
 for_window [class="zoom"] floating enable
 
 gaps inner 0
 gaps outer 0
-default_border pixel 3
+default_border pixel 2
 
 font pango:Input Regular 10
 
@@ -23,7 +23,7 @@ exec --no-startup-id ~/.i3/scripts/setxkbmap.sh
 exec --no-startup-id polybar --config=~/.i3/polybar/config main
 
 # Disable power button, for now.
-exec --no-startup-id systemd-inhibit --what=handle-power-key sleep infinity
+#exec --no-startup-id systemd-inhibit --what=handle-power-key sleep infinity
 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -122,17 +122,3 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 workspace $ws10 output HDMI1
 
 workspace_layout stacked
-
-#bar {
-#  id bar-bottom
-#  font pango:Input Regular 10
-#  position bottom
-#  status_command /home/daltonmatos/.pyenv/shims/bumblebee-status \
-#    -m nic cpu memory battery pasink pasource time \
-#    -p time.format="%a %d/%b %H:%M%z" \
-#    -p memory.format="{percent:.0f}%" \
-#    -p cpu.format="{:.0f}%" \
-#    -p nic.format="{ssid}" \
-#    -p nic.exclude="lo,virbr,docker,vboxnet,veth,br-,eno" \
-#    -t solarized-powerline
-#}
