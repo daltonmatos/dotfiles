@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 
-setxkbmap -layout br
+#setxkbmap -layout br
+setxkbmap -layout us -variant intl
 
 if [ $? -ne 0 ]; then
 

@@ -119,6 +119,9 @@ time = %H:%M
 label = %date% %time%
 label-font = ${fonts.fira}
 format =  <label>
+time-alt = %H:%M:%S
+date-alt = %a %d/%b
+
 
 format-background = ${colors.background-alt}
 format-padding = 1
