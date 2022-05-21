@@ -42,7 +42,7 @@ border-bottom-size = 2
 border-bottom-color = #000
 
 modules-left = i3 xwindow
-modules-right = next-spacex-launch vpn-pg-prd openvpn-nt-prod openvpn-trex-stg openvpn-trex-prd logitech-m720-status jbl-tunebt-500 wired-network wireless-network cpu memory battery sound mic backlight clock power
+modules-right = next-spacex-launch vpn-pg-prd openvpn-nt-prod openvpn-trex-stg openvpn-trex-prd logitech-m720-status jbl-tunebt-500 wired-network wireless-network cpu memory battery sound mic keymap clock power
 
 [module/i3]
 type = internal/i3
@@ -248,14 +248,14 @@ exec = ~/.i3/polybar/scripts/openvpn-status.sh "nt-prod" "newatil/prod"
 format-background = ${colors.background}
 tail = true
 
-[module/backlight]
-type = internal/backlight
-
-card = intel_backlight
-enable-scroll = true
-format =   <label>
-label = %percentage:2%%
+[module/keymap]
+type = internal/xkeyboard
+format = <label-layout>
 format-padding = 1
+label-layout =  %layout%/%icon%
+label-indicator-on = +%icon%
+layout-icon-0 = us;intl;intl
+layout-icon-1 = br;Brazil;abnt2
 
 ; vim:ft=dosini
 ;
