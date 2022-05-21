@@ -1,11 +1,5 @@
 #!/bin/sh
 
-# Device Class:
-# JBL GO: 0x00200414
-# JBL TUNEBT500: 0x00240404
-#  
-
-#   
 DEVICE_NAME=${1:-}
 ICON_PAIRED=${2:-}
 ICON_NOT_PAIRED=${3:-ﳌ}
