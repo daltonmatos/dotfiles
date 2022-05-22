@@ -226,7 +226,7 @@ format-background = ${colors.background}
 
 [module/anne-pro-ii-status]
 type = custom/script
-exec = ~/.i3/polybar/scripts/bt-device-status.sh "anne" "" ""
+exec = ~/.i3/polybar/scripts/bt-device-status.sh "AnnePro2" "" ""
 interval = 5
 format-padding = 1
 format-background = ${colors.background-alt}
