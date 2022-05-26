@@ -9,8 +9,10 @@ LABEL=${2}
 connected=0
 
 _connected() {
-  OTHER_PID=`pgrep -af ${SCRIPT_NAME} | grep -v -- --connected | grep ${1} | awk '{print $1}'`
-  kill -USR1 ${OTHER_PID}
+  OTHER_PID=`pgrep -af ${SCRIPT_NAME} | grep -v -- --connected | grep ${1} | awk '{print $1}' | tr '\n' ' '`
+  for PID in `echo ${OTHER_PID}`; do
+    kill -USR1 ${PID}
+  done
 }
 
 _connected_signal_handler() {
