@@ -5,9 +5,10 @@ for_window [window_role="pop-up"] floating enable
 for_window [class="zoom"] floating enable
 for_window [title="meet.google.com is sharing your screen."] move scratchpad
 
-gaps inner 0
-gaps outer 0
-default_border pixel 2
+#smart_gaps on
+gaps inner 5
+gaps outer 8
+default_border pixel 0
 
 font pango:Input Regular 10
 
@@ -34,6 +35,7 @@ floating_modifier $mod
 bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+w exec chromium
 bindsym $mod+b exec rofi-bluetooth
+
 
 bindsym $mod+space exec "rofi -modi window -show window -theme ~/.i3/rofi/dialogs/listpick-wide.rasi"
 bindsym $mod+v exec "~/.i3/scripts/rofi-menu.sh ~/rofi-menu-vpn/"
