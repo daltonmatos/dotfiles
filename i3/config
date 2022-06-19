@@ -3,6 +3,7 @@
 for_window [class="[pP]avucontrol|[Aa]randr"] floating enable, resize set 60ppt 50ppt, move position center;
 for_window [window_role="pop-up"] floating enable
 for_window [class="zoom"] floating enable
+for_window [title="meet.google.com is sharing your screen."] move scratchpad
 
 gaps inner 0
 gaps outer 0
