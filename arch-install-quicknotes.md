@@ -117,12 +117,10 @@
   - escolher qual python usar, com pyenv
   - Instalar:
     - bluetooth-battery
-    - bumblebee-status
     - netifaces
     - parso
     - pipenv
     - psutil
-    - python-language-server[all]
     - dotbot
 
 ### Geral
@@ -132,6 +130,7 @@
   - bzcat .dotfiles/Input.ttf.bz2 > .fonts/Input.ttf
   - Instalar browserpass (https://github.com/browserpass/browserpass)
   - Instalar AUR managaer: yay
+  - yay betterlockscreen
   - $ _i code
 
 # Configurações adicionais

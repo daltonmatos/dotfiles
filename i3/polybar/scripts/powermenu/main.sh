@@ -61,6 +61,7 @@ case $chosen in
         ;;
     $suspend)
       ~/.i3/scripts/lock.sh
+      sleep 2
 			systemctl suspend
         ;;
     $logout)
