@@ -4,6 +4,8 @@
       create: true
 
 - link:
+    ~/.config/picom/picom.conf:
+      path: ./picom/picom.conf
     ~/.gitconfig:
       path: git/config
     ~/.config/xfce4/terminal/accels.scm:
