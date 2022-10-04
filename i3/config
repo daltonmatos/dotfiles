@@ -17,6 +17,7 @@ set $mod Mod4
 set $default_mode "default"
 
 
+exec --no-startup-id picom -b
 exec --no-startup-id ~/.i3/scripts/check-dunst.sh
 exec --no-startup-id ~/.i3/scripts/enable-touch-click.sh
 exec --no-startup-id xset -b
