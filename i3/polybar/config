@@ -212,7 +212,7 @@ format-padding = 1
 
 [module/jbl-tunebt-500]
 type = custom/script
-exec = ~/.i3/polybar/scripts/bt-device-status.sh "TUNE" "" "ﳌ"
+exec = ~/.i3/polybar/scripts/bt-device-status.sh "TUNE|EDIFIER" "" "ﳌ" --show-battery
 interval = 5
 format-padding = 1
 format-background = ${colors.background-alt}
