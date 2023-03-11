@@ -4,6 +4,7 @@ export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 export SUDO_ASKPASS=~/.i3/scripts/askpass.sh
 
+source $(dirname ${ZDOTDIR}/.zshrc)/path.zsh
 source $(dirname ${ZDOTDIR}/.zshrc)/prompt.zsh
 source $(dirname ${ZDOTDIR}/.zshrc)/general.zsh
 source $(dirname ${ZDOTDIR}/.zshrc)/pyenv.zsh
@@ -12,6 +13,7 @@ source $(dirname ${ZDOTDIR}/.zshrc)/alias.zsh
 source $(dirname ${ZDOTDIR}/.zshrc)/ssh.zsh
 source $(dirname ${ZDOTDIR}/.zshrc)/vscode.zsh
 source $(dirname ${ZDOTDIR}/.zshrc)/fzf.zsh
+source $(dirname ${ZDOTDIR}/.zshrc)/include/fzf-key-bindings.zsh
 
 
 # GPG specifics
