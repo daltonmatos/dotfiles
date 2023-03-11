@@ -1,1 +1,15 @@
+
+configuration {
+}
+
+configuration {
+	font:							"FiraMono Nerd Font 10";
+  show-icons:                     true;
+	icon-theme: 					"Papirus";
+  display-drun: 					"";
+  drun-display-format:            "{name}";
+  disable-history:                false;
+	sidebar-mode: 					false;
+}
+
 @theme "dialogs/listpick.rasi"
