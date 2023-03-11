@@ -36,7 +36,7 @@ set et
 set autoindent
 set autoread
 
-set swapfile
+set noswapfile
 set background=dark
 if has('termguicolors')
   set termguicolors
