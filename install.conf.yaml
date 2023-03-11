@@ -18,6 +18,8 @@
       path: zsh
     ~/.gitconfig:
       path: git/gitconfig
+    ~/.git:
+      path: git
     ~/.i3:
       path: i3
     ~/.config/rofi:
