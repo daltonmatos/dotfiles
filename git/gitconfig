@@ -1,35 +1,57 @@
 [core]
-  pager =
-	excludesfile = /home/dalton/.global-gitignore
+  pager = delta
+
 [user]
 	name = Dalton Barreto
   email = daltonmatos@gmail.com
 	signingKey = 05570C19E57F6BB4!
+
 [color]
 	status = auto
   branch = auto
   diff = auto
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    features = decorations side-by-side navigate
+    line-numbers = true
+    hyperlinks = true
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
 
 [alias]
   st = status
   co = checkout
   br = branch
   mg = merge
-  ahead = log --oneline origin/develop..HEAD
-  behind = log --oneline HEAD..origin/develop
-  l = log --oneline
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
-  fo = fetch origin
+
 [push]
 	default = current
+
 [commit]
 	verbose = true
   gpgsign = true
+
 [branch]
 	autosetuprebase = always
+
 [stash]
 	showPatch = true
+
 [merge]
 	ff = false
+
 [init]
-	defaultBranch = main
+ defaultBranch = main
