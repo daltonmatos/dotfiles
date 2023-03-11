@@ -1,6 +1,7 @@
-
+# vim: ft=dosini
+#
 [include]
- path = ~/.dotfiles/git/delta.themes
+ path = ~/.git/delta.themes
 
 [core]
   pager = delta
