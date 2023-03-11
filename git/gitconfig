@@ -1,3 +1,7 @@
+
+[include]
+ path = ~/.dotfiles/git/delta.themes
+
 [core]
   pager = delta
 
@@ -15,7 +19,7 @@
     diffFilter = delta --color-only --features=interactive
 
 [delta]
-    features = decorations side-by-side navigate
+    features = decorations side-by-side navigate chameleon
     line-numbers = true
     hyperlinks = true
 
