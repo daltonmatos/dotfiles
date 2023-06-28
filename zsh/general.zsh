@@ -1,6 +1,7 @@
 
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
-export LANG=en_US.UTF-8
+#export LANG=en_US.UTF-8
+export LC_CTYPE=pt_BR.UTF-8
 
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
