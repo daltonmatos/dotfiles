@@ -3,6 +3,8 @@ i3-wm.program.bluetooth: ~/.i3/polybar/scripts/rofi-bluetooth.sh
 i3-wm.binding.launcher.window: space
 i3-wm.binding.launcher.app: Ctrl+space
 i3-wm.program.launcher.window: rofi -modi window -show window -theme ~/.i3/rofi/dialogs/listpick-wide.rasi
+i3-wm.program.launcher.cmd: rofi -modi run -show run -theme ~/.i3/rofi/dialogs/listpick.rasi
+
 # Libera @mod+v para o menu de VPN
 #i3-wm.binding.split_v: ?
 regolith.wallpaper.file: ~/.i3/wallpapers/nature-sunrise-digital-art-river-landscape-mountains-trees-uhdpaper.com-8K-31.jpg
