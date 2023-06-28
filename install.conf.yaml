@@ -24,7 +24,7 @@
       path: i3
     ~/.config/rofi:
       path: i3/rofi
-    ~/.config/regolith:
+    ~/.config/regolith2:
       path: i3/regolith2/
     ~/.vim:
       path: vim
