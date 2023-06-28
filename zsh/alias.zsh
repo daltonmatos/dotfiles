@@ -22,6 +22,7 @@ alias py='ipython'
 alias dfh='df -hP | sed -e "s/Sist. Arq./Sist.Arq./" | column -t'
 alias gf='git flow'
 alias t='terraform'
+alias tm='terramate'
 
 # Tmux aliases
 alias tl='tmux ls'

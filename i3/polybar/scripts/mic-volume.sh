@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # https://github.com/MarcDonald/polybar-mic-volume
 
 DEFAULT_SOURCE_INDEX=$(pacmd list-sources | grep "\* index:" | cut -d' ' -f5)
