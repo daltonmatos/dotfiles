@@ -3,7 +3,7 @@
 " Git mappings {{{2 "
 " For fugitive.vim
 nnoremap <leader>gs   :Git <cr>
-nnoremap <leader>gd   :Gdiffsplit <cr>
+nnoremap <leader>gd   :Gvdiffsplit <cr>
 nnoremap <leader>gp   :Git push <cr>
 nnoremap <leader>gP   :Git push -f
 nnoremap <leader>dp   :diffput <cr>
@@ -36,7 +36,7 @@ augroup END
 
 let g:Gitv_OpenHorizontal = 1
 
-let g:airline#extensions#branch#format = 'CustomBranchName'
+let g:airline#extensions#branch#format = 'fugitive#statusline'
 function! CustomBranchName(name)
   try
     let l:hash = fugitive#repo().rev_parse(a:name)[:8]
