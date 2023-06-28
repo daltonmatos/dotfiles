@@ -24,8 +24,8 @@
       path: i3
     ~/.config/rofi:
       path: i3/rofi
-    ~/.config/bumblebee-status:
-      path: i3/bumblebee-status
+    ~/.config/regolith:
+      path: i3/regolith2/
     ~/.vim:
       path: vim
     ~/.gnupg/gpg.conf:
@@ -38,3 +38,5 @@
       path: code
     ~/.fonts:
       path: fonts
+    ~/.Xresources:
+      path: Xresources
