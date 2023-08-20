@@ -21,7 +21,13 @@ bluetooth_print() {
 
               if [ ! -z ${SHOW_BATT} ]; then
                 if is_logitech_mouse ${device_alias}; then
-                  BAT_PERCENTAGE=" $( solaar show 1 | grep -i battery: | tail -1 | grep -oE "[0-9]+" | head -1)%%"
+                  SOLAAR_OUT=$(solaar show 1 2>/dev/null)
+                  SOLAAR_OK=$?
+                  if [ ${SOLAAR_OK} -eq 1 ]; then
+                    BAT_PERCENTAGE=" "
+                  else
+                    BAT_PERCENTAGE=" $( solaar show 1 | grep -i battery: | tail -1 | grep -oE "[0-9]+" | head -1)%%"
+                  fi
                 else
                   BAT_PERCENTAGE=" $(pactl list | grep battery | grep -oE "[0-9]+")%%"
                 fi
