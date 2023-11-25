@@ -35,9 +35,11 @@ underline-size = 2
 [bar/main]
 inherit = bar/base
 bottom = true
+dim-value = 0.95
+radius = 5
 
-border-top-size = 2
-border-top-color = #000
+#border-top-size = 2
+#border-top-color = #000
 border-bottom-size = 2
 border-bottom-color = #000
 
