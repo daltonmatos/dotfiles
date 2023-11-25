@@ -67,8 +67,6 @@ antigen bundle git-prompt
 antigen bundle git-flow
 antigen bundle pip
 antigen bundle python
-antigen bundle docker
-antigen bundle docker-compose
 antigen bundle colorize #depends on package community/pygmentize
 antigen bundle systemd
 antigen bundle Tarrasch/zsh-autoenv
