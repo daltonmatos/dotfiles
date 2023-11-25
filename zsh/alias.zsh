@@ -36,6 +36,6 @@ alias prettyxml='xmllint --format - < '
 
 alias avrasm2='wine ~/bin/AvrAssembler2/avrasm2.exe $*'
 alias avrasm32='wine ~/bin/AvrAssembler/avrasm32.exe $*'
-alias myip='curl https://httpbin.org/ip'
+alias myip='curl https://ipinfo.io/ip'
 
 alias _p='compdef _pass pass'
