@@ -1,10 +1,4 @@
 
-# Antigen init
-source $(dirname ${ZDOTDIR}/.zshrc)/antigen/antigen.zsh
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
-
-#POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -52,33 +46,6 @@ POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='255'
 
 POWERLEVEL9K_CUSTOM_ETH_INFO_BACKGROUND="004"
 POWERLEVEL9K_CUSTOM_ETH_INFO_FOREGROUND="255"
-
-# Load the theme.
-#antigen theme candy
-antigen theme bhilburn/powerlevel9k powerlevel9k
-
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle sudo
-antigen bundle git
-antigen bundle heroku
-antigen bundle pip
-antigen bundle command-not-found #depends on extra/pkgfile
-antigen bundle git-prompt
-antigen bundle git-flow
-antigen bundle pip
-antigen bundle python
-antigen bundle colorize #depends on package community/pygmentize
-antigen bundle systemd
-antigen bundle Tarrasch/zsh-autoenv
-antigen bundle t413/zsh-background-notify
-antigen bundle pass
-
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-completions src
-
-# Tell antigen that you're done.
-antigen apply
 
 POWERLEVEL9K_CUSTOM_ARCHLOGO="archlinux_logo"
 POWERLEVEL9K_ARCHLINUX_LOGO=$'\uf303'
