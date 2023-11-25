@@ -4,6 +4,8 @@
       create: true
 
 - link:
+    ~/.config/starship.toml:
+      path: ./zsh/starship.toml
     ~/.config/picom/picom.conf:
       path: ./picom/picom.conf
     ~/.gitconfig:

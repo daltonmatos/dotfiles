@@ -1,0 +1,93 @@
+#Icons
+# Home:  (\uF015)
+# Right Sep:  (\ue0c6)
+# Left Sep:  (\ue0c7)
+# Github:  (\uf09b)
+# Time:  (\uf017)
+#  (\uf303)
+# 󰌑
+#  (\u3727)
+#  (\ue73c)
+#  (\uf407) Indicação se a branch atua tem um PR aberto. Mostrar o número do PR
+#  gh pr list --json baseRefName,number,headRefName --head $(git rev-parse --abbrev-ref HEAD) --jq '.[] | .number' | cat
+
+format="$os $directory$git_branch$git_commit$git_metrics$git_state$all$character"
+right_format="${jobs}$cmd_duration$status"
+add_newline = false
+
+
+[directory]
+home_symbol="~"
+
+[directory.substitutions]
+"/home/daltonmatos/" = "SRC?"
+
+[jobs]
+symbol = "&:"
+symbol_threshold = 1
+number_threshold = 1
+
+[fill]
+disabled = true
+
+[cmd_duration]
+format="[ $duration]($style) "
+
+[status]
+disabled = false
+symbol="󰌑"
+format="[$status$symbol]($style)"
+
+[nodejs]
+disabled = false
+
+[os]
+disabled = true
+
+[os.symbols]
+Ubuntu = ""
+
+[python]
+disabled = false
+pyenv_version_name = false
+pyenv_prefix = "pyenv "
+python_binary = [
+    "python",
+    "python3",
+    "python2",
+]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+version_format = "v${raw}"
+style = "yellow"
+symbol = " "
+detect_extensions = ["py"]
+detect_files = [
+    "requirements.txt",
+    ".python-version",
+    "pyproject.toml",
+    "Pipfile",
+    "tox.ini",
+    "setup.py",
+    "__init__.py",
+]
+detect_folders = []
+
+[gcloud]
+disabled = true
+
+[git_branch]
+format = "[$symbol$branch(:$remote_branch)]($style) "
+symbol = " "
+
+[git_commit]
+only_detached = false
+tag_disabled = false
+
+[git_state]
+disabled = false
+
+[git_metrics]
+disabled = false
+
+[terraform]
+format = "[$symbol$workspace]($style) "
