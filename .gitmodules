@@ -1,3 +1,6 @@
 [submodule "zsh/antigen"]
 	path = zsh/antigen
 	url = http://github.com/zsh-users/antigen
+[submodule "zplug"]
+	path = zsh/zplug
+	url = https://github.com/zplug/zplug
