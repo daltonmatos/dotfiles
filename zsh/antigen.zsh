@@ -3,6 +3,7 @@ antigen use oh-my-zsh
 
 #antigen theme bhilburn/powerlevel9k powerlevel9k
 
+antigen bundle starship
 antigen bundle sudo
 antigen bundle git
 antigen bundle heroku
