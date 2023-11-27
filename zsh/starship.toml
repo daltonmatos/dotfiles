@@ -8,16 +8,33 @@
 # 󰌑
 #  (\u3727)
 #  (\ue73c)
+# 笠 (\uf9f8)
 #  (\uf407) Indicação se a branch atua tem um PR aberto. Mostrar o número do PR
 #  gh pr list --json baseRefName,number,headRefName --head $(git rev-parse --abbrev-ref HEAD) --jq '.[] | .number' | cat
+# Clickable text: https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda
 
-format="$os $directory$git_branch$git_commit$git_metrics$git_state$all$character"
+format="""
+$os\
+$directory\
+$git_branch\
+$git_commit\
+${custom.github_pr}\
+$git_metrics\
+$git_state\
+$all\
+$character
+"""
 right_format="${jobs}$cmd_duration$status"
 add_newline = false
 
+[character]
+disabled = false
 
 [directory]
 home_symbol="~"
+style="bg:blue bold fg:white"
+read_only_style="bg:blue bold fg:white"
+format = "[ $path ]($style)[$read_only]($read_only_style)[ ](bg:none fg:blue)"
 
 [directory.substitutions]
 "/home/daltonmatos/" = "SRC?"
@@ -42,10 +59,14 @@ format="[$status$symbol]($style)"
 disabled = false
 
 [os]
-disabled = true
+format = "[ $symbol  ]($style)[](bg:blue)"
+disabled = false
+style = "bg:white fg:black"
 
 [os.symbols]
-Ubuntu = ""
+#Ubuntu = ""
+Ubuntu = ""
+#Ubuntu = ""
 
 [python]
 disabled = false
@@ -82,6 +103,7 @@ symbol = " "
 [git_commit]
 only_detached = false
 tag_disabled = false
+#tag_symbol = " 笠"
 
 [git_state]
 disabled = false
@@ -90,4 +112,24 @@ disabled = false
 disabled = false
 
 [terraform]
-format = "[$symbol$workspace]($style) "
+format = "[$symbol$version \\($workspace\\)]($style) "
+
+[custom.github_pr]
+format = "[($symbol $output )]($style)"
+require_repo = true
+command ="""
+gh pr list --json baseRefName,number,headRefName --head $(git rev-parse --abbrev-ref HEAD) --jq '.[] | .number' | cat
+"""
+when = "true"
+symbol = ""
+style = "blue"
+ignore_timeout = true
+
+[custom.python]
+format = "[($output )]($style)"
+command ="""
+python -c 'print("#42")'
+"""
+when = "true"
+style = "blue"
+disabled = true
