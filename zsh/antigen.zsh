@@ -6,18 +6,22 @@ antigen use oh-my-zsh
 antigen bundle starship
 antigen bundle sudo
 antigen bundle git
-antigen bundle heroku
 antigen bundle pip
 antigen bundle command-not-found #depends on extra/pkgfile
 antigen bundle git-prompt
 antigen bundle git-flow
-antigen bundle pip
 antigen bundle python
 antigen bundle colorize #depends on package community/pygmentize
 antigen bundle systemd
-antigen bundle Tarrasch/zsh-autoenv
-antigen bundle t413/zsh-background-notify
+antigen bundle bgnotify
 antigen bundle pass
+antigen bundle encode64
+antigen bundle kubectl
+#antigen bundle pipenv
+#antigen bundle poetry
+antigen bundle poetry-env
+antigen bundle rustc
+
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
