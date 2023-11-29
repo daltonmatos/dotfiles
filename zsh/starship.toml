@@ -103,6 +103,7 @@ symbol = " "
 [git_commit]
 only_detached = false
 tag_disabled = false
+format = '[(\($hash$tag\) )]($style)'
 #tag_symbol = " 笠"
 
 [git_state]
