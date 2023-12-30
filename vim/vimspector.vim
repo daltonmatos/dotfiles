@@ -1,69 +1,48 @@
 let s:base_config = {
-      \    "adapter": "debugpy",
-      \    "configuration": {
-        \       "name": "<name>: Launch",
-        \   "type": "python",
-        \  "request": "launch",
-        \  "cwd": "",
-        \  "python": "/home/daltonmatos/.local/share/virtualenvs/asyncworker-_xqpelax/bin/python",
-        \  "stopOnEntry": v:false,
-        \ "console": "externalTerminal",
-        \  "debugOptions": [],
-        \  "program": "/home/daltonmatos/.local/share/virtualenvs/asyncworker-_xqpelax/bin/py.test",
-        \  "args": ["tests/test_utils.py::TimeitTests::test_it_marks_finishing_times"]
-        \   }
-        \}
+  \"adapter": "debugpy",
+  \"breakpoints": {
+    \"exception": {
+      \"raised": "N",
+      \"uncaught": "N",
+      \"userUnhandled": "Y"
+    \}
+  \},
+  \"configuration": {
+    \  "type": "python",
+    \  "request": "launch",
+    \  "cwd": "",
+    \  "python": "",
+    \  "stopOnEntry": v:false,
+    \  "console": "externalTerminal",
+    \  "debugOptions": [],
+    \  "program": "",
+    \  "args": "",
+    \  "justMyCode": v:false
+  \}
+\}
 
-" test#base#build_position(test#determine_runner(expand('%'), 'nearest|file', {"file": expand('%'), "line": 20}))
-" Isso retorna o que é necessário para o <args>.
-" Falta buildar o argumento <python> e <program>
-" Os dois dependem de saber o venv (pipenv --venv). vim-test acho que pode
-" montar essa linha de comando com pipenv...
-"
-"
 fun! DebugCurrentTestCase()
-  let _args = test#base#build_position(test#determine_runner(expand('%')), 'nearest', {"file": expand('%'), "line": line('.')})
-  " Para que isso funcione, deve haver um .vimspector.json na raiz do projeto
-  " com um Configuration de nome Debug Python TestCase
-  call vimspector#LaunchWithSettings({"configuration": "Debug Python TestCase", "args": "".join(_args)})
+  let test_runner_cmd = autodap#base#build_test_runner_cmd()
+  let python_cmd = autodap#base#build_python_cmd()
+  let test_runner_args = autodap#base#build_test_runner_args()
+  call extend(s:base_config['configuration'], {
+      \ "cwd": getcwd(),
+      \ "python": python_cmd,
+      \ "program": test_runner_cmd,
+      \ "args": test_runner_args
+  \})
+  let debug_session_name = fnamemodify(expand('%'), ':t')
+  call vimspector#LaunchWithConfigurations({debug_session_name: s:base_config})
 endfun
 
 
-" .vimspector.json
-"{
-"  "configurations": {
-"    "Debug Python TestCase": {
-"      "adapter": "debugpy",
-"      "configuration": {
-"        "name": "<name>: Launch",
-"        "type": "python",
-"        "request": "launch",
-"        "cwd": "",
-"        "python": "/home/daltonmatos/.local/share/virtualenvs/asyncworker-_xqpelax/bin/python",
-"        "stopOnEntry": false,
-"        "console": "externalTerminal",
-"        "debugOptions": [],
-"        "program": "/home/daltonmatos/.local/share/virtualenvs/asyncworker-_xqpelax/bin/py.test",
-"        "args": ["${args}"]
-"      }
-"
-"    }
-"  }
-"}
+nnoremap <silent> <leader>dt :call DebugCurrentTestCase()<CR>
+nnoremap <silent> <leader>dq :call Vimspector_reset()<CR>
+nnoremap <silent> <leader>dr :call vimspector#Restart()<CR>
+nnoremap <silent> <leader>b :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <silent> <leader>bl :call vimspector#ListBreakpoints()<CR>
 "
 
-
-
-nnoremap <leader>dt :call DebugCurrentTestCase()<CR>
-nnoremap <leader>b :call vimspector#ToggleBreakpoint()<CR>
-nnoremap <leader>bl :call vimspector#ListBreakpoints()<CR>
-"
-"let s:vimspector_keys = {
-"    \ 'c': function('vimspector#Continue'),
-"    \ 'b': function('vimspector#ToggleBreakpoint'),
-"    \ 'n': function('vimspector#StepOver'),
-"    \ 's': function('vimspector#StepInto'),
-"  \}
 "
 "func! s:vimspector_remove_buttonbars()
 "  call win_gotoid(g:vimspector_session_windows.code )
@@ -100,25 +79,44 @@ nnoremap <leader>bl :call vimspector#ListBreakpoints()<CR>
 "
 "endfunction
 "
-"func! s:vimspector_mappings()
-"  " nnoremap <leader>dq :call vimspector#Reset()<CR>
-"  nnoremap <leader>dq :call Vimspector_reset()<CR>
-"  nnoremap b :call vimspector#ToggleBreakpoint()<CR>
-"  nnoremap n :call vimspector#StepOver()<CR>
-"  nnoremap s :call vimspector#StepInto()<CR>
-"  nnoremap c :call vimspector#Continue()<CR>
+let s:vimspector_keys = {
+    \ 'C': function('vimspector#Continue'),
+    \ 'c': function('vimspector#RunToCursor'),
+    \ 'b': function('vimspector#ToggleBreakpoint'),
+    \ 'n': function('vimspector#StepOver'),
+    \ 's': function('vimspector#StepInto'),
+    \ 'r': function('vimspector#StepOut'),
+\}
+func! s:vimspector_mappings()
+  call win_gotoid(g:vimspector_session_windows.code )
+"itera em s:vimspector_keys e para cada mappgins, salva o que já existir com
+"maparg(key, <mode>, v:false, v:true). Isso retorna um dict com informações do
+"mapping já existente.
+"Gravamos nosso mapping com mapset.
+"Quando formos fazer o restore, iteramos na lista de saved_mappings e
+"recolocamos cada um com mapset()
+  " nnoremap <leader>dq :call vimspector#Reset()<CR>
+
+  nnoremap <buffer> <silent> b :call vimspector#ToggleBreakpoint()<CR>
+  nnoremap <buffer> <silent> n :call vimspector#StepOver()<CR>
+  nnoremap <buffer> <silent> s :call vimspector#StepInto()<CR>
+  nnoremap <buffer> <silent> C :call vimspector#Continue()<CR>
+  nnoremap <buffer> <silent> c :call vimspector#RunToCursor()<CR>
+  nnoremap <buffer> <silent> r :call vimspector#StepOut()<CR>
 "  call s:vimspector_remove_buttonbars()
-"endfunction
+endfunction
 "
-"func! Vimspector_reset()
-"  nunmap b
-"  nunmap n
-"  nunmap s
-"  nunmap c
-"  call vimspector#Reset()
-"endfunction
+func! Vimspector_reset()
+  nunmap <buffer> b
+  nunmap <buffer> n
+  nunmap <buffer> s
+  nunmap <buffer> C
+  nunmap <buffer> c
+  nunmap <buffer> r
+  call vimspector#Reset()
+endfunction
 "
-"augroup VimspectorCustom
-"  autocmd!
-"  autocmd User VimspectorUICreated call s:vimspector_mappings()
-"augroup END
+augroup VimspectorCustom
+  autocmd!
+  autocmd User VimspectorUICreated call s:vimspector_mappings()
+augroup END
