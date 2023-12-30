@@ -2,7 +2,6 @@
 " General Settings {{{3
 set nocompatible
 let mapleader="\<Space>"
-set rtp+=~/.vim/bundle/Vundle.vim/
 set wildignore+=*.py~,build/*.*,*.class,*.pyc,__pycache__*
 
 " Helps when <tab> completing strings on vim's command line
@@ -53,42 +52,6 @@ set guifont=Input\ Regular\ 12
 
 nnoremap ; :
 
-" Complete reference about what do you get with this vimrc {{{3
-" Basic Docs about installed plugins
-"
-"
-"
-" Finding things
-"
-" <leader>a Searches for the word under cursor wit Ack (All files under
-" current directory)
-" <leader>la Does the same but only on current file
-" Both work for currently selected string
-"
-" CTRL-F on insert mode uses Ack to find word under cursos (all files)
-"
-" Managing Buffers
-"
-" <leader>b Opens the Buffer manager window, where you can open/delete buffers
-"
-" How to use some plugins
-"
-" vim-scripts/Merginal
-" Inside branch list window
-" * cc Checkout selected branch
-" * A Create a new branch based on currently checked out branch
-" * M merge branch under cursor with current checked out branch
-" * rn Prompt to renamea branch under cursor
-"
-" tpope/vim-fugitive
-" Inside fugitive window
-" cc Commit current files
-" ca Commit ammend (can edit commit message)
-" cA Commit ammend with current commit message
-" dp Display unified diff of file
-"
-" }}} Complete reference about what do you get with this vimrc "
-
 function! SourceFileIfExist(filename)
   let l:extra_file = fnamemodify(expand($MYVIMRC), ':p:h') . '/' . a:filename
   if filereadable(l:extra_file)
@@ -96,9 +59,9 @@ function! SourceFileIfExist(filename)
   endif
 endfunc
 
-call SourceFileIfExist('ale.vim')
 
-" Plugin installation {{{2
+
+" Plugin installation {{{3
 filetype off
 
 call plug#begin('~/.vim/plugged')
@@ -106,9 +69,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'thinca/vim-themis', {'tag' : 'v1.7.0'}
 Plug 'mattn/vim-lsp-settings'
 Plug 'puremourning/vimspector'
-
-" Dependency for idanarye/vim-vebugger
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 Plug 'vim-ctrlspace/vim-ctrlspace'
 
@@ -165,24 +125,12 @@ Plug 'google/vim-jsonnet'
 Plug 'cespare/vim-toml'
 Plug 'ekalinin/Dockerfile.vim'
 
+Plug '~/src/contrib/vim-themis-study'
+
 call plug#end()
 
 filetype plugin indent on
 " }}} Plugin installation
-
-
-
-" Thanks to @denilsonsa (https://github.com/denilsonsa)
-function! Salvar_setKeys()
-  "Use Ctrl+S to save
-  nnoremap <silent> <C-S>      :update<CR>
-  vnoremap <silent> <C-S> <C-C>:update<CR>
-endfunc
-
-augroup Salvar
-  autocmd!
-  autocmd GUIEnter * call Salvar_setKeys()
-augroup END
 
 colorscheme base16-dracula
 " Better colors for the line numbers
@@ -237,6 +185,7 @@ nnoremap <Leader>v :tabedit $MYVIMRC<cr>
 nnoremap <silent> <C-S-PageUP> :tabm -1<CR>
 nnoremap <silent> <C-S-PageDOWN> :tabm +1<CR>
 
+call SourceFileIfExist('ale.vim')
 call SourceFileIfExist('vimlsp.vim')
 call SourceFileIfExist('ack.vim')
 call SourceFileIfExist('airline.vim')
@@ -256,7 +205,6 @@ call SourceFileIfExist('vim-rooter.vim')
 call SourceFileIfExist('vim-test.vim')
 call SourceFileIfExist('vimspector.vim')
 call SourceFileIfExist('asyncomplete-emoji.vim')
-
 
 " Suporte a linguages
 " Configuração de Language Server Protocols
