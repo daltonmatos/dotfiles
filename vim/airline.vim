@@ -4,7 +4,6 @@
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#virtualenv#enabled = 1
 let g:airline#extensions#hunks#enabled = 0 " We have signify enabled
-let g:virtualenv_stl_format = 'ጸ (%{get(g:, "virtualenv_name")})'
 let g:airline#extensions#tagbar#enabled = 0
 let g:airline_left_sep = ""
 let g:airline_section_x = airline#section#create([''])

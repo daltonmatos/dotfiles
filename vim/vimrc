@@ -140,7 +140,8 @@ Plug 'idanarye/vim-merginal'
 Plug 'elzr/vim-json' " checking for json files, highlighting errors
 Plug 'alfredodeza/pytest.vim'
 Plug 'mileszs/ack.vim'
-Plug 'daltonmatos/vim-virtualenv'
+"Plug 'daltonmatos/vim-virtualenv'
+Plug '~/src/contrib/vim-virtualenv'
 Plug 'gregsexton/gitv'
 
 Plug 'prabirshrestha/vim-lsp'
