@@ -2,3 +2,7 @@ export ZDOTDIR=${HOME}/.zsh
 export TERM=xterm-256color
 export EDITOR=vim
 export INCLUDE=${ZDOTDIR}/include
+export ZPLUG_HOME=${ZDOTDIR}/zplug
+export ZPLUG_LOG_LOAD_SUCCESS=true
+export ZPLUG_LOG_LOAD_FAILURE=true
+export ZPLUG_THREADS=1
