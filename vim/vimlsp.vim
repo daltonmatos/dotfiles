@@ -1,4 +1,4 @@
-let g:lsp_signature_help_enabled = 0
+
 
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
@@ -8,6 +8,12 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> <leader>cr <plug>(lsp-references)
     nmap <buffer> <leader>ci <plug>(lsp-implementation)
     nmap <buffer> <leader>ct <plug>(lsp-type-definition)
+    nmap <buffer> <silent> <leader>cs :LspDocumentSymbolSearch<CR>
+    nmap <buffer> <silent> <leader>cS :LspWorkspaceSymbolSearch<CR>
+    nmap <buffer> <silent> <leader>cD :LspDocumentDiagnostics<CR>
+    "extract method
+    "DocumentSymbolsSearch (tentar achar um plugin que possa mostrar isso em
+        "uma arvoire lateral)
     nmap <buffer> <leader>crn <plug>(lsp-rename)
     nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
     nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
@@ -21,6 +27,7 @@ augroup lsp_install_python
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
+let g:lsp_signature_help_enabled = 0
 let g:lsp_async_completion = 1
 let g:asyncomplete_auto_completeopt = 0
 let g:lsp_completion_documentation_enabled = 0
@@ -30,4 +37,4 @@ let g:lsp_documentation_float = 0
 let g:lsp_preview_float = 0
 
 " Muito útil para debugar um LSP server não funcional
-let g:lsp_log_file = ''
+let g:lsp_log_file = '/tmp/lsp-debug.txt'
