@@ -99,11 +99,13 @@ disabled = true
 [git_branch]
 format = "[$symbol$branch(:$remote_branch)]($style) "
 symbol = " "
+style = "fg:bold cyan bg:none"
 
 [git_commit]
 only_detached = false
 tag_disabled = false
-format = '[(\($hash$tag\) )]($style)'
+format = '[($hash$tag )]($style)'
+style = "green"
 #tag_symbol = " 笠"
 
 [git_state]
@@ -125,6 +127,7 @@ when = "true"
 symbol = ""
 style = "blue"
 ignore_timeout = true
+disabled = true
 
 [custom.python]
 format = "[($output )]($style)"
