@@ -1,12 +1,23 @@
+
+function! s:pylsp_server_cmd(server_info)
+  if has_key(environ(),'VIRTUAL_ENV')
+    let l:pylsp_bin = environ()['VIRTUAL_ENV'] . '/bin/pylsp'
+    if filereadable(l:pylsp_bin)
+      return [environ()['VIRTUAL_ENV'] . '/bin/pylsp']
+    endif
+  endif
+  return ['pylsp']
+
+endfunction
+
+
 au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
+        \ 'name': 'pylsp',
+        \ 'cmd': function('s:pylsp_server_cmd'),
         \ 'allowlist': ['python'],
         \ })
 
 autocmd FileType python setlocal completeopt-=preview
-
-let g:virtualenv_auto_activate = 1
 
 augroup VirtualEnv
   autocmd!
