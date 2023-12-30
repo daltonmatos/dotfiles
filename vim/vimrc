@@ -52,15 +52,6 @@ set guifont=Input\ Regular\ 12
 
 nnoremap ; :
 
-function! SourceFileIfExist(filename)
-  let l:extra_file = fnamemodify(expand($MYVIMRC), ':p:h') . '/' . a:filename
-  if filereadable(l:extra_file)
-    execute ':so ' . l:extra_file
-  endif
-endfunc
-
-
-
 " Plugin installation {{{3
 filetype off
 
@@ -99,7 +90,7 @@ Plug 'airblade/vim-rooter'
 Plug 'idanarye/vim-merginal'
 Plug 'elzr/vim-json' " checking for json files, highlighting errors
 Plug 'alfredodeza/pytest.vim'
-Plug 'mileszs/ack.vim'
+Plug 'donaldttt/fuzzyy', {'branch': 'vim8'}
 "Plug 'daltonmatos/vim-virtualenv'
 Plug '~/src/contrib/vim-virtualenv'
 Plug 'gregsexton/gitv'
@@ -184,29 +175,3 @@ noremap <C-t> :tabnew<CR>
 nnoremap <Leader>v :tabedit $MYVIMRC<cr>
 nnoremap <silent> <C-S-PageUP> :tabm -1<CR>
 nnoremap <silent> <C-S-PageDOWN> :tabm +1<CR>
-
-call SourceFileIfExist('ale.vim')
-call SourceFileIfExist('vimlsp.vim')
-call SourceFileIfExist('ack.vim')
-call SourceFileIfExist('airline.vim')
-call SourceFileIfExist('ale-mappings.vim')
-call SourceFileIfExist('closetag.vim')
-call SourceFileIfExist('easymotion.vim')
-call SourceFileIfExist('git.vim')
-call SourceFileIfExist('pytest.vim')
-
-call SourceFileIfExist('signify.vim')
-call SourceFileIfExist('supertab.vim')
-call SourceFileIfExist('terminal.vim')
-call SourceFileIfExist('ultisnips.vim')
-call SourceFileIfExist('vim-ctrlspace.vim')
-call SourceFileIfExist('vimmove.vim')
-call SourceFileIfExist('vim-rooter.vim')
-call SourceFileIfExist('vim-test.vim')
-call SourceFileIfExist('vimspector.vim')
-call SourceFileIfExist('asyncomplete-emoji.vim')
-
-" Suporte a linguages
-" Configuração de Language Server Protocols
-call SourceFileIfExist('langs/python.vim')
-call SourceFileIfExist('langs/terraform.vim')

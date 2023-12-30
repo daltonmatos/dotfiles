@@ -25,13 +25,13 @@ augroup VirtualEnv
 augroup END
 
 
-function! python#empty_ft()
-  if &filetype =~# "python"
-    return ''
-  else
-    return airline#parts#filetype()
-  endif
-endfunction
+"function! python#empty_ft()
+"  if &filetype =~# "python"
+"    return ''
+"  else
+"    return airline#parts#filetype()
+"  endif
+"endfunction
 
 
 " Torna complete muito lento
