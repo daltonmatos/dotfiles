@@ -6,3 +6,13 @@ export ZPLUG_HOME=${ZDOTDIR}/zplug
 export ZPLUG_LOG_LOAD_SUCCESS=true
 export ZPLUG_LOG_LOAD_FAILURE=true
 export ZPLUG_THREADS=1
+
+export EDITOR=vim
+export TERM="xterm-256color"
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+export SUDO_ASKPASS=~/.i3/scripts/askpass.sh
+export DENO_INSTALL="${HOME}/.deno"
+
+export ANTIDOTE_CLONE_DIR=${HOME}/.antidote
+export ANTIDOTE_HOME=${ANTIDOTE_CLONE_DIR}/.plugins
