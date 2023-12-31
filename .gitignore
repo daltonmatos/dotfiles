@@ -7,3 +7,6 @@ vim/plugged/
 zsh/antigen/
 #Ignore extra.vim os it it possible to add more configs without the need to commit
 vim/extra.vim
+zsh/.zplugins.zsh*
+vim/.netrwhist
+fonts/.uuid
