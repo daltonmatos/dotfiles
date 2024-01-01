@@ -28,6 +28,7 @@ ohmyzsh/ohmyzsh path:plugins/jsontools
 ptavares/zsh-tfswitch
 MichaelAquilina/zsh-you-should-use
 fdellwing/zsh-bat
+#mattberther/zsh-pyenv
 
 sudosubin/zsh-pipenv
 sudosubin/zsh-poetry
