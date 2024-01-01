@@ -1,6 +1,3 @@
-
-
-source ${ZDOTDIR}/starship.zsh
 source ${ZDOTDIR}/antidote.zsh
 
 source $(dirname ${ZDOTDIR}/.zshrc)/general.zsh

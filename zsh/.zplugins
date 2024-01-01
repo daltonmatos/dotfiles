@@ -1,4 +1,7 @@
+
 ohmyzsh/ohmyzsh path:lib/key-bindings.zsh
+mattmc3/zshrc.d
+wintermi/zsh-starship
 
 # Clipboard
 ohmyzsh/ohmyzsh path:lib/clipboard.zsh
