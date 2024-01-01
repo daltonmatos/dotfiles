@@ -16,6 +16,7 @@ ohmyzsh/ohmyzsh path:lib/theme-and-appearance.zsh
 belak/zsh-utils path:history
 
 # Utilities
+ohmyzsh/ohmyzsh path:plugins/fzf
 ohmyzsh/ohmyzsh path:plugins/extract
 ohmyzsh/ohmyzsh path:plugins/encode64
 ohmyzsh/ohmyzsh path:plugins/bgnotify
