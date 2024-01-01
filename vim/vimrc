@@ -91,7 +91,6 @@ Plug 'alfredodeza/pytest.vim'
 Plug 'donaldttt/fuzzyy', {'branch': 'vim8'}
 "Plug 'daltonmatos/vim-virtualenv'
 Plug '~/src/contrib/vim-virtualenv'
-Plug 'gregsexton/gitv'
 
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
