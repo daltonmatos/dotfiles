@@ -1,14 +1,16 @@
 export ZDOTDIR=${HOME}/.zsh
-export TERM=xterm-256color
-export EDITOR=vim
 export INCLUDE=${ZDOTDIR}/include
+
+export LC_CTYPE=pt_BR.UTF-8
+export TERM="xterm-256color"
+export TERMINAL="xfce4-terminal"
+export EDITOR=vim
+
 export ZPLUG_HOME=${ZDOTDIR}/zplug
 export ZPLUG_LOG_LOAD_SUCCESS=true
 export ZPLUG_LOG_LOAD_FAILURE=true
 export ZPLUG_THREADS=1
 
-export EDITOR=vim
-export TERM="xterm-256color"
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 export SUDO_ASKPASS=~/.i3/scripts/askpass.sh
