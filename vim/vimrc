@@ -53,7 +53,7 @@ nnoremap ; :
 " Plugin installation {{{3
 filetype off
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim-plugged')
 
 Plug 'thinca/vim-themis', {'tag' : 'v1.7.0'}
 Plug 'mattn/vim-lsp-settings'
