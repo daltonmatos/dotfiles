@@ -4,14 +4,12 @@ set nocompatible
 let mapleader="\<Space>"
 set wildignore+=*.py~,build/*.*,*.class,*.pyc,__pycache__*
 
-" Helps when <tab> completing strings on vim's command line
 set wildmenu
 set wildmode=list:longest
 set backupdir=/tmp,~/.vim/.backups,.
 set t_Co=256
 set guioptions-=T
 set guioptions-=m
-" Não redimenciona outras janelas quando algum split é fechado
 set noequalalways
 
 set backspace=indent,eol,start
