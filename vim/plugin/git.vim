@@ -13,9 +13,9 @@ vnoremap <leader>dg   :diffget <cr>
 vnoremap <leader>dp   :diffput <cr>
 
 " git history for the current file
-nnoremap <leader>glh  :Gitv! <cr>
+nnoremap <leader>glh  :Gclog! % <cr>
 " git history for the current branch
-nnoremap <leader>gh   :Gitv <cr>
+nnoremap <leader>gh   :Gclog! <cr>
 nnoremap <leader>gpr  :Git pull --rebase <cr>
 
 " When viewing git commits, star with hunks opened
