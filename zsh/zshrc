@@ -1,14 +1,5 @@
 source ${ZDOTDIR}/antidote.zsh
 
-source $(dirname ${ZDOTDIR}/.zshrc)/general.zsh
-source $(dirname ${ZDOTDIR}/.zshrc)/path.zsh
-source $(dirname ${ZDOTDIR}/.zshrc)/pyenv.zsh
-source $(dirname ${ZDOTDIR}/.zshrc)/vim.zsh
-source $(dirname ${ZDOTDIR}/.zshrc)/alias.zsh
-source $(dirname ${ZDOTDIR}/.zshrc)/ssh.zsh
-source $(dirname ${ZDOTDIR}/.zshrc)/vscode.zsh
-
-
 #GPG specifics
 GPG_TTY=$(tty)
 export GPG_TTY

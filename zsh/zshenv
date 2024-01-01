@@ -16,3 +16,4 @@ export DENO_INSTALL="${HOME}/.deno"
 
 export ANTIDOTE_CLONE_DIR=${HOME}/.antidote
 export ANTIDOTE_HOME=${ANTIDOTE_CLONE_DIR}/.plugins
+export STARSHIP_CONFIG=${HOME}/.config/starship.toml
