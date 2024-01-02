@@ -37,7 +37,6 @@
     hunk-header-style = file line-number syntax
 
 [alias]
-  st = status
   co = checkout
   br = branch
   mg = merge
