@@ -39,7 +39,7 @@ let g:Gitv_OpenHorizontal = 1
 let g:airline#extensions#branch#format = 'CustomBranchName'
 function! CustomBranchName(name)
   try
-    let l:hash = FugitiveExecute("rev-parse", "--verify", a:name).stdout[0][:8]
+    let l:hash = FugitiveExecute("rev-parse", "--verify", a:name).stdout[0][:6]
     return substitute(a:name, 'feature', 'F', '') .  ' [' . l:hash . ']'
   catch "fugitive throws exception if repo has zero commits
     return '[empty]'
