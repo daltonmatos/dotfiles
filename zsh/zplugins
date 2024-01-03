@@ -1,7 +1,12 @@
-
-ohmyzsh/ohmyzsh path:lib/key-bindings.zsh
+#Configs gerais do shell
+ohmyzsh/ohmyzsh path:lib/key-bindings.zsh #Ctrl+p, Ctrl+n (history up/down)
+sorin-ionescu/prezto
+sorin-ionescu/prezto path:modules/helper
+sorin-ionescu/prezto path:modules/utility
+sorin-ionescu/prezto path:modules/directory #AUTO_CD
+sorin-ionescu/prezto path:modules/history
 mattmc3/zshrc.d
-wintermi/zsh-starship
+wintermi/zsh-starship #prompt
 
 # Clipboard
 ohmyzsh/ohmyzsh path:lib/clipboard.zsh
@@ -9,13 +14,8 @@ ohmyzsh/ohmyzsh path:plugins/copybuffer
 ohmyzsh/ohmyzsh path:plugins/copyfile
 ohmyzsh/ohmyzsh path:plugins/copypath
 
-ohmyzsh/ohmyzsh path:plugins/magic-enter
-ohmyzsh/ohmyzsh path:lib/theme-and-appearance.zsh
-
-# History
-belak/zsh-utils path:history
-
 # Utilities
+ohmyzsh/ohmyzsh path:plugins/magic-enter
 olets/zsh-window-title
 ohmyzsh/ohmyzsh path:plugins/fzf
 ohmyzsh/ohmyzsh path:plugins/extract
@@ -31,17 +31,15 @@ MichaelAquilina/zsh-you-should-use
 fdellwing/zsh-bat
 #mattberther/zsh-pyenv
 
-sudosubin/zsh-pipenv
-sudosubin/zsh-poetry
-srijanshetty/zsh-pip-completion
-ninrod/pass-zsh-completion
-
 # Completions
-zsh-users/zsh-completions kind:fpath path:src
-belak/zsh-utils path:completion
+sudosubin/zsh-pipenv kind:fpath path:src
+sudosubin/zsh-poetry kind:fpath path:src
+ninrod/pass-zsh-completion kind:fpath path:src
 ohmyzsh/ohmyzsh path:plugins/ag kind:fpath
 MenkeTechnologies/zsh-cargo-completion kind:fpath
 pkulev/zsh-rustup-completion kind:fpath
+sorin-ionescu/prezto path:modules/completion #roda compinit e inclui zsh-users/zsh-completions
+
 
 # Deferred plugins
 zdharma-continuum/fast-syntax-highlighting kind:defer

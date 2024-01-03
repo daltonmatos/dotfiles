@@ -15,6 +15,8 @@ zstyle ':prezto:module:history' histfile "${XDG_DATA_HOME:-$HOME/.local/share}/z
 zstyle ':prezto:module:*:alias' skip 'yes'
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 zstyle ':prezto:module:editor' dot-expansion 'yes'
+zstyle ':prezto:module:utility:ls' dirs-first 'yes'
+zstyle ':prezto:module:directory:alias' skip 'no'
 
 #
 # Zephyr
