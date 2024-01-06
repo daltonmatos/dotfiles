@@ -1,12 +1,9 @@
 #Configs gerais do shell
 ohmyzsh/ohmyzsh path:lib/key-bindings.zsh #Ctrl+p, Ctrl+n (history up/down)
 sorin-ionescu/prezto
-sorin-ionescu/prezto path:modules/helper
 sorin-ionescu/prezto path:modules/utility
 sorin-ionescu/prezto path:modules/directory #AUTO_CD
 sorin-ionescu/prezto path:modules/history
-mattmc3/zshrc.d
-wintermi/zsh-starship #prompt
 
 # Clipboard
 ohmyzsh/ohmyzsh path:lib/clipboard.zsh
@@ -38,7 +35,6 @@ ninrod/pass-zsh-completion kind:fpath path:src
 ohmyzsh/ohmyzsh path:plugins/ag kind:fpath
 MenkeTechnologies/zsh-cargo-completion kind:fpath
 pkulev/zsh-rustup-completion kind:fpath
-sorin-ionescu/prezto path:modules/completion #roda compinit e inclui zsh-users/zsh-completions
 
 
 # Deferred plugins
@@ -46,4 +42,8 @@ zdharma-continuum/fast-syntax-highlighting kind:defer
 zsh-users/zsh-autosuggestions kind:defer
 #zsh-users/zsh-history-substring-search kind:defer
 
+mattmc3/zshrc.d #load custom files S{DOTDIR}/conf.d/
+wintermi/zsh-starship #prompt
+
+sorin-ionescu/prezto path:modules/completion #roda compinit e inclui zsh-users/zsh-completions
 # vim: ft=zsh sw=2 ts=2 et
