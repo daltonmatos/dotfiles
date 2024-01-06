@@ -4,6 +4,7 @@ sorin-ionescu/prezto
 sorin-ionescu/prezto path:modules/utility
 sorin-ionescu/prezto path:modules/directory #AUTO_CD
 sorin-ionescu/prezto path:modules/history
+sorin-ionescu/prezto path:modules/command-not-found
 
 # Clipboard
 ohmyzsh/ohmyzsh path:lib/clipboard.zsh
@@ -18,9 +19,8 @@ ohmyzsh/ohmyzsh path:plugins/fzf
 ohmyzsh/ohmyzsh path:plugins/extract
 ohmyzsh/ohmyzsh path:plugins/encode64
 ohmyzsh/ohmyzsh path:plugins/bgnotify
-ohmyzsh/ohmyzsh path:plugins/sudo
+ohmyzsh/ohmyzsh path:plugins/sudo # ESC ESC adiciona "sudo "
 ohmyzsh/ohmyzsh path:plugins/pip
-ohmyzsh/ohmyzsh path:plugins/command-not-found
 ohmyzsh/ohmyzsh path:plugins/rust
 ohmyzsh/ohmyzsh path:plugins/jsontools
 ptavares/zsh-tfswitch
