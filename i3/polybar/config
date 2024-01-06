@@ -44,7 +44,7 @@ border-bottom-size = 2
 border-bottom-color = #000
 
 modules-left = i3 xwindow
-modules-right = next-spacex-launch vpn-pg-prd vpn-banking vpn-anyconnect openvpn-trex-stg openvpn-trex-prd anne-pro-ii-status logitech-m720-status jbl-tunebt-500 wired-network wireless-network cpu memory battery sound mic keymap clock power
+modules-right = next-spacex-launch vpn-pg-prd vpn-anyconnect openvpn-trex-stg openvpn-trex-prd anne-pro-ii-status logitech-m720-status jbl-tunebt-500 wired-network wireless-network cpu memory battery sound mic keymap clock power
 
 [module/i3]
 type = internal/i3
@@ -255,12 +255,6 @@ tail = true
 [module/vpn-anyconnect]
 type = custom/script
 exec = ~/.i3/polybar/scripts/anyconnect-status.sh "Stone"
-format-background = ${colors.background}
-tail = true
-
-[module/vpn-banking]
-type = custom/script
-exec = ~/.i3/polybar/scripts/openvpn-status.sh "stone-banking" "Stone.Co/banking"
 format-background = ${colors.background}
 tail = true
 
