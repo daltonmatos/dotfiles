@@ -5,22 +5,3 @@
 if [ -z "${SSH_TTY}" ]; then
   export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 fi
-
-_ssx_via(){
-  COMMAND=${1}
-  gateway=${2}
-  shift; shift
-  $COMMAND -o "ProxyCommand=ssh ${gateway} -W %h:%p" -o "StrictHostKeyChecking=no" $*
-}
-
-_ssh_via(){
-  _ssx_via 'ssh' $*
-}
-
-_scp_via(){
-  _ssx_via 'scp' $*
-}
-
-
-alias ssh-via=_ssh_via
-alias scp-via=_scp_via
