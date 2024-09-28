@@ -1,7 +1,7 @@
 #/usr/bin/env zsh
 
-PARTS_SIZE_SEC=3
-PARTS_EVERY_SEC=300 #Cada 5min
+PARTS_SIZE_SEC=5
+PARTS_EVERY_SEC=40 #Cada 5min
 
 
 
@@ -20,13 +20,33 @@ FINAL_COMAND="ffmpeg -i ${ORIGINAL_VIDEO_FILE} "
 for i in $(seq ${TOTAL_PARTS}); do
   START_TIME=$(( ${i} * ${PARTS_EVERY_SEC}))
   filter_complex="${filter_complex}[0:v] trim=start=${START_TIME}:end=$((${START_TIME} + ${PARTS_SIZE_SEC})),setpts=PTS-STARTPTS[p${i}]"
-  if [ ${i}  -ne ${TOTAL_PARTS} ];then
+  if [ ${i} -ne ${TOTAL_PARTS} ];then
   filter_complex="${filter_complex};"
   fi
 done
 
-filter_complex="${filter_complex};$(for i in $(seq $TOTAL_PARTS);do echo -n [p${i}];done) concat=n=${TOTAL_PARTS}:v=1 [v]"
+#filter_complex="${filter_complex};$(for i in $(seq $TOTAL_PARTS);do echo -n [p${i}];done) concat=n=${TOTAL_PARTS}:v=1 [v]"
 
-FINAL_COMAND="${FINAL_COMAND} -filter_complex '${filter_complex}' -map '[v]' -pix_fmt yuvj420p output.mp4"
+#xfade_output="\n[p1][p2]xfade=transition=fade:duration=1:offset=2[o1]\n"
+for part in $(seq $((${TOTAL_PARTS} - 1)));do
+
+
+  if [ ${part} -eq 1 ];then
+    xfade_output="${xfade_output}\n[p$((part))][p$((${part} + 1))]xfade=transition=fade:duration=1:offset=$(((PARTS_SIZE_SEC - 1) * part))"
+  else
+    xfade_output="${xfade_output}\n[xf$((part -1))][p$((${part} + 1))]xfade=transition=fade:duration=1:offset=$(((PARTS_SIZE_SEC - 1) * part))"
+  fi
+
+  if [ ${part} -eq $((TOTAL_PARTS - 1)) ];then
+    xfade_output="${xfade_output}[out]"
+  else
+    xfade_output="${xfade_output}[xf${part}];"
+  fi
+done
+
+#set -x
+all_filters="${filter_complex};\n${xfade_output}"
+
+FINAL_COMAND="${FINAL_COMAND} -filter_complex "\'${all_filters}\'" -map '[out]' -pix_fmt yuv420p output.mp4"
 
 echo ${FINAL_COMAND}
