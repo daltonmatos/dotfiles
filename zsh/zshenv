@@ -8,3 +8,5 @@ export EDITOR=vim
 export ANTIDOTE_CLONE_DIR=${HOME}/.antidote
 export ANTIDOTE_HOME=${ANTIDOTE_CLONE_DIR}/.plugins
 export STARSHIP_CONFIG=${HOME}/.config/starship.toml
+
+export MAGIC_ENTER_GIT_COMMAND="git status "
