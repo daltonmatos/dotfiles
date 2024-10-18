@@ -1,10 +1,8 @@
 #/usr/bin/env zsh
 
-PARTS_SIZE_SEC=5
-PARTS_EVERY_SEC=40 #Cada 5min
-
-
-
+MINUTE=60
+PARTS_SIZE_SEC=10
+PARTS_EVERY_SEC=$((5 * MINUTE))
 
 ORIGINAL_VIDEO_FILE=${1}
 VIDEO_DURATION_FLOAT=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 ${1})
@@ -12,7 +10,7 @@ VIDEO_DURATION=$(echo ${VIDEO_DURATION_FLOAT} | cut -d . -f 1)
 TOTAL_PARTS=$(( ${VIDEO_DURATION} / ${PARTS_EVERY_SEC} ))
 
 echo "Total duration: ${VIDEO_DURATION}. ${TOTAL_PARTS} partes de ${PARTS_SIZE_SEC}s"
-echo "Tempo total do resumo: $((${PARTS_SIZE_SEC} * ${TOTAL_PARTS}))"
+echo "Tempo total do resumo: $(( (PARTS_SIZE_SEC * TOTAL_PARTS) - ((TOTAL_PARTS - 1) * 2)))s"
 
 
 FINAL_COMAND="ffmpeg -i ${ORIGINAL_VIDEO_FILE} "
@@ -27,7 +25,6 @@ done
 
 #filter_complex="${filter_complex};$(for i in $(seq $TOTAL_PARTS);do echo -n [p${i}];done) concat=n=${TOTAL_PARTS}:v=1 [v]"
 
-#xfade_output="\n[p1][p2]xfade=transition=fade:duration=1:offset=2[o1]\n"
 for part in $(seq $((${TOTAL_PARTS} - 1)));do
 
 
