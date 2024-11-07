@@ -6,7 +6,8 @@ wired_interface = enp0s31f6
 
 [colors]
 background = #272727
-background-alt = #383838
+background-alt = #272727
+#background-alt = #383838
 foreground = #CACACA
 foreground-alt = #CACACA
 alert = #EF5350
