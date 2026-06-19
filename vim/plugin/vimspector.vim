@@ -97,22 +97,22 @@ func! s:vimspector_mappings()
 "recolocamos cada um com mapset()
   " nnoremap <leader>dq :call vimspector#Reset()<CR>
 
-  nnoremap <buffer> <silent> b :call vimspector#ToggleBreakpoint()<CR>
-  nnoremap <buffer> <silent> n :call vimspector#StepOver()<CR>
-  nnoremap <buffer> <silent> s :call vimspector#StepInto()<CR>
-  nnoremap <buffer> <silent> C :call vimspector#Continue()<CR>
-  nnoremap <buffer> <silent> c :call vimspector#RunToCursor()<CR>
-  nnoremap <buffer> <silent> r :call vimspector#StepOut()<CR>
+  nnoremap <silent> b :call vimspector#ToggleBreakpoint()<CR>
+  nnoremap <silent> n :call vimspector#StepOver()<CR>
+  nnoremap <silent> s :call vimspector#StepInto()<CR>
+  nnoremap <silent> C :call vimspector#Continue()<CR>
+  nnoremap <silent> c :call vimspector#RunToCursor()<CR>
+  nnoremap <silent> r :call vimspector#StepOut()<CR>
 "  call s:vimspector_remove_buttonbars()
 endfunction
 "
 func! Vimspector_reset()
-  nunmap <buffer> b
-  nunmap <buffer> n
-  nunmap <buffer> s
-  nunmap <buffer> C
-  nunmap <buffer> c
-  nunmap <buffer> r
+  nunmap b
+  nunmap n
+  nunmap s
+  nunmap C
+  nunmap c
+  nunmap r
   call vimspector#Reset()
 endfunction
 "
