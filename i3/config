@@ -53,7 +53,7 @@ bindsym $mod+p exec ~/.i3/polybar/scripts/powermenu/main.sh
 bindsym $mod+Shift+q kill
 
 
-bindsym Print exec maim ~/Pictures/screenshot-$(date +"%s").jpg
+bindsym Print exec maim -s ~/Pictures/screenshot-$(date +"%s").jpg
 bindsym Shift+Print exec maim -s ~/Pictures/screenshot-$(date +"%s").jpg
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
