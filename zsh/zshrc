@@ -13,3 +13,6 @@ decrypt_env() {
   local env_name=CRYPT_${env_name_sufix}
   gpg -d <<<${(P)env_name} 2>/dev/null
 }
+
+# opencode
+export PATH=/home/daltonmatos/.opencode/bin:$PATH

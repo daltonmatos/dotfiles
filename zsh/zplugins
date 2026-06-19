@@ -21,7 +21,7 @@ ohmyzsh/ohmyzsh path:plugins/encode64
 ohmyzsh/ohmyzsh path:plugins/bgnotify
 ohmyzsh/ohmyzsh path:plugins/sudo # ESC ESC adiciona "sudo "
 ohmyzsh/ohmyzsh path:plugins/pip
-ohmyzsh/ohmyzsh path:plugins/rust
+# ohmyzsh/ohmyzsh path:plugins/rust
 ohmyzsh/ohmyzsh path:plugins/jsontools
 ptavares/zsh-tfswitch
 MichaelAquilina/zsh-you-should-use
